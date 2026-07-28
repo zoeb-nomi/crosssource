@@ -8,7 +8,7 @@ This project is an independent implementation of published RAG-evaluation method
 
 ## Status
 
-v0.1 in progress. Milestones: scaffold ✅ · corpus ✅ · pipeline ⬜ · golden set ⬜ · eval harness ⬜ · judge validation ⬜ · results + publish ⬜
+v0.1 in progress. Milestones: scaffold ✅ · corpus ✅ · pipeline ✅ · golden set ⬜ · eval harness ⬜ · judge validation ⬜ · results + publish ⬜
 
 ## Corpus
 
