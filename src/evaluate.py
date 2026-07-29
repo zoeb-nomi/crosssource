@@ -96,13 +96,14 @@ def claim_citation_pairs(answer):
     pairs, last_end = [], 0
     for m in CITATION_RE.finditer(answer):
         claim = answer[last_end:m.start()].strip()
-        # back-to-back citations share the previous claim span
-        if not claim and pairs:
+        # citations separated only by punctuation/whitespace ("[a:1], [a:2]")
+        # are continuation citations for the previous claim span
+        if not re.search(r"\w", claim) and pairs:
             claim = pairs[-1][0]
         # keep the claim to its last ~2 sentences for a focused judgment
         sentences = re.split(r"(?<=[.?!])\s+", claim)
         claim = " ".join(sentences[-2:]).strip()
-        if claim:
+        if re.search(r"\w", claim):
             pairs.append((claim, m.group(1)))
         last_end = m.end()
     return pairs
