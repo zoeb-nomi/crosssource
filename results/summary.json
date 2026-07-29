@@ -1,0 +1,25 @@
+{
+  "baseline": {
+    "items": 25,
+    "citation_precision": 0.9763,
+    "citation_recall": 0.76,
+    "faithfulness": 1.0,
+    "relevance": 0.98,
+    "failure_labels": {
+      "right_doc_wrong_passage": 3,
+      "missing_authority": 6,
+      "unsupported_claim": 1
+    }
+  },
+  "strict": {
+    "items": 25,
+    "citation_precision": 0.9938,
+    "citation_recall": 0.76,
+    "faithfulness": 1.0,
+    "relevance": 0.96,
+    "failure_labels": {
+      "missing_authority": 6,
+      "unsupported_claim": 2
+    }
+  }
+}
