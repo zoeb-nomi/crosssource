@@ -2,6 +2,8 @@
 
 **An evaluation harness for RAG answer quality and citation accuracy on public case law.**
 
+By [Zoeb Nomi](https://www.zoebnomi.com) — AI Product Manager at Instead, working on LLM evaluation and RAG output quality. More public evaluation work at [zoebnomi.com](https://www.zoebnomi.com).
+
 Legal AI is a major LLM category whose most famous trust failure is citation hallucination — lawyers have been sanctioned for filing AI-fabricated citations (*Mata v. Avianca*), and academic work (Stanford RegLab, "Hallucination-Free? Assessing the Reliability of Leading AI Legal Research Tools," Magesh et al., 2024) found even dedicated legal RAG tools hallucinate at meaningful rates. CrossSource is an open, reproducible harness for measuring citation-level reliability of a RAG system on public court opinions.
 
 This project is an independent implementation of published RAG-evaluation methods, applied to a domain where citation errors carry professional consequences.
