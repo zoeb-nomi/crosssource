@@ -1,4 +1,5 @@
 # CrossSource
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21969577.svg)](https://doi.org/10.5281/zenodo.21969577)
 
 **An evaluation harness for RAG answer quality and citation accuracy on public case law.**
 
@@ -78,3 +79,8 @@ Retrieval ablations (k, hybrid/rerank) to lift the recall ceiling; a second judg
 ## License
 
 MIT. All corpus documents are public-domain US court opinions; per-document provenance in `data/sources.json`.
+
+
+## Citation
+
+Archived on Zenodo: [10.5281/zenodo.21969577](https://doi.org/10.5281/zenodo.21969577) (concept DOI, all versions).
