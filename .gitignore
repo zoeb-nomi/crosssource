@@ -12,3 +12,6 @@ __pycache__/
 .idea/
 .vscode/
 .claude/
+
+# raw API caches (CourtListener responses; large, re-fetchable)
+data/raw/
