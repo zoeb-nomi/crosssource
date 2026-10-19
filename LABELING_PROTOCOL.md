@@ -147,6 +147,7 @@ Include an item only if:
 
 Exclude (or have the rater flag `bad_item`) if:
 - the passage is boilerplate (standard of review, jurisdiction statement, procedural history only);
+- the passage is not the court's own text: a staff-prepared summary, syllabus or headnote, a caption, or a counsel list;
 - the passage is mainly a block quote of a statute, regulation, contract or jury instruction;
 - the question or claim can be answered from general legal knowledge without the passage *and* the passage does not add anything specific;
 - the text is garbled (OCR errors, broken footnote markers) in a way that changes meaning;

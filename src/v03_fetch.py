@@ -1,12 +1,15 @@
 """Fetch v0.3 candidate opinions from the CourtListener REST API v4.
 
-Discovery is done separately (CourtListener MCP `search`, one response per
-topic saved to data/raw/search/<topic_key>.json). This script takes those
-candidates in rank order and, per topic, fetches opinions until it has
---per-topic that pass the source rules in LABELING_PROTOCOL.md §2:
+`search`: one REST v4 search per topic in data/v0.3/topics.json, first page
+saved byte-exact to data/raw/search/<topic_key>.json (request params and time in
+<topic_key>.request.json). Queries were first explored with the CourtListener MCP.
+
+`fetch`: takes those candidates in rank order and, per topic, fetches opinions
+until it has --per-topic that pass the source rules in LABELING_PROTOCOL.md §2:
 
   GET /api/rest/v4/opinions/<id>/   -> data/raw/opinions/<id>.json        (verbatim)
-  GET /api/rest/v4/clusters/<id>/   -> data/raw/clusters/<id>.json        (verbatim)
+  cluster metadata (case name, date filed, precedential status, URL) is taken from
+  the verbatim search response; data/raw/clusters/ holds the few clusters fetched early
   accepted                          -> data/raw/opinions/<id>.meta.json   (provenance)
   every decision                    -> data/v0.3/work/fetch_log.jsonl
 
@@ -14,7 +17,8 @@ Requires COURTLISTENER_API_TOKEN in the environment (never written anywhere).
 Cached responses are reused, so re-runs cost no requests. Requests are spaced
 by --delay seconds and 429s honour Retry-After.
 
-Usage:  python src/v03_fetch.py [--per-topic 3] [--delay 1.0] [--topics a,b]
+Usage:  python src/v03_fetch.py search [--topics a,b]
+        python src/v03_fetch.py fetch [--per-topic 3] [--delay 1.0] [--topics a,b]
 """
 
 import argparse
@@ -50,23 +54,58 @@ class Client:
         self.s.headers.update({"Authorization": f"Token {token}", "User-Agent": "crosssource-v0.3 (research; MIT)"})
         self.delay, self.requests = delay, 0
 
-    def get(self, path, cache):
-        if cache.exists():
-            return json.loads(cache.read_text(encoding="utf-8"))
-        for _ in range(5):
+    def request(self, path, params=None):
+        for _ in range(8):
             time.sleep(self.delay)
-            r = self.s.get(f"{API}/{path}", timeout=60)
+            try:
+                r = self.s.get(f"{API}/{path}", params=params, timeout=90)
+            except (requests.ConnectionError, requests.Timeout) as e:
+                print(f"    {type(e).__name__} on {path} — retrying in 30s")
+                time.sleep(30)
+                continue
             self.requests += 1
+            if r.status_code >= 500:
+                print(f"    {r.status_code} on {path} — retrying in 30s")
+                time.sleep(30)
+                continue
             if r.status_code == 429:
                 wait = int(r.headers.get("Retry-After", "60"))
-                print(f"    429 — waiting {wait}s")
+                print(f"    429 on {path} — waiting {wait}s")
                 time.sleep(wait)
                 continue
             r.raise_for_status()
-            cache.parent.mkdir(parents=True, exist_ok=True)
-            cache.write_text(r.text, encoding="utf-8")
-            return r.json()
-        raise RuntimeError(f"rate-limited 5 times on {path}")
+            return r
+        raise RuntimeError(f"rate-limited 8 times on {path}")
+
+    def get(self, path, cache):
+        if cache.exists():
+            return json.loads(cache.read_text(encoding="utf-8"))
+        r = self.request(path)
+        cache.parent.mkdir(parents=True, exist_ok=True)
+        cache.write_bytes(r.content)
+        return r.json()
+
+
+def search_params(topic):
+    return {"type": "o", "q": topic["q"], "court": " ".join(topic["courts"]), "filed_after": "2018-01-01",
+            "stat_Published": "on", "order_by": "score desc"}
+
+
+def cmd_search(client, topics):
+    for topic in topics:
+        params = search_params(topic)
+        out = RAW / "search" / f"{topic['topic_key']}.json"
+        if out.exists() and (RAW / "search" / f"{topic['topic_key']}.request.json").exists():
+            continue
+        r = client.request("search/", params)
+        out.parent.mkdir(parents=True, exist_ok=True)
+        out.write_bytes(r.content)
+        (RAW / "search" / f"{topic['topic_key']}.request.json").write_text(json.dumps(
+            {"url": f"{API}/search/", "params": params, "status": r.status_code,
+             "fetched_at": datetime.now(timezone.utc).isoformat(timespec="seconds")}, indent=2) + "\n")
+        d = r.json()
+        print(f"{topic['topic_key']:28} count={d['count']:5}  page={len(d['results'])}  "
+              f"courts={sorted({x['court_id'] for x in d['results']})}")
 
 
 def opinion_text(op):
@@ -122,6 +161,7 @@ def candidates(topic):
 
 def main():
     ap = argparse.ArgumentParser()
+    ap.add_argument("cmd", choices=["search", "fetch"])
     ap.add_argument("--per-topic", type=int, default=3)
     ap.add_argument("--delay", type=float, default=1.0)
     ap.add_argument("--topics", default="")
@@ -133,6 +173,10 @@ def main():
     if args.topics:
         topics = [t for t in topics if t["topic_key"] in args.topics.split(",")]
     client = Client(token, args.delay)
+    if args.cmd == "search":
+        cmd_search(client, topics)
+        print(f"\n{client.requests} API requests this run")
+        return
     log_path = V3 / "work" / "fetch_log.jsonl"
     log_path.parent.mkdir(parents=True, exist_ok=True)
     log = open(log_path, "a", encoding="utf-8")
@@ -141,10 +185,12 @@ def main():
     for topic in topics:
         cands = candidates(topic)
         if cands is None:
-            print(f"[{topic['topic_key']}] no cached search — run the MCP search first")
+            print(f"[{topic['topic_key']}] no cached search — run `search` first")
             continue
-        accepted = [json.loads(p.read_text())["opinion_id"] for p in (RAW / "opinions").glob("*.meta.json")
-                    if json.loads(p.read_text()).get("topic_key") == topic["topic_key"]]
+        metas = [json.loads(p.read_text()) for p in (RAW / "opinions").glob("*.meta.json")]
+        accepted = [m["opinion_id"] for m in metas if m.get("topic_key") == topic["topic_key"]]
+        # CourtListener sometimes holds one decision under two clusters; dedupe on name + date
+        same_case = {(m["case_name"].lower(), m["date_filed"]) for m in metas}
         courts_used = set()
         # two passes: first prefer one opinion per court, then fill
         for distinct in (True, False):
@@ -153,10 +199,17 @@ def main():
                     break
                 if oid in accepted or (distinct and result["court_id"] in courts_used):
                     continue
-                if result["court_id"] not in topic["courts"]:
-                    continue
+                if result["court_id"] not in topic["courts"] or EXCLUDE_NAME_RE.search(result["caseName"]):
+                    continue  # decided from search metadata alone; no request spent
+                if (result["caseName"].lower(), result["dateFiled"]) in same_case:
+                    continue  # duplicate cluster of a case already accepted
                 op = client.get(f"opinions/{oid}/", RAW / "opinions" / f"{oid}.json")
-                cluster = client.get(f"clusters/{result['cluster_id']}/", RAW / "clusters" / f"{result['cluster_id']}.json")
+                # cluster metadata comes from the verbatim search response (same fields as clusters/<id>/),
+                # which halves the requests against CourtListener's 50/hour, 125/day quota
+                cached = RAW / "clusters" / f"{result['cluster_id']}.json"
+                cluster = (json.loads(cached.read_text(encoding="utf-8")) if cached.exists() else
+                           {"case_name": result["caseName"], "date_filed": result["dateFiled"],
+                            "precedential_status": result["status"], "absolute_url": result["absolute_url"]})
                 reason = check(result, op, cluster, topic)
                 entry = {"topic_key": topic["topic_key"], "opinion_id": oid, "cluster_id": result["cluster_id"],
                          "case_name": result["caseName"], "court_id": result["court_id"], "accepted": reason is None,
@@ -182,6 +235,7 @@ def main():
                 }
                 (RAW / "opinions" / f"{oid}.meta.json").write_text(json.dumps(meta, indent=2) + "\n", encoding="utf-8")
                 accepted.append(oid)
+                same_case.add((meta["case_name"].lower(), meta["date_filed"]))
                 courts_used.add(result["court_id"])
                 print(f"  + {oid} {result['court_id']:5} {meta['date_filed']} {meta['case_name'][:50]} [{field}]")
         summary[topic["topic_key"]] = len(accepted)

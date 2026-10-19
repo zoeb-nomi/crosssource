@@ -1,0 +1,233 @@
+PRECEDENTIAL
+UNITED STATES COURT OF APPEALS
+FOR THE THIRD CIRCUIT
+No. 16-1969
+JEFFREY WORKMAN,
+Appellant
+v. SUPERINTENDENT ALBION SCI; DISTRICT ATTORNEY PHILADELPHIA; ATTORNEY GENERAL
+PENNSYLVANIA On Appeal from the United States District Court
+for the Eastern District of Pennsylvania
+(E.D. Pa. No.: 2-14-cv-02957)
+District Judge: Honorable Paul S. Diamond
+Argued: February 21, 2018
+(Opinion filed: February 12, 2019) Before: AMBRO, RESTREPO, and FUENTES, Circuit
+Judges Marshall L. Dayan [ARGUED] Lisa B. Freeland Office of the Federal Public Defender 1001 Liberty Avenue 1500 Liberty Center Pittsburgh, PA 15222
+Counsel for Appellant Catherine B. Kiefer [ARGUED] Max Kaufman Acting Chief, Federal Litigation Unit Ronald Eisenberg Deputy District Attorney, Law Division John Delaney First Assistant District Attorney Kelley B. Hodge District Attorney Susan E. Affronti Philadelphia County Office of District Attorney 3 South Penn Square Philadelphia, PA 19107
+Counsel for Appellee
+OPINION OF THE COURT FUENTES, Circuit Judge.
+This case arises from the shooting death of Lawson Hunt in August 2006. Appellant Jeffrey Workman was one of two people to shoot Hunt, and was convicted of first-degree murder in Pennsylvania on a theory of transferred intent. His trial counsel, pursuing what might generously be called a unique theory of criminal liability, did not meaningfully test the Commonwealth of Pennsylvania’s case. According to Workman, his trial counsel told him that he could not be convicted of murder because Hunt was already dead when he was struck by Workman’s bullet. Based on this representation, Workman declined a plea bargain for a 20-year term of imprisonment. In post-conviction proceedings, Workman’s post-conviction counsel failed to make a claim for ineffective assistance of trial counsel based on trial counsel’s failure to present a cogent defense.
+Workman appeals the dismissal of his petition for writ of habeas corpus under 28 U.S.C. § 2254, arguing that his trial counsel was constitutionally ineffective. Although his claim of ineffective assistance of trial counsel was procedurally defaulted in state post-conviction relief proceedings, he argues that his default should be excused because his state post-conviction counsel rendered ineffective assistance. Respondents argue that Workman cannot show his attorneys rendered ineffective assistance and therefore cannot excuse his procedural default under Martinez v. Ryan.1
+Because Workman’s state post-conviction counsel’s assistance was ineffective and because his underlying ineffective assistance of trial counsel claim has some merit, we excuse his procedural default of his underlying claim under Martinez. Because, on the face of the record, trial counsel’s assistance was manifestly ineffective, we will vacate the Order
+566 U.S. 1 (2012). of the District Court and remand with instructions to grant a conditional writ of habeas corpus. I. Facts
+A. The Shooting of Lawson Hunt
+In August 2006, Gary Moses shot Lawson Hunt in Philadelphia, Pennsylvania. Hearing the shots, Workman found Hunt, saw Moses, and fired at Moses. Workman fired eight times. One bullet ricocheted off a solid object and struck Hunt in the chest. Hunt died as a result of his injuries. According to the assistant medical examiner, who testified at trial, either of the two bullets that struck Hunt could have been fatal.
+B. Workman’s Trial
+Workman was charged with first-degree murder, with Moses as a co-defendant. The Commonwealth’s theory of transferred intent argued that Workman, firing at Moses, had intended to kill Moses and therefore his intent to kill Moses transferred when his bullet struck Hunt. At trial, Assistant Medical Examiner Edwin Lieberman testified that Hunt’s death was caused by two gunshot wounds. He testified that the wound to Hunt’s chest, caused by the ricocheted bullet fired by Workman, was “much more immediately fatal,”2 but the other bullet (fired by Moses) “certainly [could have] cause[d] death,” depending “upon the time between the shooting or the time he’s shot and the time he gets to the hospital and how quickly they can do something about it.”3 In other words, Lieberman
+App. at 196.
+Id. could not definitively state that Moses’s bullet, and not Workman’s, had killed Hunt. In fact, Lieberman testified that, based on the blood evidence surrounding the ricocheted bullet wound, he believed Hunt had still been alive when he was struck by the bullet fired by Workman. Workman’s trial counsel cross-examined Lieberman, but this cross-examination focused on eliciting testimony that Lieberman could not establish that Workman’s bullet hit Hunt before Moses’s bullet.
+At the conclusion of the Commonwealth’s case-in-chief, Workman’s counsel moved for a judgment of acquittal. He argued that because Moses fired first and because “to a reasonable medical certainty the first bullet killed” Hunt, Workman could not be convicted because “he has fired into the body of a man that is dead and you can’t kill a dead man.”4 He made this argument despite Lieberman’s testimony, which included the opinion that Hunt was alive when struck by Workman’s bullet. The Commonwealth pointed out that inconsistency. The trial court denied the motion.
+Having reserved his opening statement for the beginning of Workman’s case-in-chief, Workman’s trial counsel simply stated:
+Ladies and gentlemen of the jury,
+you’ve been very patient for six or
+seven days. I will inform you now
+as the judge will later charge you,
+Jeffrey Workman will not present
+any evidence. So I’m opening to
+App. at 231.
+you and not saying that we’re
+presenting anything. You’ll get
+the full impact of that when the
+judge charges you later in the case.
+Thank you very much.5
+Workman’s counsel called no witnesses and presented no evidence, resting immediately. Workman’s counsel also requested that the jury be instructed on voluntary and involuntary manslaughter and defense of others. In closing, Workman’s trial counsel reiterated his theory: that because codefendant Moses shot Hunt first, the Commonwealth could not establish that Workman killed Hunt beyond a reasonable doubt. Despite Lieberman’s testimony regarding the blood evidence suggesting that Hunt survived the immediate aftermath of Moses’s gunshot, Workman’s trial counsel stated:
+But the point of the matter is [Hunt
+is] fired on by the first bullet. He
+goes down. The blood spots are
+near or at that spot. No showing
+that he moved around or did
+anything. He’s dead. He’s dead
+from the first bullet. And when the
+doctor has – and this is the last
+thing I’m going to say about that –
+the unmitigated gall in his position
+as a Philadelphia medical
+examiner to come into this
+courtroom and tell you the man
+was alive when the ricochet hit him
+App. at 265.
+and he doesn’t know where the
+ricochet shot comes from . . . at
+that given point you must conclude
+that they have not proved their case
+beyond a reasonable doubt
+because the doctor’s testimony is
+absolutely incredulous.6 In his closing remarks, counsel did not mention Workman’s intent to kill or to defend Hunt, despite requesting instructions on involuntary and voluntary manslaughter as well as defense of others.
+The jury convicted Workman of first-degree murder. It acquitted Moses. Workman received a mandatory sentence of life imprisonment without parole.
+C. Workman’s State Post-Conviction
+Proceedings
+Workman’s first opportunity to raise a claim regarding the performance of his trial counsel was during Pennsylvania post-conviction proceedings under the Post Conviction Relief Act.7 After being appointed counsel and filing an amended petition, Workman’s petition raised a single claim: “ineffective assistance of trial counsel for failing to request a jury instruction that indicated that the transferred intent doctrine also applied to the petitioner’s claim of defense of use of force to protect a third person.”8 App. at 275. 42 Pa. Cons. Stat. § 9541, et seq. App. at 329.
+Workman’s state post-conviction counsel did not raise any argument concerning Workman’s trial counsel’s failure to present evidence or argue consistently with the evidence presented to the jury.
+The Superior Court of Pennsylvania, addressing the claim, found that “review of the certified record reveals that the trial court gave a thorough jury instruction regarding the defense of force to protect a third person.”9 It concluded that the “nonsensical claim of ineffective assistance of counsel lack[ed] merit,” and noted that “even if we could make sense of [Workman’s] argument, he fails to establish how inclusion of the requested jury instructions would have been so influential that it would have likely changed the outcome of [Workman’s] trial.”10
+D. Workman’s Habeas Proceedings
+Workman petitioned for a writ of habeas corpus under 28 U.S.C. § 2254 in the District Court. One ground upon which he petitioned was that he was denied the effective assistance of counsel at trial and on direct appeal.11 Proceeding pro se, he stated that “[t]rail [sic] counsel told me that given the [C]ommonwealth’s case and evidence as a whole there was no way under the law I could be convicted, which impacted my App. at 344. Id. Workman’s trial counsel continued to represent Workman on direct appeal. Nevertheless, procedural default of ineffective assistance of direct appeal counsel is not eligible to be excused under Martinez. See Davila v. Davis, 137 S. Ct. 2058, 2063 (2017). decisions through out [sic] the proceedings.”12 He alleged in his petition that he included this in his initial post-conviction motion, but his appointed post-conviction counsel “did not brief it to the courts.”13 He did not specifically allege that he told post-conviction counsel of this claim in his petition. He did, however, specifically allege that, with regard to this claim, the Commonwealth failed to prove he killed Hunt. Further, in his reply to Respondents’ Answer to Workman’s habeas petition, Workman stated:
+Also again to clarify what is meant
+by this claim of ineffectiveness
+[sic] assistance of counsel was not
+to limit the claim to the advice of
+counsel, but to counsel’s overall
+performance. . . . Counsel did not
+only tell me this [deficient advice],
+he used it as his sole defense at
+trial.14
+In his reply, Workman also stated that counsel’s ineffective assistance “ultimately lead [sic] me to deny a plea offer, [and to] not testify.”15
+The petition was referred to a Magistrate Judge, who issued a Report and Recommendation that the petition be dismissed. The Magistrate Judge concluded that Workman’s claims were without merit. In his objections to the Report and App. at 355. Id. App. at 442 (emphasis added). Id. Recommendation, Workman stated that his trial counsel’s conduct led him to deny a plea agreement offered by the Commonwealth of between ten and twenty years’ imprisonment. Moreover, Workman also stated that but for trial counsel’s statement that he could not be convicted, he would have testified in his own defense.
+The District Court adopted the Magistrate Judge’s Report and Recommendation. With respect to Workman’s ineffective-assistance-of-counsel claims, which are before us now, it held that Workman could not excuse procedural default under Martinez. The District Court refused to consider Workman’s allegations regarding his failure to accept the plea offer and his failure to testify, because it mistakenly believed these allegations were first raised in his objections to the report and recommendation. It concluded that Workman had not shown prejudice from trial counsel’s allegedly deficient performance, though it did not conclude that trial counsel’s performance was deficient, because Workman did not specify “the alternate actions he would have taken but for trial counsel’s purportedly defective advice.”16 It concluded that Workman’s post-conviction counsel was not deficient. Noting that it presumed the reasonableness of post-conviction counsel’s strategic choices, the Court stated that Workman’s ability to rebut that presumption was undermined by Workman’s failure to allege either of two events. First, Workman failed to allege that he informed his post-conviction counsel that his trial counsel told him that he could not be convicted. Second, Workman failed to allege that his post-conviction counsel was aware of this allegation. The District
+App. at 23. Court dismissed the petition, and Workman applied for a certificate of appealability.
+E. Proceedings Before This Court
+We granted a certificate of appealability in October 2016. In January 2018, we amended the certificate of appealability sua sponte. The amended certificate states, in full:
+The foregoing request for a
+certificate of appealability is
+granted as to Workman’s claim
+that trial counsel rendered
+ineffective assistance of counsel
+when he gave erroneous advice
+that Workman could not be
+convicted and thus failed to
+present a cogent defense strategy
+at trial. Jurists of reason might
+well agree that this claim is
+procedurally defaulted, as it was
+not presented to the Superior Court
+and Pennsylvania courts would
+now refuse to consider the claim in
+a new Post Conviction Relief Act
+(“PCRA”) petition. See 42 Pa.
+C.S. § 9545(b); Slack v. McDaniel,
+529 U.S. 473, 484 (2000).
+However, “[w]here, under state
+law, claims of ineffective
+assistance of trial counsel must be
+raised in an initial-review
+collateral proceeding, a procedural default will not bar a federal habeas court from hearing a substantial claim of ineffective assistance at trial if, in the initial-review collateral proceeding, there was no counsel or counsel in that proceeding was ineffective.” Martinez v. Ryan, 132 S. Ct. 1309, 1320 (2012). Jurists of reason could debate whether Workman’s claim that trial counsel was ineffective for providing erroneous advice that he could not be convicted and thus failed to present any cogent defense at trial, causing him to reject a plea offer, was substantial. Strickland v. Washington, 466 U.S. 668, 687-88, 694 (1984). Jurists of reason could also debate whether PCRA counsel was ineffective for failing to raise the claim on initial-collateral review. On this ground only, we find that the District Court’s procedural ruling is debatable and that Workman has met his burden of making a substantial showing of the denial of a constitutional right. Slack v. McDaniel, 529 U.S. 473, 484 (2000). The application for a certificate of appealability is denied as to all other issues.
+Notably, jurists of reason would
+agree that evidence was sufficient
+to support Workman’s
+convictions. Jackson v. Virginia,
+443 U.S. 307, 319 (1979). II. Discussion17
+Workman’s claim of ineffective assistance of trial counsel on the basis of trial counsel’s failure to present a cogent defense and trial counsel’s defective advice was never presented to the state courts in post-conviction relief proceedings. It is procedurally defaulted. Accordingly, he must rely on the exception established by Martinez.
+A. Excusing Procedural Default Under Martinez
+v. Ryan
+Martinez recognizes a narrow exception to the doctrine of procedural default: “Inadequate assistance of counsel at initial-review collateral proceedings may establish cause for a prisoner’s procedural default of a claim of ineffective assistance at trial.”18 This exception is available to a petitioner who can show that: 1) his procedurally defaulted ineffective assistance of trial counsel claim has “some merit”19; and that 2) his state-post conviction counsel was “ineffective under the We have jurisdiction under 28 U.S.C. §§ 1291 and 2253. We review the legal conclusions of the District Court de novo. Johnson v. Rosemeyer, 117 F.3d 104, 109 (3d Cir. 1997). Martinez, 566 U.S. at 9. Id. at 14 (citing Miller-El v. Cockrell, 537 U.S. 322 (2003)). standards of Strickland v. Washington.”20 We explain these requirements in turn.
+The Underlying Claim Must Have
+“Some Merit”
+To excuse procedural default on an ineffective assistance of trial counsel claim under Martinez, that claim must be substantial—it must have “some merit.”21 Miller-El v. Cockrell, the case on which the Supreme Court based its description of what a “substantial claim” entails, concerns the standards for issuing a certificate of appealability. To demonstrate that his claim has some merit, a petitioner must “show that reasonable jurists could debate whether (or, for that matter, agree that) the petition should have been resolved in a different manner or that the issues presented were adequate to deserve encouragement to proceed further.”22
+This is different from the standard applied on the merits under Strickland v. Washington.23 That standard requires a petitioner to show counsel was “deficient,” meaning “that counsel made errors so serious that counsel was not functioning as the ‘counsel’ guaranteed to the defendant by the Sixth Amendment.”24 A petitioner must also show that “the deficient performance prejudiced the defense,” which “requires showing that counsel’s errors were so serious as to Id. Id. (citing Miller-El, 537 U.S. 322). Miller-El, 537 U.S. at 336 (internal citation, quotation marks, and alteration omitted). 466 U.S. 668 (1984). Id. at 687. deprive the defendant of a fair trial.”25 This is an exacting standard,26 reflecting the reluctance of the courts to second-guess strategic decisions made by counsel.
+State Post-Conviction Counsel Must Be
+Ineffective
+A substantial claim alone is not sufficient to excuse a petitioner’s procedural default. Martinez holds that state post-conviction counsel must be “ineffective under the standards of Strickland v. Washington” to excuse the procedural default of the underlying claim.27
+We have described Strickland as containing two prongs, both of which must be met to sustain a claim of ineffective assistance of counsel: the “performance” and “prejudice” prongs.28 The “performance” prong refers to Strickland’s Id.
+See Kimmelman v. Morrison, 477 U.S. 365, 382 (1986) (noting that the Strickland standard is “highly demanding”). Martinez, 566 U.S. at 14. See Bey v. Superintendent Greene SCI, 856 F.3d 230, 238 (3d Cir. 2017) (“To prove ineffective assistance of counsel under Strickland v. Washington, a petitioner must prove ‘(1) that his counsel’s performance was deficient, that is, it fell below an objective standard of reasonableness, and (2) that counsel’s deficient performance prejudiced his client,’ i.e., that ‘there is a reasonable probability that, but for counsel’s unprofessional errors, the result of the proceeding would have been different.’ We have previously referred to these as the ‘performance’ and ‘prejudice’ prongs of the Strickland test.” (citation omitted)). requirement that “counsel’s representation fell below an objective standard of reasonableness.”29 The “prejudice” prong refers to Strickland’s requirement that a petitioner show “a reasonable probability that, but for counsel’s unprofessional errors, the result of the proceeding would have been different.”30
+For Workman to show that his state post-conviction counsel’s deficient performance caused prejudice under Strickland, he must show that his state post-conviction counsel could have obtained a different result had he presented the now-defaulted ineffective-assistance-of-trial-counsel claim. In other words, he must prove the merits of his underlying ineffective-assistance-of-trial-counsel claim in order to excuse the procedural default of that claim and obtain consideration on the merits. At this stage, what is important is that the underlying ineffective-assistance-of-trial-counsel claim is “substantial,” not that a petitioner has, in fact, been “prejudiced” by trial counsel’s deficient performance under Strickland.
+If the use of the word “substantial” and the phrase “some merit” rather than “prejudicial” does not make it explicit, the Supreme Court clearly implies, by relying on Miller-El v. Cockrell in its requirement that the claim be substantial, that the underlying ineffective-assistance-of-trial-counsel claim must be evaluated under a standard less exacting than Strickland prejudice.31 In Martinez, the Court Strickland, 466 U.S. at 687–88. Id. at 694.
+See Martinez, 566 U.S. at 14; Bey, 856 F.3d at 238 (interpreting Martinez as “suggesting that we apply the acknowledged that an unrepresented or ineffectively represented prisoner likely cannot vindicate an ineffective-assistance-of-trial-counsel claim:
+Without the help of an adequate
+attorney, a prisoner will have
+similar difficulties vindicating a
+substantial ineffective-assistance-
+of-trial-counsel claim. Claims of
+ineffective assistance at trial often
+require investigative work and an
+understanding of trial strategy.
+When the issue cannot be raised on
+direct review, moreover, a prisoner
+asserting an ineffective-assistance-
+of-trial-counsel claim in an initial-
+review collateral proceeding
+cannot rely on a court opinion or
+the prior work of an attorney
+addressing that claim. . . . To
+present a claim of ineffective
+assistance at trial in accordance
+with the State’s procedures, then, a
+prisoner likely needs an effective
+attorney.
+The same would be true if the State
+did not appoint an attorney to assist
+in the initial-review collateral
+proceeding. The prisoner, standard for issuing certificates of appealability in resolving the inquiry into what constitutes a ‘substantial’ claim”).
+unlearned in the law, may not
+comply with the State’s procedural
+rules or may misapprehend the
+substantive details of federal
+constitutional law. . . . While
+confined to prison, the prisoner is
+in no position to develop the
+evidentiary basis for a claim of
+ineffective assistance, which often
+turns on evidence outside the trial
+record.32
+Martinez also recognizes that “[a] finding of cause and prejudice does not entitle the prisoner to habeas relief. It merely allows a federal court to consider the merits of a claim that otherwise would have been procedurally defaulted.”33
+Two other appellate courts have considered the role of Martinez’s “substantial” requirement and whether the underlying ineffective-assistance-of-trial-counsel claim must also be analyzed under the exacting bar of Strickland. In our view, and in accordance with the view shared by the Seventh and Ninth Circuits, when a petitioner shows that post-conviction relief counsel’s performance was unreasonably deficient, the requirement that the deficient performance result in prejudice may be satisfied “with a substantial claim of ineffective assistance of trial counsel that would otherwise have been deemed defaulted.”34 Martinez, 566 U.S. at 11–12 (internal citations omitted). Id. at 17. Brown v. Brown, 847 F.3d 502, 513 (7th Cir. 2017) (citing Detrich v. Ryan, 740 F.3d 1237, 1245–46 (9th Cir. 2013)).
+In Detrich v. Ryan,35 the Ninth Circuit considered the application of Martinez in light of Trevino v. Thaler.36 In Trevino, the Supreme Court set out the four requirements of Martinez:
+We consequently read Coleman as
+containing an exception, allowing
+a federal habeas court to find
+“cause,” thereby excusing a
+defendant’s procedural default,
+where (1) the claim of “ineffective
+assistance of trial counsel” was a
+“substantial” claim; (2) the
+“cause” consisted of there being
+“no counsel” or only “ineffective”
+counsel during the state collateral
+review proceeding; (3) the state
+collateral review proceeding was
+the “initial” review proceeding in
+respect to the “ineffective-
+assistance-of-trial-counsel claim”;
+and (4) state law requires that an
+“ineffective assistance of trial
+counsel [claim] . . . be raised in an
+initial-review collateral
+proceeding.” 37 Addressing “prejudice,” the Ninth Circuit recognized that: 740 F.3d 1237 (9th Cir. 2013). 569 U.S. 413 (2013). Id. at 423 (citing Martinez, 566 U.S. at 12–18).
+If a prisoner who had [post-
+conviction relief] counsel were
+required to show prejudice, in the
+ordinary Strickland sense,
+resulting from his [post-conviction
+relief] counsel’s deficient
+performance in order to satisfy the
+second Martinez requirement, the
+prisoner would have to show, as a
+condition for excusing his
+procedural default of a claim, that
+he would succeed on the merits of
+that same claim.38
+The Ninth Circuit rejected that notion. The Court concluded that, “for the narrow purpose of satisfying the second Martinez requirement to establish ‘cause,’ a prisoner need only show that his [post-conviction relief] counsel performed in a deficient matter.”39 The Court explained that “[a] prisoner need not show actual prejudice resulting from his [post-conviction relief] counsel’s deficient performance, over and above his required showing that the [ineffective-assistance-of-trial-counsel] claim be ‘substantial’ under the first Martinez requirement.”40
+The Ninth Circuit also considered Justice Breyer’s statement “respecting the denial of the petition for the writ of Detrich, 740 F.3d at 1246. Id. at 1245. Id. at 1245–46. certiorari” in Gallow v. Cooper,41 understanding him to distinguish between “cause” under the second prong of Martinez and “cause and prejudice” under Strickland: “That is, cause and prejudice under Strickland are determined separately from, and after, a determination of ‘cause’ under Martinez.”42 Justice Breyer, who wrote for the Court in Trevino, wrote in Gallow that “[t]he ineffective assistance of state habeas counsel might provide cause to excuse the default of the claim, thereby allowing the federal habeas court to consider the full contours of Gallow’s ineffective-assistance claim.”43 We agree with the Ninth Circuit’s analysis. Whether the ineffectiveness of post-conviction relief counsel provided cause to excuse procedural default is separate from the question of whether an ineffective-assistance-of-trial-counsel claim would prevail on the merits.
+In Brown v. Brown,44 the Seventh Circuit adopted the Ninth Circuit’s rule as follows: “To demonstrate cause under Martinez-Trevino, the petitioner must show deficient performance by counsel on collateral review as required under the first prong of the Strickland analysis. . . . Actual resulting prejudice can be established with a substantial claim of ineffective assistance of trial counsel that would otherwise have been deemed defaulted.”45
+This rule is sensible, workable, and a proper reading of Martinez. If Workman shows that his underlying ineffective-570 U.S. 933 (2013). Detrich, 740 F.3d at 1246. Gallow, 570 U.S. at 933. 847 F.3d 502 (7th Cir. 2017) Id. at 513 (internal citations omitted). assistance-of-trial-counsel claim has some merit and that his state post-conviction counsel’s performance fell below an objective standard of reasonableness, he has shown sufficient prejudice from counsel’s ineffective assistance that his procedural default must be excused under Martinez.46
+B. Workman’s Underlying Claim Has “Some
+Merit”
+On the question presented by the amended certificate of appealability, Workman’s claim has “some merit” under the standard contemplated by Martinez. Respondents argue that the claim that Workman’s trial counsel was constitutionally ineffective for failing to present a cogent defense was not presented to the District Court and, therefore, was waived by Workman.
+We disagree that Workman waived this claim. “A habeas corpus petition prepared by a prisoner without legal assistance may not be skillfully drawn and should thus be read generously. ‘It is the policy of the courts to give a liberal construction to pro se habeas petitions.’”47 Reviewing the events at trial reflected by the record and the habeas petition See Preston v. Superintendent of Graterford SCI & Att’y Gen. of Pa., No. 16-3095, slip op. at 21-22 (3d Cir. Sept. 5, 2018) (stating that “[a]ctual resulting prejudice” may be established “with a substantial claim of ineffective assistance of trial counsel” (quoting Brown, 846 F.3d at 513)). Rainey v. Varner, 603 F.3d 189, 198 (3d Cir. 2010) (quoting United States ex rel. Montgomery v. Brierley, 414 F.2d 552, 555 (3d Cir. 1969)). prepared pro se by Workman, we construe his third ground for relief in his petition to raise a claim of ineffective assistance of trial counsel based on trial counsel’s defective defense, which included calling no witnesses, presenting no evidence, and arguing inconsistently with the testimony in evidence.
+C. Workman’s Post-Conviction Counsel
+Rendered Ineffective Assistance
+Workman’s state post-conviction counsel failed to recognize the merit of Workman’s claim that trial counsel was constitutionally ineffective for failing to present a cogent defense. In a case in which trial counsel presented no witnesses or evidence and appeared on the face of the record to be unable to adapt to the medical examiner’s testimony that Hunt was alive when the ricocheted bullet struck him in the chest, Workman’s state post-conviction counsel presented one claim in PCRA proceedings: “ineffective assistance of trial counsel for failing to request a jury instruction that indicated that the transferred intent doctrine also applied to the petitioner’s claim of defense of use of force to protect a third person.”48 The Superior Court found that claim “nonsensical,” to the extent that it could not determine what exactly Workman, through state post-conviction counsel, claimed.49
+There is a “strong presumption” that an attorney’s decision to pursue some claims and decline to pursue others is a tactical choice.50 However, this presumption is not App. at 329. Id. Yarborough v. Gentry, 540 U.S. 1, 6 (2003) (“When counsel focuses on some issues to the exclusion of others, there is a invincible: “A petitioner may rebut the suggestion that the challenged conduct reflected merely a [tactical] choice . . . by showing that counsel omitted significant and obvious issues while pursuing issues that were clearly and significantly weaker.”51
+Here, a significant and obvious issue existed: trial counsel’s utter and complete failure to test the Commonwealth’s case with appropriate cross-examination of Lieberman, his failure to present witnesses (either fact or expert) in support of his position, or to adapt his argument to the testimony in evidence instead of simply asserting the contrary statement that “[Hunt is] dead. He’s dead from the first bullet.” 52 State post-conviction counsel overlooked these errors, as is apparent from his letter to Workman that said, “Contrary to your assessment, a review of the notes of testimony does not reveal ‘numerous issues of ineffective assistance of counsel.’ Trial counsel’s argument to the jury was an attempt to save you from a first[-]degree murder conviction.”53
+Moreover, the claim that state post-conviction counsel chose to pursue was clearly and significantly weaker. The Superior Court held that the “nonsensical claim of ineffective assistance of counsel lack[ed] merit.”54 It further stated that strong presumption that he did so for tactical reasons rather than through sheer neglect.”). McKee v. United States, 167 F.3d 103, 106 (2d Cir. 1999) (citation and quotation marks omitted). App. at 275. App. at 460. App. at 344. “even if we could make sense of [Workman’s] argument, he fails to establish how inclusion of the requested jury instructions would have been so influential that it would have likely changed the outcome of [Workman’s] trial.”55
+The evident weakness of this claim is not merely illuminated with the benefit of hindsight, as a “review of the certified record reveals that the trial court gave a thorough jury instruction regarding the defense of force to protect a third person.”56 In other words, it appears that state post-conviction counsel’s claim was that trial counsel was ineffective for failing to request a jury instruction that was actually given. This is the epitome of a doomed claim.
+In our view, Workman has rebutted the presumption that state post-conviction counsel made a strategic choice in omitting the issue of trial counsel’s failure to present a cogent defense, and that state post-conviction counsel’s performance was deficient under the “performance” prong of Strickland. We therefore conclude that Workman has satisfied the requirements of Martinez. The procedural default of his ineffective-assistance-of-trial-counsel claim is excused.
+D. The Ineffective Assistance of Workman’s
+Trial Counsel Violated Workman’s Sixth
+Amendment Right to Counsel
+Once procedural default is excused, “our review of a petitioner’s claim is de novo because the state court did not
+Id.
+Id. consider the claim on the merits.”57 Our review of Workman’s claim for ineffective assistance of trial counsel proceeds under the two prongs of Strickland v. Washington,58 which require Workman to show both that “counsel’s performance was deficient” and that he was prejudiced as a result.59
+Workman’s trial counsel’s performance was deficient under Strickland even without considering allegations of defective advice and purported plea agreements. To establish deficient performance, a “defendant must show that counsel’s representation fell below an objective standard of reasonableness.”60 However, “to eliminate the distorting effects of hindsight . . . . a court must indulge a strong presumption that counsel’s conduct falls within the wide range of reasonable professional assistance; that is, the defendant must overcome the presumption that, under the circumstances, the challenged action ‘might be considered sound trial strategy.’”61 Nonetheless, “[w]here the deficiencies in counsel’s performance are severe and cannot be characterized as the product of strategic judgment, ineffectiveness may be clear.”62 Ultimately, “[t]he relevant question is not whether Bey, 856 F.3d at 236 (citing Bronshtein v. Horn, 404 F.3d 700, 710 n.4, 715 (3d Cir. 2005)). 466 U.S. 668 (1984). Id. at 687. Although the Court here conducts its own analysis under Strickland, the Commonwealth concedes in its Supplement to Petition for Rehearing and Rehearing En Banc that relief under Strickland is proper. Id. at 688. Id. at 689 (quoting Michel v. Louisiana, 350 U.S. 91, 101 (1955)). United States v. Gray, 878 F.2d 702, 711 (3d Cir. 1989) counsel’s choices were strategic, but whether they were reasonable.”63
+The record is clear that counsel’s performance was deficient. In response to Lieberman’s testimony, which indicated that the blood evidence revealed that Hunt was alive when he was shot in the chest by the ricocheted bullet fired by Workman, trial counsel argued that Lieberman possessed “unmitigated gall.”64 Trial counsel did not call an expert witness to rebut Lieberman’s testimony, or call any fact witnesses. Trial counsel’s cross-examination of Lieberman focused solely on establishing that Workman’s bullet did not hit Hunt first. At best, trial counsel established that Lieberman could not conclusively state that Workman’s bullet hit Hunt before Moses’s. He utterly failed to contend with Lieberman’s testimony that Moses’s bullet hit Hunt first, but Hunt remained alive when Workman’s bullet struck Hunt.
+“[T]he adversarial process protected by the Sixth Amendment requires that the accused have ‘counsel acting in the role of an advocate.’”65 Workman’s trial counsel acted as an advocate not of his client but of his theory—that one cannot kill a dead man, and therefore the jury could not convict Workman of homicide—all contrary to the facts and testimony before the jury. Any objective standard of reasonableness requires counsel to understand facts and testimony and adapt to them, even at the expense of purportedly clever theories. Workman’s trial counsel appears to have misunderstood or Roe v. Flores-Ortega, 528 U.S. 470, 481 (2000). App. at 275. United States v. Cronic, 466 U.S. 648, 656 (1984) (quoting Anders v. California, 386 U.S. 738, 743 (1967)). willfully neglected this when faced with Lieberman’s testimony. No sound strategy would support counsel’s choices,66 and counsel’s performance falls below an objective standard of reasonable performance.67
+Under Strickland, this deficient performance must be paired with specific prejudice—a “reasonable probability that, but for counsel’s unprofessional errors, the result of the proceeding would have been different.”68 A “reasonable probability is a probability sufficient to undermine confidence in the outcome.”69 Counsel’s failure in this case prejudiced Workman. Counsel failed to present a case on behalf of his client and, when cross-examining the Commonwealth’s witnesses, failed to modify his theory of the case to account for the evidence presented by the Commonwealth. Workman’s counsel wholly failed to rebut the Commonwealth’s evidence, Cf. Lewis v. Horn, 581 F.3d 92, 114 (3d Cir. 2009); Thomas v. Varner, 428 F.3d 491, 500 (3d Cir. 2005) (“In cases in which the record does not explicitly disclose trial counsel’s actual strategy or lack thereof (either due to lack of diligence on the part of the petitioner or due to the unavailability of counsel), the presumption may only be rebutted through a showing that no sound strategy posited by the Commonwealth could have supported the conduct.”). Even as early as the preliminary hearing, Lieberman testified that either gunshot wound would have been fatal to Hunt. Thus, before trial began, counsel had notice that the Commonwealth had some evidence that cut against Workman. Counsel chose to ignore it and press his own theory to Workman’s detriment. Strickland v. Washington, 466 U.S. 668, 694 (1984). Id. instead stating in his closing statement that Lieberman’s testimony was supported only by “unmitigated gall.” Counsel also requested jury instructions on involuntary and voluntary manslaughter and defense of others, in an effort to establish that Workman acted in defense of Hunt. Counsel, however, did nothing to support a conviction for those lesser offenses. Although the Commonwealth mounted a strong case against Workman, he is required here only to show that but for counsel’s unprofessional errors there is a reasonable probability that the outcome of the proceeding would have been different. He has met that burden.
+As a result, we hold that Workman’s trial counsel was constitutionally ineffective. Workman is entitled to habeas relief under 28 U.S.C. § 2254. III. Conclusion
+For the foregoing reasons, we will vacate the order of the District Court and remand with instructions to grant a conditional writ of habeas corpus.

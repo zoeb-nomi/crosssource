@@ -28,6 +28,8 @@ OUT = ROOT / "data" / "v0.3"
 
 PAGE_HEADER_RE = re.compile(r"^\s*(USCA\d+ Appeal:|Appellate Case:|Case:\s*\d|USCA Case #).*$", re.I)
 PAGE_NUMBER_RE = re.compile(r"^\s*-?\s*\d{1,3}\s*-?\s*$")
+# running headers such as "2  ESTATE OF NAJERA-AGUIRRE V. CITY OF RIVERSIDE" (either side of the number)
+RUNNING_HEADER_RE = re.compile(r"^\s*(\d{1,3}\s+)?[A-Z0-9 .,'&’\-]{3,} V\. [A-Z0-9 .,'&’\-]{3,}?(\s+\d{1,3})?\s*$")
 BLOCK_TAG_RE = re.compile(r"</?(p|div|br|h\d|li|blockquote|tr)\b[^>]*>", re.I)
 TAG_RE = re.compile(r"<[^>]+>")
 
@@ -45,7 +47,8 @@ def join_preformatted(text: str) -> list[str]:
     """PDF-derived text: drop page furniture, rebuild paragraphs from indentation."""
     lines = []
     for line in text.replace("\f", "\n").split("\n"):
-        if not line.strip() or PAGE_HEADER_RE.match(line) or PAGE_NUMBER_RE.match(line):
+        if (not line.strip() or PAGE_HEADER_RE.match(line) or PAGE_NUMBER_RE.match(line)
+                or RUNNING_HEADER_RE.match(line)):
             continue
         lines.append(line.rstrip())
     if not lines:

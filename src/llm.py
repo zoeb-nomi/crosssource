@@ -20,6 +20,8 @@ PRICES = {
     "claude-sonnet-5-5": (2.00, 10.00),
     "claude-haiku-5-5": (0.10, 0.50),
     "claude-opus-4-8": (5.00, 25.00),
+    # developers.openai.com/api/docs/pricing, read 2026-10-19 (standard tier, uncached input)
+    "gpt-5-mini": (0.25, 2.00),
 }
 PRICES.update({k: tuple(v) for k, v in json.loads(os.environ.get("CROSSSOURCE_PRICES", "{}")).items()})
 
@@ -56,7 +58,8 @@ def complete(model: str, system: str, user: str, max_tokens: int = 1500, schema:
             kwargs["response_format"] = {"type": "json_schema",
                                          "json_schema": {"name": "verdict", "strict": True, "schema": schema["schema"]}}
         r = _client("openai").chat.completions.create(
-            model=name, max_completion_tokens=max_tokens,
+            # gpt-5 models reason before answering; reasoning counts toward this cap
+            model=name, max_completion_tokens=max(max_tokens, 8000),
             messages=[{"role": "system", "content": system}, {"role": "user", "content": user}], **kwargs)
         _record(name, role, r.usage.prompt_tokens, r.usage.completion_tokens)
         return r.choices[0].message.content or ""
