@@ -20,7 +20,7 @@ import json
 import os
 import re
 
-import anthropic
+from llm import complete
 
 JUDGE_MODEL = os.environ.get("CROSSSOURCE_JUDGE_MODEL", "claude-opus-4-8")
 CITATION_RE = re.compile(r"\[([a-z0-9_]+:\d+)\]")
@@ -79,16 +79,36 @@ RELEVANCE_SCHEMA = {
 }
 
 
-def _judge(client, prompt, schema):
-    response = client.messages.create(
-        model=JUDGE_MODEL,
-        max_tokens=1500,
-        system="You are a meticulous auditor of a legal research assistant. Judge only from the text provided; never rely on outside knowledge.",
-        messages=[{"role": "user", "content": prompt}],
-        output_config={"format": schema},
-    )
-    text = next(b.text for b in response.content if b.type == "text")
-    return json.loads(text)
+JUDGE_SYSTEM = "You are a meticulous auditor of a legal research assistant. Judge only from the text provided; never rely on outside knowledge."
+
+
+def _judge(judge_model, prompt, schema):
+    return json.loads(complete(judge_model, JUDGE_SYSTEM, prompt, 4000, schema=schema, role="judge"))
+
+
+def citation_prompt(claim, cited_chunk, others):
+    return f"""A legal research assistant answered a question and attached a citation to a claim.
+
+CLAIM:
+{claim}
+
+CITED PASSAGE [{cited_chunk['id']}]:
+{cited_chunk['text']}
+
+OTHER PASSAGES THE ASSISTANT HAD AVAILABLE:
+{context_block(others)}
+
+Question 1: Does the CITED passage genuinely support the claim, such that a reader could verify the claim from that passage alone? (supported)
+Question 2: If not supported, classify the failure:
+- "right_doc_wrong_passage": another available passage from the SAME document supports the claim
+- "wrong_document": an available passage from a DIFFERENT document supports the claim
+- "unsupported_claim": no available passage supports the claim
+Use "none" when supported is true."""
+
+
+def judge_citation(judge_model, claim, cited_chunk, others):
+    """One citation-precision verdict; also the task model for v0.3 citation_check items."""
+    return _judge(judge_model, citation_prompt(claim, cited_chunk, others), VERDICT_SCHEMA)
 
 
 def claim_citation_pairs(answer):
@@ -113,7 +133,7 @@ def context_block(chunks):
     return "\n\n".join(f"[{c['id']}]\n{c['text']}" for c in chunks)
 
 
-def eval_item(client, item, generation, retrieved_chunks):
+def eval_item(item, generation, retrieved_chunks, judge_model=JUDGE_MODEL):
     """Score one (golden item, generated answer) pair. Returns a result dict."""
     answer = generation["answer"]
     chunk_by_id = {c["id"]: c for c in retrieved_chunks}
@@ -130,23 +150,7 @@ def eval_item(client, item, generation, retrieved_chunks):
             })
             continue
         others = [c for c in retrieved_chunks if c["id"] != cid]
-        verdict = _judge(client, f"""A legal research assistant answered a question and attached a citation to a claim.
-
-CLAIM:
-{claim}
-
-CITED PASSAGE [{cid}]:
-{chunk_by_id[cid]['text']}
-
-OTHER PASSAGES THE ASSISTANT HAD AVAILABLE:
-{context_block(others)}
-
-Question 1: Does the CITED passage genuinely support the claim, such that a reader could verify the claim from that passage alone? (supported)
-Question 2: If not supported, classify the failure:
-- "right_doc_wrong_passage": another available passage from the SAME document supports the claim
-- "wrong_document": an available passage from a DIFFERENT document supports the claim
-- "unsupported_claim": no available passage supports the claim
-Use "none" when supported is true.""", VERDICT_SCHEMA)
+        verdict = judge_citation(judge_model, claim, chunk_by_id[cid], others)
         citation_judgments.append({"claim": claim, "citation": cid, **verdict})
 
     supported_n = sum(1 for j in citation_judgments if j["supported"])
@@ -160,7 +164,7 @@ Use "none" when supported is true.""", VERDICT_SCHEMA)
     citation_recall = len(hit) / len(truth) if truth else 0.0
 
     # --- faithfulness (RAGAS-style) ---
-    faith = _judge(client, f"""QUESTION:
+    faith = _judge(judge_model, f"""QUESTION:
 {item['question']}
 
 ASSISTANT'S ANSWER:
@@ -175,7 +179,7 @@ For each, mark supported=true only if the retrieved context above supports it.""
     faithfulness = (sum(1 for c in claims if c["supported"]) / len(claims)) if claims else 0.0
 
     # --- relevance ---
-    rel = _judge(client, f"""QUESTION:
+    rel = _judge(judge_model, f"""QUESTION:
 {item['question']}
 
 ANSWER:

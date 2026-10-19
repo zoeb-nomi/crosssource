@@ -15,3 +15,7 @@ __pycache__/
 
 # raw API caches (CourtListener responses; large, re-fetchable)
 data/raw/
+
+# v0.3 derived work files (rebuilt by src/v03_dataset.py)
+data/v0.3/work/packets/
+data/v0.3/work/rater_input/

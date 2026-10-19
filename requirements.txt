@@ -3,3 +3,4 @@ requests>=2.31
 anthropic>=0.40
 python-dotenv>=1.0
 matplotlib>=3.8
+openai>=1.40
