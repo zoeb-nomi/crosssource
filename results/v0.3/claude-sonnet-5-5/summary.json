@@ -1,0 +1,58 @@
+{
+  "model": "claude-sonnet-5-5",
+  "judge_model": "claude-sonnet-5-5",
+  "qa_citation": {
+    "baseline": {
+      "items": 15,
+      "citation_precision": 0.9148,
+      "citation_recall": 0.7,
+      "faithfulness": 0.9822,
+      "relevance": 0.9667,
+      "failure_labels": {
+        "right_doc_wrong_passage": 7,
+        "missing_authority": 5,
+        "unsupported_claim": 3
+      }
+    },
+    "strict": {
+      "items": 15,
+      "citation_precision": 0.916,
+      "citation_recall": 0.7,
+      "faithfulness": 1.0,
+      "relevance": 0.9667,
+      "failure_labels": {
+        "right_doc_wrong_passage": 8,
+        "missing_authority": 5,
+        "unsupported_claim": 1
+      }
+    }
+  },
+  "citation_check": {
+    "items": 15,
+    "accuracy": 1.0,
+    "kappa": 1.0,
+    "confusion_gold_rows_pred_cols": {
+      "right_doc_wrong_passage": {
+        "right_doc_wrong_passage": 3
+      },
+      "supported": {
+        "supported": 5
+      },
+      "unsupported_claim": {
+        "unsupported_claim": 6
+      },
+      "wrong_document": {
+        "wrong_document": 1
+      }
+    }
+  },
+  "usage_this_run": {
+    "claude-sonnet-5-5": {
+      "calls": 325,
+      "input_tokens": 1259583,
+      "output_tokens": 79114,
+      "usd": 3.3103
+    }
+  },
+  "failures": []
+}

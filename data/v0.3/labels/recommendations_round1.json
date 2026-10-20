@@ -1,0 +1,185 @@
+{
+ "agency_arbitrary_capricious-qa-2": {
+  "label": [
+   "cl11115647:11",
+   "cl11115647:13"
+  ],
+  "why": "B: chunk 11 quotes the awareness-and-good-reasons test, a Must-mention point (§3.1 rule 2: same point in two chunks → mark both)."
+ },
+ "agency_arbitrary_capricious-qa-3": {
+  "label": [
+   "cl9379438:5",
+   "cl9379438:6"
+  ],
+  "why": "B: chunk 5 states the 'upheld, if at all, on the basis articulated by the agency' rule, the first Must-mention point."
+ },
+ "arbitration_enforce-qa-1": {
+  "label": [
+   "cl10465611:18",
+   "cl10465611:19"
+  ],
+  "why": "B: chunk 18 states the FLSA cases rest on Congress expressly providing for class actions (point 1)."
+ },
+ "arbitration_enforce-qa-5": {
+  "label": [
+   "cl9958088:5",
+   "cl9958088:6",
+   "cl9958088:7"
+  ],
+  "why": "B: chunk 5 says a party must adduce evidence of the fee schedule as applied (point 1); chunk 7 requires the litigation-vs-arbitration cost and ability-to-pay comparison (point 3)."
+ },
+ "contract_interpretation-qa-3": {
+  "label": [
+   "cl4682256:9",
+   "cl4682256:10"
+  ],
+  "why": "B: chunk 9 states that exceptions to disclosure are narrowly construed (point 3)."
+ },
+ "first_amendment_employee-cc-5": {
+  "label": "unsupported_claim",
+  "why": "B under §3.2 as written: the passage says the MLA told 'Theken'; only cl9905225:2 (not in the context set) identifies Theken as mayor. Preferred alternative: reword the claim to say 'told Theken' and keep `supported`, which is what A built."
+ },
+ "ineffective_assistance-qa-3": {
+  "label": [
+   "cl4367038:8",
+   "cl4367038:9"
+  ],
+  "why": "Partly B: chunk 9 states the some-merit standard differs from Strickland merits and that PCR counsel must be ineffective (points 2–3); chunk 10 states no Must-mention point of this question."
+ },
+ "ineffective_assistance-qa-4": {
+  "label": [
+   "cl4367038:10",
+   "cl4367038:11",
+   "cl4367038:13"
+  ],
+  "why": "B: chunk 10 states the 'less exacting than Strickland prejudice' standard (point 1); chunk 13 states agreement with the Ninth Circuit and quotes the Seventh's rule (point 3)."
+ },
+ "ineffective_assistance-qa-5": {
+  "label": [
+   "cl9905848:10",
+   "cl9905848:11"
+  ],
+  "why": "B: chunk 10 (¶27) says the court need not address deficient performance (point 3)."
+ },
+ "limitations_discovery_rule-qa-4": {
+  "label": [
+   "cl9363399:4",
+   "cl9363399:5"
+  ],
+  "why": "B: chunk 4 states the rule defers accrual until the plaintiff knew or should have known (point 2)."
+ },
+ "limitations_discovery_rule-qa-5": {
+  "label": [
+   "cl9363399:5",
+   "cl9363399:6"
+  ],
+  "why": "B: the 'requirement of reasonable diligence' sentence splits across the boundary (§3.1 rule 3 → mark both)."
+ },
+ "miranda_custody-qa-4": {
+  "label": [
+   "cl6105386:9",
+   "cl6105386:10"
+  ],
+  "why": "B: chunk 10 says the testimony had no material impact given the documented strength of Angel Rodriguez's testimony (points 2–3)."
+ },
+ "negligence_duty-qa-1": {
+  "label": [
+   "cl11419421:5",
+   "cl11419421:6"
+  ],
+  "why": "B: the 'express contractual language … concrete actions' sentence splits across chunks 5–6 (§3.1 rule 3)."
+ },
+ "negligence_duty-qa-4": {
+  "label": [
+   "cl5129137:10",
+   "cl5129137:11"
+  ],
+  "why": "B: chunk 10 (¶21) states the Manufacturer's accident occurred on the regularly traveled portion (point 1)."
+ },
+ "patent_obviousness-qa-5": {
+  "label": [
+   "cl9954963:4",
+   "cl9954963:5"
+  ],
+  "why": "Partly B: chunk 5 says the mere existence of both arrangements gives no reason to substitute (points 1–2); chunk 6 is about KSR generally, not the would-vs-could point."
+ },
+ "personal_jurisdiction-qa-2": {
+  "label": [
+   "cl4538757:10",
+   "cl4538757:11",
+   "cl4538757:13"
+  ],
+  "why": "Partly B: chunk 10 (devices not implanted, no false info received in Illinois) and chunk 13 (no connection; factors weigh against jurisdiction) state points 1–2; chunk 9 states the general no-relation finding but none of the listed links."
+ },
+ "title_vii_retaliation-qa-4": {
+  "label": [
+   "cl11118835:10",
+   "cl11118835:11"
+  ],
+  "why": "B: chunk 10 states Muldrow requires some harm but not significant harm (point 1)."
+ },
+ "agency_arbitrary_capricious-cc-2": {
+  "label": "supported",
+  "why": "Confirm: the agreed label matches the passage on a re-read."
+ },
+ "agency_arbitrary_capricious-qa-5": {
+  "label": [
+   "cl9915536:8"
+  ],
+  "why": "Confirm: the agreed label matches the passage on a re-read."
+ },
+ "contract_interpretation-cc-5": {
+  "label": "supported",
+  "why": "Confirm: the agreed label matches the passage on a re-read."
+ },
+ "first_amendment_employee-cc-1": {
+  "label": "right_doc_wrong_passage",
+  "why": "Confirm: the agreed label matches the passage on a re-read."
+ },
+ "insurance_duty_defend-cc-4": {
+  "label": "wrong_document",
+  "why": "Confirm: the agreed label matches the passage on a re-read."
+ },
+ "limitations_discovery_rule-qa-3": {
+  "label": [
+   "cl8250811:4"
+  ],
+  "why": "Confirm: the agreed label matches the passage on a re-read."
+ },
+ "miranda_custody-cc-1": {
+  "label": "wrong_document",
+  "why": "Confirm: the agreed label matches the passage on a re-read."
+ },
+ "miranda_custody-qa-1": {
+  "label": [
+   "cl11176209:4"
+  ],
+  "why": "Confirm: the agreed label matches the passage on a re-read."
+ },
+ "miranda_custody-qa-2": {
+  "label": [
+   "cl5124709:3"
+  ],
+  "why": "Confirm: the agreed label matches the passage on a re-read."
+ },
+ "negligence_duty-cc-5": {
+  "label": "supported",
+  "why": "Confirm: the agreed label matches the passage on a re-read."
+ },
+ "patent_obviousness-cc-4": {
+  "label": "wrong_document",
+  "why": "Confirm: the agreed label matches the passage on a re-read."
+ },
+ "qi_excessive_force-qa-4": {
+  "label": [
+   "cl10839652:8"
+  ],
+  "why": "Confirm: the agreed label matches the passage on a re-read."
+ },
+ "title_vii_retaliation-qa-2": {
+  "label": [
+   "cl10737190:7"
+  ],
+  "why": "Confirm: the agreed label matches the passage on a re-read."
+ }
+}

@@ -1,3 +1,13 @@
+{"id": "agency_arbitrary_capricious-qa-1", "draft_key": "agency_arbitrary_capricious-qa-1", "construction_note": ""}
+{"id": "agency_arbitrary_capricious-qa-2", "draft_key": "agency_arbitrary_capricious-qa-2", "construction_note": ""}
+{"id": "agency_arbitrary_capricious-qa-3", "draft_key": "agency_arbitrary_capricious-qa-3", "construction_note": ""}
+{"id": "agency_arbitrary_capricious-qa-4", "draft_key": "agency_arbitrary_capricious-qa-4", "construction_note": ""}
+{"id": "agency_arbitrary_capricious-qa-5", "draft_key": "agency_arbitrary_capricious-qa-5", "construction_note": ""}
+{"id": "agency_arbitrary_capricious-cc-1", "draft_key": "agency_arbitrary_capricious-cc-1", "construction_note": "Started from supported claim (court may not supply a basis the agency did not give); changed to say the court may supply its own plausible basis (reverses the rule)."}
+{"id": "agency_arbitrary_capricious-cc-2", "draft_key": "agency_arbitrary_capricious-cc-2", "construction_note": "Faithful paraphrase of cited chunk."}
+{"id": "agency_arbitrary_capricious-cc-3", "draft_key": "agency_arbitrary_capricious-cc-3", "construction_note": "Claim paraphrases Youme chunk 12; cited chunk 11 is the preceding change-in-position framework passage in the same opinion."}
+{"id": "agency_arbitrary_capricious-cc-4", "draft_key": "agency_arbitrary_capricious-cc-4", "construction_note": "Faithful paraphrase of cited chunk."}
+{"id": "agency_arbitrary_capricious-cc-5", "draft_key": "agency_arbitrary_capricious-cc-5", "construction_note": "Claim paraphrases Cross chunk 5; cited chunk is BNSF chunk 4 on the arbitrary-and-capricious standard."}
 {"id": "arbitration_enforce-qa-1", "draft_key": "arbitration_enforce-qa-1", "construction_note": ""}
 {"id": "arbitration_enforce-qa-2", "draft_key": "arbitration_enforce-qa-2", "construction_note": ""}
 {"id": "arbitration_enforce-qa-3", "draft_key": "arbitration_enforce-qa-3", "construction_note": ""}
@@ -8,6 +18,36 @@
 {"id": "arbitration_enforce-cc-3", "draft_key": "arbitration_enforce-cc-3", "construction_note": "Claim paraphrases cl9958088:8 (same opinion); cited chunk cl9958088:6 is on the same topic of cost evidence but does not state the cost-cap or bargaining-power points."}
 {"id": "arbitration_enforce-cc-4", "draft_key": "arbitration_enforce-cc-4", "construction_note": "Claim paraphrases the second sentence of cl10465611:17; cited chunk is from the Ninth Circuit McBurnie opinion."}
 {"id": "arbitration_enforce-cc-5", "draft_key": "arbitration_enforce-cc-5", "construction_note": "Started from the supported claim (Congress expressly provided FLSA class enforcement, unlike the situation in New Jersey) and changed it to say the CFA likewise authorizes class actions and the waiver was unenforceable."}
+{"id": "article_iii_standing-qa-1", "draft_key": "article_iii_standing-qa-1", "construction_note": ""}
+{"id": "article_iii_standing-qa-2", "draft_key": "article_iii_standing-qa-2", "construction_note": ""}
+{"id": "article_iii_standing-qa-3", "draft_key": "article_iii_standing-qa-3", "construction_note": ""}
+{"id": "article_iii_standing-qa-4", "draft_key": "article_iii_standing-qa-4", "construction_note": ""}
+{"id": "article_iii_standing-qa-5", "draft_key": "article_iii_standing-qa-5", "construction_note": ""}
+{"id": "article_iii_standing-cc-1", "draft_key": "article_iii_standing-cc-1", "construction_note": "Started from supported claim (court distinguished the cases); changed to say the court treated them as controlling (misattributes Cook's argument to the court and reverses the outcome)."}
+{"id": "article_iii_standing-cc-2", "draft_key": "article_iii_standing-cc-2", "construction_note": "Claim paraphrases Bassett chunk 3; cited chunk is Tennessee chunk 3 on the standing elements."}
+{"id": "article_iii_standing-cc-3", "draft_key": "article_iii_standing-cc-3", "construction_note": "Faithful paraphrase of cited chunk."}
+{"id": "article_iii_standing-cc-4", "draft_key": "article_iii_standing-cc-4", "construction_note": "Claim paraphrases Cook chunk 15; cited chunk 12 is an earlier standing passage in the same opinion."}
+{"id": "article_iii_standing-cc-5", "draft_key": "article_iii_standing-cc-5", "construction_note": "Faithful paraphrase of cited chunk."}
+{"id": "contract_interpretation-qa-1", "draft_key": "contract_interpretation-qa-1", "construction_note": ""}
+{"id": "contract_interpretation-qa-2", "draft_key": "contract_interpretation-qa-2", "construction_note": ""}
+{"id": "contract_interpretation-qa-3", "draft_key": "contract_interpretation-qa-3", "construction_note": ""}
+{"id": "contract_interpretation-qa-4", "draft_key": "contract_interpretation-qa-4", "construction_note": ""}
+{"id": "contract_interpretation-qa-5", "draft_key": "contract_interpretation-qa-5", "construction_note": ""}
+{"id": "contract_interpretation-cc-1", "draft_key": "contract_interpretation-cc-1", "construction_note": "Claim paraphrases the holding in chunk 12; cited chunk 8 is the court-decisions discussion in the same opinion."}
+{"id": "contract_interpretation-cc-2", "draft_key": "contract_interpretation-cc-2", "construction_note": "Faithful paraphrase of the final sentence of the cited chunk."}
+{"id": "contract_interpretation-cc-3", "draft_key": "contract_interpretation-cc-3", "construction_note": "Reversed the outcome of the supported claim (the court declined to extend the exception to consultants)."}
+{"id": "contract_interpretation-cc-4", "draft_key": "contract_interpretation-cc-4", "construction_note": "Claim paraphrases Privilege Underwriters chunk 4; cited chunk is Maxim Crane chunk 9 on plain-meaning construction."}
+{"id": "contract_interpretation-cc-5", "draft_key": "contract_interpretation-cc-5", "construction_note": "Faithful paraphrase of the reasoning in the cited chunk."}
+{"id": "first_amendment_employee-qa-1", "draft_key": "first_amendment_employee-qa-1", "construction_note": ""}
+{"id": "first_amendment_employee-qa-2", "draft_key": "first_amendment_employee-qa-2", "construction_note": ""}
+{"id": "first_amendment_employee-qa-3", "draft_key": "first_amendment_employee-qa-3", "construction_note": ""}
+{"id": "first_amendment_employee-qa-4", "draft_key": "first_amendment_employee-qa-4", "construction_note": ""}
+{"id": "first_amendment_employee-qa-5", "draft_key": "first_amendment_employee-qa-5", "construction_note": ""}
+{"id": "first_amendment_employee-cc-1", "draft_key": "first_amendment_employee-cc-1", "construction_note": "Claim paraphrases Ciarametaro chunk 11; cited chunk 10 is the preceding precedent-distinguishing passage in the same opinion."}
+{"id": "first_amendment_employee-cc-2", "draft_key": "first_amendment_employee-cc-2", "construction_note": "Faithful paraphrase of cited chunk."}
+{"id": "first_amendment_employee-cc-3", "draft_key": "first_amendment_employee-cc-3", "construction_note": "Claim paraphrases Ciarametaro chunk 5; cited chunk is Burch chunk 20 on adverse employment actions."}
+{"id": "first_amendment_employee-cc-4", "draft_key": "first_amendment_employee-cc-4", "construction_note": "Started from supported claim (persisting after being told to stop does not make official-duty speech protected); reversed the holding."}
+{"id": "first_amendment_employee-cc-5", "draft_key": "first_amendment_employee-cc-5", "construction_note": "Faithful paraphrase of cited chunk."}
 {"id": "ineffective_assistance-qa-1", "draft_key": "ineffective_assistance-qa-1", "construction_note": ""}
 {"id": "ineffective_assistance-qa-2", "draft_key": "ineffective_assistance-qa-2", "construction_note": ""}
 {"id": "ineffective_assistance-qa-3", "draft_key": "ineffective_assistance-qa-3", "construction_note": ""}
@@ -38,6 +78,26 @@
 {"id": "limitations_discovery_rule-cc-3", "draft_key": "limitations_discovery_rule-cc-3", "construction_note": "Claim paraphrases cl8234259:20 (same opinion); cited chunk cl8234259:16 is the earlier passage introducing the equitable principles and does not state the timing analysis."}
 {"id": "limitations_discovery_rule-cc-4", "draft_key": "limitations_discovery_rule-cc-4", "construction_note": "Claim paraphrases the first three sentences of cl8250811:10; cited chunk is from the New Jersey Dimitrakopoulos opinion."}
 {"id": "limitations_discovery_rule-cc-5", "draft_key": "limitations_discovery_rule-cc-5", "construction_note": "Started from the supported claim (a very limited exception requiring direct and intended beneficiary status before the Lucas factors apply) and replaced the threshold with mere foreseeability."}
+{"id": "miranda_custody-qa-1", "draft_key": "miranda_custody-qa-1", "construction_note": ""}
+{"id": "miranda_custody-qa-2", "draft_key": "miranda_custody-qa-2", "construction_note": ""}
+{"id": "miranda_custody-qa-3", "draft_key": "miranda_custody-qa-3", "construction_note": ""}
+{"id": "miranda_custody-qa-4", "draft_key": "miranda_custody-qa-4", "construction_note": ""}
+{"id": "miranda_custody-qa-5", "draft_key": "miranda_custody-qa-5", "construction_note": ""}
+{"id": "miranda_custody-cc-1", "draft_key": "miranda_custody-cc-1", "construction_note": "Claim paraphrases Wesson chunk 8; cited chunk is Robinson chunk 6 on a nearby Miranda topic."}
+{"id": "miranda_custody-cc-2", "draft_key": "miranda_custody-cc-2", "construction_note": "Faithful paraphrase of cited chunk."}
+{"id": "miranda_custody-cc-3", "draft_key": "miranda_custody-cc-3", "construction_note": "Reversed the outcome of the supported claim (court found no coercive environment)."}
+{"id": "miranda_custody-cc-4", "draft_key": "miranda_custody-cc-4", "construction_note": "Claim paraphrases Robinson chunk 4; cited chunk 3 is the preceding custody-test passage in the same opinion."}
+{"id": "miranda_custody-cc-5", "draft_key": "miranda_custody-cc-5", "construction_note": "Faithful paraphrase of last sentence of cited chunk."}
+{"id": "negligence_duty-qa-1", "draft_key": "negligence_duty-qa-1", "construction_note": ""}
+{"id": "negligence_duty-qa-2", "draft_key": "negligence_duty-qa-2", "construction_note": ""}
+{"id": "negligence_duty-qa-3", "draft_key": "negligence_duty-qa-3", "construction_note": ""}
+{"id": "negligence_duty-qa-4", "draft_key": "negligence_duty-qa-4", "construction_note": ""}
+{"id": "negligence_duty-qa-5", "draft_key": "negligence_duty-qa-5", "construction_note": ""}
+{"id": "negligence_duty-cc-1", "draft_key": "negligence_duty-cc-1", "construction_note": "Started from supported claim (knowledge can matter only once a nuisance affecting ordinary travel exists); changed to say knowledge alone creates a duty even without effect on ordinary travel (reverses the rule)."}
+{"id": "negligence_duty-cc-2", "draft_key": "negligence_duty-cc-2", "construction_note": "Faithful paraphrase of the first part of the cited chunk."}
+{"id": "negligence_duty-cc-3", "draft_key": "negligence_duty-cc-3", "construction_note": "Claim paraphrases Snay chunk 5 (paragraph 14 text); cited chunk is Hill-Junious chunk 9 on foreseeability."}
+{"id": "negligence_duty-cc-4", "draft_key": "negligence_duty-cc-4", "construction_note": "Claim paraphrases Suquilanda chunk 9; cited chunk 7 is the preceding retained-control case discussion in the same opinion."}
+{"id": "negligence_duty-cc-5", "draft_key": "negligence_duty-cc-5", "construction_note": "Faithful paraphrase of cited chunk."}
 {"id": "patent_obviousness-qa-1", "draft_key": "patent_obviousness-qa-1", "construction_note": ""}
 {"id": "patent_obviousness-qa-2", "draft_key": "patent_obviousness-qa-2", "construction_note": ""}
 {"id": "patent_obviousness-qa-3", "draft_key": "patent_obviousness-qa-3", "construction_note": ""}
@@ -58,6 +118,26 @@
 {"id": "personal_jurisdiction-cc-3", "draft_key": "personal_jurisdiction-cc-3", "construction_note": "Claim paraphrases the Calder paragraph of cl11081153:7 (same opinion); cited chunk cl11081153:10 is on the nearby topic of tortious effects via servers."}
 {"id": "personal_jurisdiction-cc-4", "draft_key": "personal_jurisdiction-cc-4", "construction_note": "Claim paraphrases the factor list in cl4538757:12; cited chunk is from the Sixth Circuit Carbone opinion."}
 {"id": "personal_jurisdiction-cc-5", "draft_key": "personal_jurisdiction-cc-5", "construction_note": "Started from the supported claim (formal agency is not required) and reversed it to require a formal agency relationship."}
+{"id": "qi_excessive_force-qa-1", "draft_key": "qi_excessive_force-qa-1", "construction_note": ""}
+{"id": "qi_excessive_force-qa-2", "draft_key": "qi_excessive_force-qa-2", "construction_note": ""}
+{"id": "qi_excessive_force-qa-3", "draft_key": "qi_excessive_force-qa-3", "construction_note": ""}
+{"id": "qi_excessive_force-qa-4", "draft_key": "qi_excessive_force-qa-4", "construction_note": ""}
+{"id": "qi_excessive_force-qa-5", "draft_key": "qi_excessive_force-qa-5", "construction_note": ""}
+{"id": "qi_excessive_force-cc-1", "draft_key": "qi_excessive_force-cc-1", "construction_note": "Started from supported claim (court may discredit when video is clear enough that no reasonable jury could believe the account); changed to 'whenever video evidence exists' (scope overstated)."}
+{"id": "qi_excessive_force-cc-2", "draft_key": "qi_excessive_force-cc-2", "construction_note": "Faithful paraphrase of first sentence of cited chunk."}
+{"id": "qi_excessive_force-cc-3", "draft_key": "qi_excessive_force-cc-3", "construction_note": "Claim paraphrases Santander chunk 4; cited chunk is from the Najera opinion on an adjacent qualified immunity point."}
+{"id": "qi_excessive_force-cc-4", "draft_key": "qi_excessive_force-cc-4", "construction_note": "Faithful paraphrase of the quoted test in the cited chunk."}
+{"id": "qi_excessive_force-cc-5", "draft_key": "qi_excessive_force-cc-5", "construction_note": "Claim paraphrases Santander chunk 10; cited chunk 9 is the preceding false-arrest standard passage in the same opinion."}
+{"id": "title_vii_retaliation-qa-1", "draft_key": "title_vii_retaliation-qa-1", "construction_note": ""}
+{"id": "title_vii_retaliation-qa-2", "draft_key": "title_vii_retaliation-qa-2", "construction_note": ""}
+{"id": "title_vii_retaliation-qa-3", "draft_key": "title_vii_retaliation-qa-3", "construction_note": ""}
+{"id": "title_vii_retaliation-qa-4", "draft_key": "title_vii_retaliation-qa-4", "construction_note": ""}
+{"id": "title_vii_retaliation-qa-5", "draft_key": "title_vii_retaliation-qa-5", "construction_note": ""}
+{"id": "title_vii_retaliation-cc-1", "draft_key": "title_vii_retaliation-cc-1", "construction_note": "Started from supported claim (no evidence of protected activity or retaliation); changed to say protected activity was accepted and only causation failed (misattributes the basis of the holding)."}
+{"id": "title_vii_retaliation-cc-2", "draft_key": "title_vii_retaliation-cc-2", "construction_note": "Faithful paraphrase of cited chunk."}
+{"id": "title_vii_retaliation-cc-3", "draft_key": "title_vii_retaliation-cc-3", "construction_note": "Claim paraphrases Hamilton chunk 3; cited chunk 2 is the preceding passage on proof methods in the same opinion."}
+{"id": "title_vii_retaliation-cc-4", "draft_key": "title_vii_retaliation-cc-4", "construction_note": "Faithful paraphrase of cited chunk."}
+{"id": "title_vii_retaliation-cc-5", "draft_key": "title_vii_retaliation-cc-5", "construction_note": "Claim paraphrases Ayorinde chunk 5; cited chunk is Paterakos chunk 12 on pretext."}
 {"id": "vehicle_search-qa-1", "draft_key": "vehicle_search-qa-1", "construction_note": ""}
 {"id": "vehicle_search-qa-2", "draft_key": "vehicle_search-qa-2", "construction_note": ""}
 {"id": "vehicle_search-qa-3", "draft_key": "vehicle_search-qa-3", "construction_note": ""}

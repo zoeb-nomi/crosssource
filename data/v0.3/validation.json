@@ -1,29 +1,31 @@
 {
-  "items": 70,
-  "qa_citation": 35,
-  "citation_check": 35,
+  "items": 150,
+  "qa_citation": 75,
+  "citation_check": 75,
   "cc_label_mix": {
-    "supported": 14,
-    "right_doc_wrong_passage": 7,
-    "wrong_document": 7,
-    "unsupported_claim": 7
+    "unsupported_claim": 15,
+    "supported": 30,
+    "right_doc_wrong_passage": 15,
+    "wrong_document": 15
   },
   "qa_gt_sizes": {
-    "1": 35
+    "1": 74,
+    "2": 1
   },
-  "distinct_opinions": 21,
+  "distinct_opinions": 45,
   "max_items_per_opinion": 4,
-  "federal_share": 0.486,
-  "max_court_share": 0.143,
+  "federal_share": 0.6,
+  "max_court_share": 0.127,
   "area_of_law": {
-    "contracts": 20,
-    "criminal": 20,
-    "torts": 10,
+    "administrative": 10,
+    "contracts": 30,
+    "civil_procedure": 20,
+    "constitutional": 20,
+    "criminal": 30,
+    "torts": 20,
     "ip": 10,
-    "civil_procedure": 10
+    "employment": 10
   },
-  "max_area_share": 0.286,
-  "problems": [
-    "fewer than 40 distinct opinions"
-  ]
+  "max_area_share": 0.2,
+  "problems": []
 }
