@@ -45,7 +45,13 @@ MIN_WORDS, MAX_CHARS = 1500, 80000
 EXCLUDE_NAME_RE = re.compile(r"in re (the )?marriage|adoption|juvenile|custody|guardianship|disciplinary|"
                              r"\bin re [a-z]\.\s?[a-z]\.|\binstead\b", re.I)
 EXCLUDE_TEXT_RE = re.compile(r"sexual(ly)? assault|\brape\b|child pornography|sex offender|minor victim|"
-                             r"sexual abuse|termination of parental rights", re.I)
+                             r"sexual abuse|sexual activity|termination of parental rights|divorce decree|dissolution of marriage|"
+                             r"\b([1-9]|1[0-7])-year-old|\bchildren (died|were killed)", re.I)
+# the opening of the text must be a court-of-last-resort / circuit majority, not a dissent, order or trial-court opinion
+HEAD_REJECT_RE = re.compile(r"DISSENTING OPINION|CONCURRING OPINION|OPINION IN SUPPORT OF (AFFIRMANCE|REVERSAL)|"
+                            r"\bOn order of the Court\b|MEMORANDUM OPINION|"
+                            r"\bPls?\.[’'] (Mem|Opp|Mot)\.", re.I)
+FEDERAL_APPEALS_RE = re.compile(r"Circuit Judges?|COURT OF APPEALS", re.I)
 
 
 class Client:
@@ -115,8 +121,13 @@ def opinion_text(op):
     return None, ""
 
 
+EXCLUSIONS = json.loads((V3 / "exclusions.json").read_text(encoding="utf-8")) if (V3 / "exclusions.json").exists() else {}
+
+
 def check(result, op, cluster, topic):
     """Return None if the opinion passes §2, else the reason it fails."""
+    if str(op.get("id")) in EXCLUSIONS:
+        return f"manual exclusion: {EXCLUSIONS[str(op['id'])]}"
     if result["court_id"] not in topic["courts"]:
         return f"court {result['court_id']} not in topic list"
     if cluster.get("precedential_status") != "Published":
@@ -141,6 +152,11 @@ def check(result, op, cluster, topic):
     m = EXCLUDE_TEXT_RE.search(plain)
     if m:
         return f"excluded subject matter: {m.group(0)!r}"
+    m = HEAD_REJECT_RE.search(plain[:3000])
+    if m:
+        return f"not a majority appellate opinion: {m.group(0)!r}"
+    if re.fullmatch(r"ca\d+|cadc|cafc", result["court_id"]) and not FEDERAL_APPEALS_RE.search(plain[:6000]):
+        return "tagged as a court of appeals but the text reads as a trial-court opinion"
     return None
 
 

@@ -1,0 +1,43 @@
+{
+  "missing_b": [],
+  "citation_check": {
+    "n": 35,
+    "percent_agreement": 1.0,
+    "kappa": 1.0,
+    "confusion_a_rows_b_cols": {
+      "supported": {
+        "supported": 14
+      },
+      "right_doc_wrong_passage": {
+        "right_doc_wrong_passage": 7
+      },
+      "wrong_document": {
+        "wrong_document": 7
+      },
+      "unsupported_claim": {
+        "unsupported_claim": 7
+      }
+    },
+    "disagreements": []
+  },
+  "qa_citation": {
+    "n": 35,
+    "exact_set_agreement": 0.7429,
+    "chunk_decisions": 175,
+    "chunk_percent_agreement": 0.9143,
+    "chunk_kappa": 0.7692,
+    "mean_jaccard": 0.8452,
+    "disagreements": [
+      "arbitration_enforce-qa-1",
+      "arbitration_enforce-qa-5",
+      "ineffective_assistance-qa-3",
+      "ineffective_assistance-qa-4",
+      "ineffective_assistance-qa-5",
+      "limitations_discovery_rule-qa-4",
+      "limitations_discovery_rule-qa-5",
+      "patent_obviousness-qa-5",
+      "personal_jurisdiction-qa-2"
+    ]
+  },
+  "bad_item_flags": []
+}

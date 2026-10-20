@@ -108,7 +108,7 @@ def cmd_assemble(_):
             doc = doc_of(gt[0])
             n = sum(1 for c in chunks if doc_of(c) == doc)
             item = {
-                "id": f"q{len(qa) + 1:03d}", "type": "qa_citation", "topic_key": d["topic_key"],
+                "id": d["draft_key"], "type": "qa_citation", "topic_key": d["topic_key"],
                 "area_of_law": sources[doc]["area_of_law"], "question": d["question"],
                 "reference_notes": d["reference_notes"], "ground_truth_chunks": gt,
                 "candidate_window": window_for(gt, n),
@@ -121,7 +121,7 @@ def cmd_assemble(_):
             ctx = list(d["context_chunks"])
             random.Random(f"{SEED}:{d['claim']}").shuffle(ctx)
             item = {
-                "id": f"c{len(cc) + 1:03d}", "type": "citation_check", "topic_key": d["topic_key"],
+                "id": d["draft_key"], "type": "citation_check", "topic_key": d["topic_key"],
                 "area_of_law": sources[doc]["area_of_law"], "claim": d["claim"],
                 "cited_chunk": d["cited_chunk"], "context_chunks": ctx, "label": d["label"],
             }
@@ -208,7 +208,21 @@ def cmd_validate(_):
 
 
 # --------------------------------------------------------------------------- rater input
-def cmd_rater_input(_):
+def cmd_import_labels(args):
+    """Translate a rater's opaque-id output back to item ids -> labels/rater_b_round<N>.jsonl."""
+    id_map = json.loads((WORK / "rater_id_map.json").read_text())
+    rows = jl_read(args.src)
+    out = []
+    for r in rows:
+        out.append({**r, "id": id_map[r["id"]]})
+    dest = V3 / "labels" / f"rater_b_round{args.round}.jsonl"
+    existing = {r["id"]: r for r in jl_read(dest)} if dest.exists() and args.append else {}
+    existing.update({r["id"]: r for r in out})
+    jl_write(dest, sorted(existing.values(), key=lambda r: r["id"]))
+    print(f"imported {len(out)} labels -> {dest} ({len(existing)} total)")
+
+
+def cmd_rater_input(args):
     chunks = load_chunks()
     rows = []
     for it in jl_read(V3 / "qa_citation.jsonl"):
@@ -219,9 +233,17 @@ def cmd_rater_input(_):
         rows.append({"id": it["id"], "type": "citation_check", "claim": it["claim"],
                      "cited": {"id": it["cited_chunk"], "text": chunks[it["cited_chunk"]]},
                      "others": [{"id": c, "text": chunks[c]} for c in it["context_chunks"] if c != it["cited_chunk"]]})
+    # opaque ids: draft keys encode build order (and so, for citation_check, the target label)
+    import hashlib
+    id_map = {}
+    for r in rows:
+        opaque = "r" + hashlib.sha256(f"{SEED}:{r['id']}".encode()).hexdigest()[:8]
+        id_map[opaque] = r["id"]
+        r["id"] = opaque
+    (WORK / "rater_id_map.json").write_text(json.dumps(id_map, indent=1) + "\n", encoding="utf-8")
     # batches of 25, items interleaved so a rater never sees one topic in a run
     random.Random(SEED).shuffle(rows)
-    out = WORK / "rater_input"
+    out = Path(args.out) if getattr(args, "out", None) else WORK / "rater_input"
     out.mkdir(parents=True, exist_ok=True)
     for old in out.glob("*.jsonl"):
         old.unlink()
@@ -310,14 +332,70 @@ def cmd_adjudication(args):
     print(f"{len(dis)} disagreements/flags + {len(audit)} audit = {len(dis) + len(audit)} -> {out}")
 
 
+# --------------------------------------------------------------------------- markdown renderers
+def agreement_tables(res):
+    cc, qa = res["citation_check"], res["qa_citation"]
+    lines = ["| Type | n | Percent agreement | Cohen's kappa | Notes |", "|---|---|---|---|---|",
+             f"| `citation_check` | {cc['n']} | {cc['percent_agreement']:.1%} | {cc['kappa']:.3f} | 4-way label |",
+             f"| `qa_citation` | {qa['n']} | {qa['exact_set_agreement']:.1%} (exact chunk set) | {qa['chunk_kappa']:.3f} (chunk-level, "
+             f"{qa['chunk_decisions']} decisions) | chunk-level agreement {qa['chunk_percent_agreement']:.1%}; mean Jaccard {qa['mean_jaccard']:.3f} |",
+             "", "`citation_check` confusion (rows = rater A, columns = rater B):", "",
+             "| A \\ B | " + " | ".join(CC_LABELS) + " |", "|---|" + "---|" * len(CC_LABELS)]
+    for a in CC_LABELS:
+        row = cc["confusion_a_rows_b_cols"].get(a, {})
+        lines.append(f"| {a} | " + " | ".join(str(row.get(b, 0)) for b in CC_LABELS) + " |")
+    return "\n".join(lines)
+
+
+def cmd_render(args):
+    """Write agreement tables + the adjudication checklist for a round."""
+    res = compare(args.labels_b)
+    (V3 / "labels" / f"agreement_tables_round{args.round}.md").write_text(agreement_tables(res) + "\n", encoding="utf-8")
+    queue = json.loads((V3 / "labels" / f"adjudication_queue_round{args.round}.json").read_text())
+    recs = json.loads((V3 / "labels" / f"recommendations_round{args.round}.json").read_text())
+    chunks = load_chunks()
+    items = {it["id"]: it for it in jl_read(V3 / "qa_citation.jsonl") + jl_read(V3 / "citation_check.jsonl")}
+    A, B = load_labels(V3 / "labels" / "rater_a.jsonl"), load_labels(args.labels_b)
+
+    def block(cid):
+        return f"`{cid}`\n\n> " + chunks[cid].replace("\n", "\n>\n> ")
+
+    out = []
+    for section, ids in (("Disagreements and bad-item flags", queue["disagreements_and_flags"]),
+                         ("Random 10% audit of agreed items", queue["audit_sample"])):
+        out.append(f"## {section} ({len(ids)})\n")
+        for i in ids:
+            it, a, b, r = items[i], A[i], B[i], recs.get(i, {})
+            prov = it["provenance"]
+            out.append(f"### [ ] {i} · {it['type']} · {prov['case_name']} ({prov['court_id']}, {prov['date_filed']})\n")
+            out.append(f"Source: [{prov['url']}]({prov['url']}) · opinion {prov['opinion_id']} · cited authority as it appears: `{prov['cited_authority']}`\n")
+            if it["type"] == "qa_citation":
+                out.append(f"**Question:** {it['question']}\n\n**Reference notes:** {it['reference_notes']}\n")
+                shown = sorted(set(a["label"]) | set(b["label"] or []), key=lambda c: int(c.split(':')[1]))
+                out.append("**Chunks either rater chose:**\n\n" + "\n\n".join(block(c) for c in shown) + "\n")
+                out.append(f"Candidate window: {', '.join(f'`{c}`' for c in it['candidate_window'])}\n")
+            else:
+                out.append(f"**Claim:** {it['claim']}\n\n**Cited passage:** {block(it['cited_chunk'])}\n")
+                others = [c for c in it["context_chunks"] if c != it["cited_chunk"]]
+                out.append("<details><summary>Other passages available</summary>\n\n" + "\n\n".join(block(c) for c in others) + "\n\n</details>\n")
+            out.append(f"| | Label | Reason |\n|---|---|---|\n| Rater A | `{a['label']}` | {a['reason']} |\n| Rater B | `{b['label']}` | {b['reason']}"
+                       + (f" **bad_item:** {b['bad_item']}" if b.get("bad_item") else "") + " |\n")
+            out.append(f"**Recommended:** `{r.get('label', '?')}` — {r.get('why', '')}\n\n**Final label:** ______\n\n---\n")
+    (V3 / "labels" / f"adjudication_body_round{args.round}.md").write_text("\n".join(out), encoding="utf-8")
+    print(f"rendered {len(queue['disagreements_and_flags']) + len(queue['audit_sample'])} queue items")
+
+
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("cmd", choices=["packets", "assemble", "validate", "rater-input", "agreement", "adjudication"])
-    ap.add_argument("--labels-b", default=str(V3 / "labels" / "rater_b.jsonl"))
+    ap.add_argument("cmd", choices=["packets", "assemble", "validate", "rater-input", "agreement", "adjudication", "render", "import-labels"])
+    ap.add_argument("--labels-b", default=str(V3 / "labels" / "rater_b_round1.jsonl"))
     ap.add_argument("--round", type=int, default=1)
+    ap.add_argument("--out", default=None, help="rater-input: write batches here (e.g. an isolated scratch dir)")
+    ap.add_argument("--src", default=None, help="import-labels: rater output file (opaque ids)")
+    ap.add_argument("--append", action="store_true", help="import-labels: merge into an existing round file")
     args = ap.parse_args()
     {"packets": cmd_packets, "assemble": cmd_assemble, "validate": cmd_validate, "rater-input": cmd_rater_input,
-     "agreement": cmd_agreement, "adjudication": cmd_adjudication}[args.cmd](args)
+     "agreement": cmd_agreement, "adjudication": cmd_adjudication, "render": cmd_render, "import-labels": cmd_import_labels}[args.cmd](args)
 
 
 if __name__ == "__main__":

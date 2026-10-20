@@ -1,0 +1,29 @@
+{
+  "items": 70,
+  "qa_citation": 35,
+  "citation_check": 35,
+  "cc_label_mix": {
+    "supported": 14,
+    "right_doc_wrong_passage": 7,
+    "wrong_document": 7,
+    "unsupported_claim": 7
+  },
+  "qa_gt_sizes": {
+    "1": 35
+  },
+  "distinct_opinions": 21,
+  "max_items_per_opinion": 4,
+  "federal_share": 0.486,
+  "max_court_share": 0.143,
+  "area_of_law": {
+    "contracts": 20,
+    "criminal": 20,
+    "torts": 10,
+    "ip": 10,
+    "civil_procedure": 10
+  },
+  "max_area_share": 0.286,
+  "problems": [
+    "fewer than 40 distinct opinions"
+  ]
+}
