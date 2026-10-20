@@ -51,7 +51,7 @@ This project is an independent implementation of published RAG-evaluation method
   - These are model–model figures plus a 30-item human pass, not full human inter-rater reliability; see the caveats in AGREEMENT.md.
 - **Adjudication:** [ADJUDICATION.md](ADJUDICATION.md) covers the 17 disagreements and a 10% audit, each with both labels, reasons, the recommendation and the final decision. Decisions are in `data/v0.3/labels/adjudicated.jsonl` and applied by `src/v03_dataset.py apply-adjudication`. Each item records `label_source` (`adjudicated` or agreed).
 - **Data:** `data/v0.3/qa_citation.jsonl`, `data/v0.3/citation_check.jsonl`, `data/v0.3/corpus/` (normalised opinion text), `data/v0.3/sources.json` (per-opinion provenance, including text source), `data/v0.3/labels/`.
-- **Rebuild:** `src/v03_fetch.py` (search and fetch; needs `COURTLISTENER_API_TOKEN`), then `src/v03_corpus.py`, then `src/v03_dataset.py` (packets, assemble, validate, rater input, agreement, adjudication). Raw API responses are cached in `data/raw/`, which is gitignored. 33 opinions come from the REST API; 12 come from CourtListener storage PDFs, SHA-1-verified against the search response. Opinions removed during curation, with reasons, are in `data/v0.3/exclusions.json`. Each opinion's later treatment is recorded in `sources.json` as `precedential_status` (good law / abrogated / overruled / unknown), with its basis and date; it is recorded, not used for selection (protocol v1.1 §2).
+- **Rebuild:** `src/v03_fetch.py` (search and fetch; needs `COURTLISTENER_API_TOKEN`), then `src/v03_corpus.py`, then `src/v03_dataset.py` (packets, assemble, validate, rater input, agreement, adjudication). Raw API responses are cached in `data/raw/`, which is gitignored. 33 opinions come from the REST API; 12 come from CourtListener storage PDFs, SHA-1-verified against the search response. Opinions removed during curation, with reasons, are in `data/v0.3/exclusions.json`. `precedential_status` is `not_checked` for all 45 opinions: CourtListener exposes no subsequent-history flags; the one abrogation found during collection was removed and logged in `exclusions.json`; status is recorded, not a selection criterion (protocol §2(e)).
 - **Method note:** unlike v0.1, v0.3 items were **drafted by a model** following the protocol, labelled independently by a second blind model run, and then human-adjudicated (disagreements plus an audit sample). The v0.1 statement that every question is human-written applies to v0.1 only.
 
 ### v0.3 harness sanity pass (30-item seeded sample, pipeline check only)
@@ -61,12 +61,12 @@ This project is an independent implementation of published RAG-evaluation method
 .venv/bin/python run_eval.py --dataset v0.3 --model gpt-5-mini --judge-model claude-sonnet-5-5 --sample 30
 ```
 
-| Model | qa citation precision (baseline / strict) | qa citation recall | `citation_check` accuracy (κ) | API cost |
+| Model | qa citation precision (baseline / strict) | qa citation recall (baseline / strict) | `citation_check` accuracy (κ) | API cost |
 |---|---|---|---|---|
-| `claude-sonnet-5-5` | 0.915 / 0.916 | 0.70 | 1.00 (1.00) | $3.31 |
-| `gpt-5-mini` (judge `claude-sonnet-5-5`) | 0.744 / 0.841 | 0.70 | 0.93 (0.90) | $0.10 + $1.42 judge |
+| `claude-sonnet-5-5` | 0.919 / 0.913 | 0.718 / 0.718 | 1.00 (1.00) | $3.31 |
+| `gpt-5-mini` (judge `claude-sonnet-5-5`) | 0.763 / 0.878 | 0.718 / 0.692 | 0.93 (0.90) | $0.10 + $1.42 judge |
 
-n = 15 per type: these numbers confirm the pipeline runs end to end, not a model comparison. They were run before adjudication and before the Najera Aguirre and cc-5 rebuilds, so they are not re-scored on the final labels. Summaries are in `results/v0.3/<model>/summary.json`.
+Re-scored against the **final labels** from the saved outputs, with no new API calls (`python src/v03_rescore.py`; `results/v0.3/<model>/summary_final_labels.json`). n = 13 `qa_citation` (2 sampled items were rebuilt after the run and dropped) and 15 `citation_check`. 6 sampled rows are scored against labels that changed at adjudication or re-label. Recall and `citation_check` accuracy use the final labels; precision is the judge's verdict on the saved answers. These numbers confirm the pipeline runs end to end; they are not a model comparison. Cost is that of the original run; the re-score cost $0.
 
 ## Method (v0.1)
 

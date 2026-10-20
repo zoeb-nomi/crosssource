@@ -49,7 +49,7 @@ The curator adjudicated all 30 queued items (17 disagreements + a seeded 10% aud
 | `citation_check` | 75 | 100% | 1.000 | the only round-1 disagreement was rewritten |
 | `qa_citation` | 75 | 78.7% (exact chunk set) | 0.835 (chunk level, 375 decisions) | chunk-level agreement 94.1%; mean Jaccard 0.881 |
 
-Final labels: adjudicated for the 30 queued items (`label_source: "adjudicated"`), and rater A = rater B for the other 120.
+Final labels: adjudicated for the 30 queued items (`label_source: "adjudicated"`). For the other 120, rater A = rater B, and the 53 `qa_citation` among them were re-labelled under v1.1: 51 confirmed, 2 gained a chunk (see below).
 
 ## What the disagreements show
 - **All 16 `qa_citation` disagreements go the same way.** Rater B chose a strict superset of rater A's chunks. Rater A marked one chunk on 74 of 75 items. Rater B marked one chunk on 58, two on 12, three on 4 and four on 1.
@@ -66,7 +66,17 @@ The curator then adopted **protocol v1.1** at adjudication:
 - §2: reasoned per curiam opinions are allowed, and precedential status is recorded but is not a selection criterion.
 - §5: claims that depend on an identifier shown only outside the passages are excluded, and interleaved footnote text alone is not "garbled".
 
-**Not done:** the protocol's own version rule says items labelled under an older version are re-labelled. The 120 items outside the queue carry v1.0 labels on which both model raters agreed. They were not re-labelled under v1.1; the §3.1 change could add chunks to some of their ground-truth sets.
+**v1.1 re-label of the non-queued `qa_citation` items (2026-10-20).** Per the protocol's version rule, the 53 `qa_citation` items outside the queue were re-labelled under v1.1. This was one blind Claude Sonnet 5.5 subagent run, with opaque ids, an isolated folder and no access to earlier labels. Labels: `data/v0.3/labels/relabel_v11.jsonl`. The 67 `citation_check` items outside the queue were not re-labelled, because their rules did not change.
+
+| 53 non-queued `qa_citation` items | Before (v1.0, agreed) | After (v1.1) |
+|---|---|---|
+| Unchanged | — | **51** |
+| Gained a chunk | — | **2** (`contract_interpretation-qa-4` + `cl6320573:11`; `article_iii_standing-qa-4` + `cl11116328:8`) |
+| Lost a chunk | — | 0 |
+| 1-chunk ground truth | 53 | 51 |
+| 2-chunk ground truth | 0 | 2 |
+
+All 75 `qa_citation` items, by ground-truth size: before re-label 59 / 11 / 5 (1 / 2 / 3 chunks); after **57 / 13 / 5**. The 2 changes come from a single rater and were applied without a second rater; each item records `label_source`.
 
 ## Caveats a reader should weigh
 1. **The `citation_check` agreement is near ceiling, and that is not evidence the items are hard.**
@@ -75,5 +85,5 @@ The curator then adopted **protocol v1.1** at adjudication:
    - §1.3 of the protocol, which rater B read, states the target label mix (30/15/15/15). Rater B's distribution was 29/15/15/16. Rater B could have used that mix as a prior.
    - A human-labelled sample of these items is the next thing to get before this figure is used as a reliability claim. The v1.1 rater copy should also leave out the target mix.
 2. **Rater B ran in two sessions**: 70 items, then 80 after the 10 replacement opinions were fetched. The second session was paused once by the environment's auto-mode classifier at item 11. It resumed with the curator's approval and kept its first 11 labels. Rater B also once read a tool-output overflow file of its own item text; that file held no labels.
-3. **`qa_citation` ground truth outside the queue is the agreed v1.0 label.** Where both model raters marked only the build chunk, a restating chunk may be missing from the set (see "Not done" above). Harness citation recall would then under-credit a citation of that chunk.
+3. **The v1.1 re-label is a single model rater.** Its 2 changes were not second-rated or human-checked.
 4. **The human pass covers 30 of 150 items.** The other 120 rest on model–model agreement.

@@ -20,9 +20,8 @@
     "chunks": 29,
     "api_url": "https://www.courtlistener.com/api/rest/v4/opinions/10465611/",
     "source": "CourtListener REST API v4 (Free Law Project)",
-    "precedential_status": "unknown",
-    "precedential_status_basis": "not screened",
-    "precedential_status_checked": null
+    "precedential_status": "not_checked",
+    "precedential_status_note": "not_checked: CourtListener exposes no subsequent-history flags; the one abrogation found during collection (Hamilton v. Dallas County, 5th Cir. 2022 panel opinion) was removed and logged in exclusions.json; status is recorded, not a selection criterion (protocol §2(e))."
   },
   {
     "doc_id": "cl10465655",
@@ -49,9 +48,8 @@
     "chunks": 13,
     "api_url": "https://www.courtlistener.com/api/rest/v4/opinions/10465655/",
     "source": "CourtListener file storage PDF, SHA-1 verified against the REST v4 search response (Free Law Project)",
-    "precedential_status": "unknown",
-    "precedential_status_basis": "not screened",
-    "precedential_status_checked": null
+    "precedential_status": "not_checked",
+    "precedential_status_note": "not_checked: CourtListener exposes no subsequent-history flags; the one abrogation found during collection (Hamilton v. Dallas County, 5th Cir. 2022 panel opinion) was removed and logged in exclusions.json; status is recorded, not a selection criterion (protocol §2(e))."
   },
   {
     "doc_id": "cl10737190",
@@ -78,9 +76,8 @@
     "chunks": 11,
     "api_url": "https://www.courtlistener.com/api/rest/v4/opinions/10737190/",
     "source": "CourtListener file storage PDF, SHA-1 verified against the REST v4 search response (Free Law Project)",
-    "precedential_status": "unknown",
-    "precedential_status_basis": "not screened",
-    "precedential_status_checked": null
+    "precedential_status": "not_checked",
+    "precedential_status_note": "not_checked: CourtListener exposes no subsequent-history flags; the one abrogation found during collection (Hamilton v. Dallas County, 5th Cir. 2022 panel opinion) was removed and logged in exclusions.json; status is recorded, not a selection criterion (protocol §2(e))."
   },
   {
     "doc_id": "cl10759655",
@@ -103,9 +100,8 @@
     "chunks": 14,
     "api_url": "https://www.courtlistener.com/api/rest/v4/opinions/10759655/",
     "source": "CourtListener REST API v4 (Free Law Project)",
-    "precedential_status": "unknown",
-    "precedential_status_basis": "not screened",
-    "precedential_status_checked": null
+    "precedential_status": "not_checked",
+    "precedential_status_note": "not_checked: CourtListener exposes no subsequent-history flags; the one abrogation found during collection (Hamilton v. Dallas County, 5th Cir. 2022 panel opinion) was removed and logged in exclusions.json; status is recorded, not a selection criterion (protocol §2(e))."
   },
   {
     "doc_id": "cl10802953",
@@ -130,9 +126,8 @@
     "chunks": 7,
     "api_url": "https://www.courtlistener.com/api/rest/v4/opinions/10802953/",
     "source": "CourtListener REST API v4 (Free Law Project)",
-    "precedential_status": "unknown",
-    "precedential_status_basis": "not screened",
-    "precedential_status_checked": null
+    "precedential_status": "not_checked",
+    "precedential_status_note": "not_checked: CourtListener exposes no subsequent-history flags; the one abrogation found during collection (Hamilton v. Dallas County, 5th Cir. 2022 panel opinion) was removed and logged in exclusions.json; status is recorded, not a selection criterion (protocol §2(e))."
   },
   {
     "doc_id": "cl10815384",
@@ -159,9 +154,8 @@
     "chunks": 14,
     "api_url": "https://www.courtlistener.com/api/rest/v4/opinions/10815384/",
     "source": "CourtListener file storage PDF, SHA-1 verified against the REST v4 search response (Free Law Project)",
-    "precedential_status": "unknown",
-    "precedential_status_basis": "not screened",
-    "precedential_status_checked": null
+    "precedential_status": "not_checked",
+    "precedential_status_note": "not_checked: CourtListener exposes no subsequent-history flags; the one abrogation found during collection (Hamilton v. Dallas County, 5th Cir. 2022 panel opinion) was removed and logged in exclusions.json; status is recorded, not a selection criterion (protocol §2(e))."
   },
   {
     "doc_id": "cl10835596",
@@ -186,9 +180,8 @@
     "chunks": 8,
     "api_url": "https://www.courtlistener.com/api/rest/v4/opinions/10835596/",
     "source": "CourtListener REST API v4 (Free Law Project)",
-    "precedential_status": "unknown",
-    "precedential_status_basis": "not screened",
-    "precedential_status_checked": null
+    "precedential_status": "not_checked",
+    "precedential_status_note": "not_checked: CourtListener exposes no subsequent-history flags; the one abrogation found during collection (Hamilton v. Dallas County, 5th Cir. 2022 panel opinion) was removed and logged in exclusions.json; status is recorded, not a selection criterion (protocol §2(e))."
   },
   {
     "doc_id": "cl10839652",
@@ -213,9 +206,8 @@
     "chunks": 14,
     "api_url": "https://www.courtlistener.com/api/rest/v4/opinions/10839652/",
     "source": "CourtListener REST API v4 (Free Law Project)",
-    "precedential_status": "unknown",
-    "precedential_status_basis": "not screened",
-    "precedential_status_checked": null
+    "precedential_status": "not_checked",
+    "precedential_status_note": "not_checked: CourtListener exposes no subsequent-history flags; the one abrogation found during collection (Hamilton v. Dallas County, 5th Cir. 2022 panel opinion) was removed and logged in exclusions.json; status is recorded, not a selection criterion (protocol §2(e))."
   },
   {
     "doc_id": "cl11081153",
@@ -240,9 +232,8 @@
     "chunks": 15,
     "api_url": "https://www.courtlistener.com/api/rest/v4/opinions/11081153/",
     "source": "CourtListener REST API v4 (Free Law Project)",
-    "precedential_status": "unknown",
-    "precedential_status_basis": "not screened",
-    "precedential_status_checked": null
+    "precedential_status": "not_checked",
+    "precedential_status_note": "not_checked: CourtListener exposes no subsequent-history flags; the one abrogation found during collection (Hamilton v. Dallas County, 5th Cir. 2022 panel opinion) was removed and logged in exclusions.json; status is recorded, not a selection criterion (protocol §2(e))."
   },
   {
     "doc_id": "cl11107767",
@@ -265,9 +256,8 @@
     "chunks": 28,
     "api_url": "https://www.courtlistener.com/api/rest/v4/opinions/11107767/",
     "source": "CourtListener REST API v4 (Free Law Project)",
-    "precedential_status": "unknown",
-    "precedential_status_basis": "not screened",
-    "precedential_status_checked": null
+    "precedential_status": "not_checked",
+    "precedential_status_note": "not_checked: CourtListener exposes no subsequent-history flags; the one abrogation found during collection (Hamilton v. Dallas County, 5th Cir. 2022 panel opinion) was removed and logged in exclusions.json; status is recorded, not a selection criterion (protocol §2(e))."
   },
   {
     "doc_id": "cl11110987",
@@ -290,9 +280,8 @@
     "chunks": 28,
     "api_url": "https://www.courtlistener.com/api/rest/v4/opinions/11110987/",
     "source": "CourtListener REST API v4 (Free Law Project)",
-    "precedential_status": "unknown",
-    "precedential_status_basis": "not screened",
-    "precedential_status_checked": null
+    "precedential_status": "not_checked",
+    "precedential_status_note": "not_checked: CourtListener exposes no subsequent-history flags; the one abrogation found during collection (Hamilton v. Dallas County, 5th Cir. 2022 panel opinion) was removed and logged in exclusions.json; status is recorded, not a selection criterion (protocol §2(e))."
   },
   {
     "doc_id": "cl11115647",
@@ -317,9 +306,8 @@
     "chunks": 18,
     "api_url": "https://www.courtlistener.com/api/rest/v4/opinions/11115647/",
     "source": "CourtListener file storage PDF, SHA-1 verified against the REST v4 search response (Free Law Project)",
-    "precedential_status": "unknown",
-    "precedential_status_basis": "not screened",
-    "precedential_status_checked": null
+    "precedential_status": "not_checked",
+    "precedential_status_note": "not_checked: CourtListener exposes no subsequent-history flags; the one abrogation found during collection (Hamilton v. Dallas County, 5th Cir. 2022 panel opinion) was removed and logged in exclusions.json; status is recorded, not a selection criterion (protocol §2(e))."
   },
   {
     "doc_id": "cl11116328",
@@ -342,9 +330,8 @@
     "chunks": 16,
     "api_url": "https://www.courtlistener.com/api/rest/v4/opinions/11116328/",
     "source": "CourtListener REST API v4 (Free Law Project)",
-    "precedential_status": "unknown",
-    "precedential_status_basis": "not screened",
-    "precedential_status_checked": null
+    "precedential_status": "not_checked",
+    "precedential_status_note": "not_checked: CourtListener exposes no subsequent-history flags; the one abrogation found during collection (Hamilton v. Dallas County, 5th Cir. 2022 panel opinion) was removed and logged in exclusions.json; status is recorded, not a selection criterion (protocol §2(e))."
   },
   {
     "doc_id": "cl11118835",
@@ -367,9 +354,8 @@
     "chunks": 21,
     "api_url": "https://www.courtlistener.com/api/rest/v4/opinions/11118835/",
     "source": "CourtListener REST API v4 (Free Law Project)",
-    "precedential_status": "unknown",
-    "precedential_status_basis": "not screened",
-    "precedential_status_checked": null
+    "precedential_status": "not_checked",
+    "precedential_status_note": "not_checked: CourtListener exposes no subsequent-history flags; the one abrogation found during collection (Hamilton v. Dallas County, 5th Cir. 2022 panel opinion) was removed and logged in exclusions.json; status is recorded, not a selection criterion (protocol §2(e))."
   },
   {
     "doc_id": "cl11121462",
@@ -394,9 +380,8 @@
     "chunks": 8,
     "api_url": "https://www.courtlistener.com/api/rest/v4/opinions/11121462/",
     "source": "CourtListener file storage PDF, SHA-1 verified against the REST v4 search response (Free Law Project)",
-    "precedential_status": "unknown",
-    "precedential_status_basis": "not screened",
-    "precedential_status_checked": null
+    "precedential_status": "not_checked",
+    "precedential_status_note": "not_checked: CourtListener exposes no subsequent-history flags; the one abrogation found during collection (Hamilton v. Dallas County, 5th Cir. 2022 panel opinion) was removed and logged in exclusions.json; status is recorded, not a selection criterion (protocol §2(e))."
   },
   {
     "doc_id": "cl11176209",
@@ -421,9 +406,8 @@
     "chunks": 8,
     "api_url": "https://www.courtlistener.com/api/rest/v4/opinions/11176209/",
     "source": "CourtListener REST API v4 (Free Law Project)",
-    "precedential_status": "unknown",
-    "precedential_status_basis": "not screened",
-    "precedential_status_checked": null
+    "precedential_status": "not_checked",
+    "precedential_status_note": "not_checked: CourtListener exposes no subsequent-history flags; the one abrogation found during collection (Hamilton v. Dallas County, 5th Cir. 2022 panel opinion) was removed and logged in exclusions.json; status is recorded, not a selection criterion (protocol §2(e))."
   },
   {
     "doc_id": "cl11235652",
@@ -446,9 +430,8 @@
     "chunks": 35,
     "api_url": "https://www.courtlistener.com/api/rest/v4/opinions/11235652/",
     "source": "CourtListener REST API v4 (Free Law Project)",
-    "precedential_status": "unknown",
-    "precedential_status_basis": "not screened",
-    "precedential_status_checked": null
+    "precedential_status": "not_checked",
+    "precedential_status_note": "not_checked: CourtListener exposes no subsequent-history flags; the one abrogation found during collection (Hamilton v. Dallas County, 5th Cir. 2022 panel opinion) was removed and logged in exclusions.json; status is recorded, not a selection criterion (protocol §2(e))."
   },
   {
     "doc_id": "cl11259842",
@@ -473,9 +456,8 @@
     "chunks": 13,
     "api_url": "https://www.courtlistener.com/api/rest/v4/opinions/11259842/",
     "source": "CourtListener file storage PDF, SHA-1 verified against the REST v4 search response (Free Law Project)",
-    "precedential_status": "unknown",
-    "precedential_status_basis": "not screened",
-    "precedential_status_checked": null
+    "precedential_status": "not_checked",
+    "precedential_status_note": "not_checked: CourtListener exposes no subsequent-history flags; the one abrogation found during collection (Hamilton v. Dallas County, 5th Cir. 2022 panel opinion) was removed and logged in exclusions.json; status is recorded, not a selection criterion (protocol §2(e))."
   },
   {
     "doc_id": "cl11419421",
@@ -500,9 +482,8 @@
     "chunks": 14,
     "api_url": "https://www.courtlistener.com/api/rest/v4/opinions/11419421/",
     "source": "CourtListener file storage PDF, SHA-1 verified against the REST v4 search response (Free Law Project)",
-    "precedential_status": "unknown",
-    "precedential_status_basis": "not screened",
-    "precedential_status_checked": null
+    "precedential_status": "not_checked",
+    "precedential_status_note": "not_checked: CourtListener exposes no subsequent-history flags; the one abrogation found during collection (Hamilton v. Dallas County, 5th Cir. 2022 panel opinion) was removed and logged in exclusions.json; status is recorded, not a selection criterion (protocol §2(e))."
   },
   {
     "doc_id": "cl11452592",
@@ -527,9 +508,8 @@
     "chunks": 21,
     "api_url": "https://www.courtlistener.com/api/rest/v4/opinions/11452592/",
     "source": "CourtListener REST API v4 (Free Law Project)",
-    "precedential_status": "unknown",
-    "precedential_status_basis": "not screened",
-    "precedential_status_checked": null
+    "precedential_status": "not_checked",
+    "precedential_status_note": "not_checked: CourtListener exposes no subsequent-history flags; the one abrogation found during collection (Hamilton v. Dallas County, 5th Cir. 2022 panel opinion) was removed and logged in exclusions.json; status is recorded, not a selection criterion (protocol §2(e))."
   },
   {
     "doc_id": "cl4367038",
@@ -554,9 +534,8 @@
     "chunks": 21,
     "api_url": "https://www.courtlistener.com/api/rest/v4/opinions/4367038/",
     "source": "CourtListener REST API v4 (Free Law Project)",
-    "precedential_status": "unknown",
-    "precedential_status_basis": "not screened",
-    "precedential_status_checked": null
+    "precedential_status": "not_checked",
+    "precedential_status_note": "not_checked: CourtListener exposes no subsequent-history flags; the one abrogation found during collection (Hamilton v. Dallas County, 5th Cir. 2022 panel opinion) was removed and logged in exclusions.json; status is recorded, not a selection criterion (protocol §2(e))."
   },
   {
     "doc_id": "cl4532507",
@@ -579,9 +558,8 @@
     "chunks": 34,
     "api_url": "https://www.courtlistener.com/api/rest/v4/opinions/4532507/",
     "source": "CourtListener REST API v4 (Free Law Project)",
-    "precedential_status": "unknown",
-    "precedential_status_basis": "not screened",
-    "precedential_status_checked": null
+    "precedential_status": "not_checked",
+    "precedential_status_note": "not_checked: CourtListener exposes no subsequent-history flags; the one abrogation found during collection (Hamilton v. Dallas County, 5th Cir. 2022 panel opinion) was removed and logged in exclusions.json; status is recorded, not a selection criterion (protocol §2(e))."
   },
   {
     "doc_id": "cl4538757",
@@ -608,9 +586,8 @@
     "chunks": 16,
     "api_url": "https://www.courtlistener.com/api/rest/v4/opinions/4538757/",
     "source": "CourtListener REST API v4 (Free Law Project)",
-    "precedential_status": "unknown",
-    "precedential_status_basis": "not screened",
-    "precedential_status_checked": null
+    "precedential_status": "not_checked",
+    "precedential_status_note": "not_checked: CourtListener exposes no subsequent-history flags; the one abrogation found during collection (Hamilton v. Dallas County, 5th Cir. 2022 panel opinion) was removed and logged in exclusions.json; status is recorded, not a selection criterion (protocol §2(e))."
   },
   {
     "doc_id": "cl4682256",
@@ -635,9 +612,8 @@
     "chunks": 17,
     "api_url": "https://www.courtlistener.com/api/rest/v4/opinions/4682256/",
     "source": "CourtListener file storage PDF, SHA-1 verified against the REST v4 search response (Free Law Project)",
-    "precedential_status": "unknown",
-    "precedential_status_basis": "not screened",
-    "precedential_status_checked": null
+    "precedential_status": "not_checked",
+    "precedential_status_note": "not_checked: CourtListener exposes no subsequent-history flags; the one abrogation found during collection (Hamilton v. Dallas County, 5th Cir. 2022 panel opinion) was removed and logged in exclusions.json; status is recorded, not a selection criterion (protocol §2(e))."
   },
   {
     "doc_id": "cl5124709",
@@ -664,9 +640,8 @@
     "chunks": 9,
     "api_url": "https://www.courtlistener.com/api/rest/v4/opinions/5124709/",
     "source": "CourtListener file storage PDF, SHA-1 verified against the REST v4 search response (Free Law Project)",
-    "precedential_status": "unknown",
-    "precedential_status_basis": "not screened",
-    "precedential_status_checked": null
+    "precedential_status": "not_checked",
+    "precedential_status_note": "not_checked: CourtListener exposes no subsequent-history flags; the one abrogation found during collection (Hamilton v. Dallas County, 5th Cir. 2022 panel opinion) was removed and logged in exclusions.json; status is recorded, not a selection criterion (protocol §2(e))."
   },
   {
     "doc_id": "cl5129137",
@@ -691,9 +666,8 @@
     "chunks": 24,
     "api_url": "https://www.courtlistener.com/api/rest/v4/opinions/5129137/",
     "source": "CourtListener REST API v4 (Free Law Project)",
-    "precedential_status": "unknown",
-    "precedential_status_basis": "not screened",
-    "precedential_status_checked": null
+    "precedential_status": "not_checked",
+    "precedential_status_note": "not_checked: CourtListener exposes no subsequent-history flags; the one abrogation found during collection (Hamilton v. Dallas County, 5th Cir. 2022 panel opinion) was removed and logged in exclusions.json; status is recorded, not a selection criterion (protocol §2(e))."
   },
   {
     "doc_id": "cl6105386",
@@ -720,9 +694,8 @@
     "chunks": 12,
     "api_url": "https://www.courtlistener.com/api/rest/v4/opinions/6105386/",
     "source": "CourtListener file storage PDF, SHA-1 verified against the REST v4 search response (Free Law Project)",
-    "precedential_status": "unknown",
-    "precedential_status_basis": "not screened",
-    "precedential_status_checked": null
+    "precedential_status": "not_checked",
+    "precedential_status_note": "not_checked: CourtListener exposes no subsequent-history flags; the one abrogation found during collection (Hamilton v. Dallas County, 5th Cir. 2022 panel opinion) was removed and logged in exclusions.json; status is recorded, not a selection criterion (protocol §2(e))."
   },
   {
     "doc_id": "cl6320573",
@@ -745,9 +718,8 @@
     "chunks": 16,
     "api_url": "https://www.courtlistener.com/api/rest/v4/opinions/6320573/",
     "source": "CourtListener REST API v4 (Free Law Project)",
-    "precedential_status": "unknown",
-    "precedential_status_basis": "not screened",
-    "precedential_status_checked": null
+    "precedential_status": "not_checked",
+    "precedential_status_note": "not_checked: CourtListener exposes no subsequent-history flags; the one abrogation found during collection (Hamilton v. Dallas County, 5th Cir. 2022 panel opinion) was removed and logged in exclusions.json; status is recorded, not a selection criterion (protocol §2(e))."
   },
   {
     "doc_id": "cl8234259",
@@ -773,9 +745,8 @@
     "chunks": 25,
     "api_url": "https://www.courtlistener.com/api/rest/v4/opinions/8234259/",
     "source": "CourtListener REST API v4 (Free Law Project)",
-    "precedential_status": "unknown",
-    "precedential_status_basis": "not screened",
-    "precedential_status_checked": null
+    "precedential_status": "not_checked",
+    "precedential_status_note": "not_checked: CourtListener exposes no subsequent-history flags; the one abrogation found during collection (Hamilton v. Dallas County, 5th Cir. 2022 panel opinion) was removed and logged in exclusions.json; status is recorded, not a selection criterion (protocol §2(e))."
   },
   {
     "doc_id": "cl8250811",
@@ -800,9 +771,8 @@
     "chunks": 15,
     "api_url": "https://www.courtlistener.com/api/rest/v4/opinions/8250811/",
     "source": "CourtListener REST API v4 (Free Law Project)",
-    "precedential_status": "unknown",
-    "precedential_status_basis": "not screened",
-    "precedential_status_checked": null
+    "precedential_status": "not_checked",
+    "precedential_status_note": "not_checked: CourtListener exposes no subsequent-history flags; the one abrogation found during collection (Hamilton v. Dallas County, 5th Cir. 2022 panel opinion) was removed and logged in exclusions.json; status is recorded, not a selection criterion (protocol §2(e))."
   },
   {
     "doc_id": "cl9226166",
@@ -829,9 +799,8 @@
     "chunks": 14,
     "api_url": "https://www.courtlistener.com/api/rest/v4/opinions/9226166/",
     "source": "CourtListener REST API v4 (Free Law Project)",
-    "precedential_status": "unknown",
-    "precedential_status_basis": "not screened",
-    "precedential_status_checked": null
+    "precedential_status": "not_checked",
+    "precedential_status_note": "not_checked: CourtListener exposes no subsequent-history flags; the one abrogation found during collection (Hamilton v. Dallas County, 5th Cir. 2022 panel opinion) was removed and logged in exclusions.json; status is recorded, not a selection criterion (protocol §2(e))."
   },
   {
     "doc_id": "cl9363399",
@@ -854,9 +823,8 @@
     "chunks": 12,
     "api_url": "https://www.courtlistener.com/api/rest/v4/opinions/9363399/",
     "source": "CourtListener REST API v4 (Free Law Project)",
-    "precedential_status": "unknown",
-    "precedential_status_basis": "not screened",
-    "precedential_status_checked": null
+    "precedential_status": "not_checked",
+    "precedential_status_note": "not_checked: CourtListener exposes no subsequent-history flags; the one abrogation found during collection (Hamilton v. Dallas County, 5th Cir. 2022 panel opinion) was removed and logged in exclusions.json; status is recorded, not a selection criterion (protocol §2(e))."
   },
   {
     "doc_id": "cl9374906",
@@ -883,9 +851,8 @@
     "chunks": 10,
     "api_url": "https://www.courtlistener.com/api/rest/v4/opinions/9374906/",
     "source": "CourtListener file storage PDF, SHA-1 verified against the REST v4 search response (Free Law Project)",
-    "precedential_status": "unknown",
-    "precedential_status_basis": "not screened",
-    "precedential_status_checked": null
+    "precedential_status": "not_checked",
+    "precedential_status_note": "not_checked: CourtListener exposes no subsequent-history flags; the one abrogation found during collection (Hamilton v. Dallas County, 5th Cir. 2022 panel opinion) was removed and logged in exclusions.json; status is recorded, not a selection criterion (protocol §2(e))."
   },
   {
     "doc_id": "cl9379438",
@@ -910,9 +877,8 @@
     "chunks": 7,
     "api_url": "https://www.courtlistener.com/api/rest/v4/opinions/9379438/",
     "source": "CourtListener REST API v4 (Free Law Project)",
-    "precedential_status": "unknown",
-    "precedential_status_basis": "not screened",
-    "precedential_status_checked": null
+    "precedential_status": "not_checked",
+    "precedential_status_note": "not_checked: CourtListener exposes no subsequent-history flags; the one abrogation found during collection (Hamilton v. Dallas County, 5th Cir. 2022 panel opinion) was removed and logged in exclusions.json; status is recorded, not a selection criterion (protocol §2(e))."
   },
   {
     "doc_id": "cl9556163",
@@ -935,9 +901,8 @@
     "chunks": 12,
     "api_url": "https://www.courtlistener.com/api/rest/v4/opinions/9556163/",
     "source": "CourtListener REST API v4 (Free Law Project)",
-    "precedential_status": "unknown",
-    "precedential_status_basis": "not screened",
-    "precedential_status_checked": null
+    "precedential_status": "not_checked",
+    "precedential_status_note": "not_checked: CourtListener exposes no subsequent-history flags; the one abrogation found during collection (Hamilton v. Dallas County, 5th Cir. 2022 panel opinion) was removed and logged in exclusions.json; status is recorded, not a selection criterion (protocol §2(e))."
   },
   {
     "doc_id": "cl9841132",
@@ -962,9 +927,8 @@
     "chunks": 13,
     "api_url": "https://www.courtlistener.com/api/rest/v4/opinions/9841132/",
     "source": "CourtListener REST API v4 (Free Law Project)",
-    "precedential_status": "unknown",
-    "precedential_status_basis": "not screened",
-    "precedential_status_checked": null
+    "precedential_status": "not_checked",
+    "precedential_status_note": "not_checked: CourtListener exposes no subsequent-history flags; the one abrogation found during collection (Hamilton v. Dallas County, 5th Cir. 2022 panel opinion) was removed and logged in exclusions.json; status is recorded, not a selection criterion (protocol §2(e))."
   },
   {
     "doc_id": "cl9900814",
@@ -989,9 +953,8 @@
     "chunks": 6,
     "api_url": "https://www.courtlistener.com/api/rest/v4/opinions/9900814/",
     "source": "CourtListener REST API v4 (Free Law Project)",
-    "precedential_status": "unknown",
-    "precedential_status_basis": "not screened",
-    "precedential_status_checked": null
+    "precedential_status": "not_checked",
+    "precedential_status_note": "not_checked: CourtListener exposes no subsequent-history flags; the one abrogation found during collection (Hamilton v. Dallas County, 5th Cir. 2022 panel opinion) was removed and logged in exclusions.json; status is recorded, not a selection criterion (protocol §2(e))."
   },
   {
     "doc_id": "cl9905225",
@@ -1018,9 +981,8 @@
     "chunks": 12,
     "api_url": "https://www.courtlistener.com/api/rest/v4/opinions/9905225/",
     "source": "CourtListener file storage PDF, SHA-1 verified against the REST v4 search response (Free Law Project)",
-    "precedential_status": "unknown",
-    "precedential_status_basis": "not screened",
-    "precedential_status_checked": null
+    "precedential_status": "not_checked",
+    "precedential_status_note": "not_checked: CourtListener exposes no subsequent-history flags; the one abrogation found during collection (Hamilton v. Dallas County, 5th Cir. 2022 panel opinion) was removed and logged in exclusions.json; status is recorded, not a selection criterion (protocol §2(e))."
   },
   {
     "doc_id": "cl9905848",
@@ -1045,9 +1007,8 @@
     "chunks": 13,
     "api_url": "https://www.courtlistener.com/api/rest/v4/opinions/9905848/",
     "source": "CourtListener REST API v4 (Free Law Project)",
-    "precedential_status": "unknown",
-    "precedential_status_basis": "not screened",
-    "precedential_status_checked": null
+    "precedential_status": "not_checked",
+    "precedential_status_note": "not_checked: CourtListener exposes no subsequent-history flags; the one abrogation found during collection (Hamilton v. Dallas County, 5th Cir. 2022 panel opinion) was removed and logged in exclusions.json; status is recorded, not a selection criterion (protocol §2(e))."
   },
   {
     "doc_id": "cl9915536",
@@ -1072,9 +1033,8 @@
     "chunks": 9,
     "api_url": "https://www.courtlistener.com/api/rest/v4/opinions/9915536/",
     "source": "CourtListener REST API v4 (Free Law Project)",
-    "precedential_status": "unknown",
-    "precedential_status_basis": "not screened",
-    "precedential_status_checked": null
+    "precedential_status": "not_checked",
+    "precedential_status_note": "not_checked: CourtListener exposes no subsequent-history flags; the one abrogation found during collection (Hamilton v. Dallas County, 5th Cir. 2022 panel opinion) was removed and logged in exclusions.json; status is recorded, not a selection criterion (protocol §2(e))."
   },
   {
     "doc_id": "cl9931599",
@@ -1097,9 +1057,8 @@
     "chunks": 19,
     "api_url": "https://www.courtlistener.com/api/rest/v4/opinions/9931599/",
     "source": "CourtListener REST API v4 (Free Law Project)",
-    "precedential_status": "unknown",
-    "precedential_status_basis": "not screened",
-    "precedential_status_checked": null
+    "precedential_status": "not_checked",
+    "precedential_status_note": "not_checked: CourtListener exposes no subsequent-history flags; the one abrogation found during collection (Hamilton v. Dallas County, 5th Cir. 2022 panel opinion) was removed and logged in exclusions.json; status is recorded, not a selection criterion (protocol §2(e))."
   },
   {
     "doc_id": "cl9950712",
@@ -1124,9 +1083,8 @@
     "chunks": 12,
     "api_url": "https://www.courtlistener.com/api/rest/v4/opinions/9950712/",
     "source": "CourtListener REST API v4 (Free Law Project)",
-    "precedential_status": "unknown",
-    "precedential_status_basis": "not screened",
-    "precedential_status_checked": null
+    "precedential_status": "not_checked",
+    "precedential_status_note": "not_checked: CourtListener exposes no subsequent-history flags; the one abrogation found during collection (Hamilton v. Dallas County, 5th Cir. 2022 panel opinion) was removed and logged in exclusions.json; status is recorded, not a selection criterion (protocol §2(e))."
   },
   {
     "doc_id": "cl9954963",
@@ -1151,9 +1109,8 @@
     "chunks": 10,
     "api_url": "https://www.courtlistener.com/api/rest/v4/opinions/9954963/",
     "source": "CourtListener REST API v4 (Free Law Project)",
-    "precedential_status": "unknown",
-    "precedential_status_basis": "not screened",
-    "precedential_status_checked": null
+    "precedential_status": "not_checked",
+    "precedential_status_note": "not_checked: CourtListener exposes no subsequent-history flags; the one abrogation found during collection (Hamilton v. Dallas County, 5th Cir. 2022 panel opinion) was removed and logged in exclusions.json; status is recorded, not a selection criterion (protocol §2(e))."
   },
   {
     "doc_id": "cl9958088",
@@ -1176,9 +1133,8 @@
     "chunks": 10,
     "api_url": "https://www.courtlistener.com/api/rest/v4/opinions/9958088/",
     "source": "CourtListener REST API v4 (Free Law Project)",
-    "precedential_status": "unknown",
-    "precedential_status_basis": "not screened",
-    "precedential_status_checked": null
+    "precedential_status": "not_checked",
+    "precedential_status_note": "not_checked: CourtListener exposes no subsequent-history flags; the one abrogation found during collection (Hamilton v. Dallas County, 5th Cir. 2022 panel opinion) was removed and logged in exclusions.json; status is recorded, not a selection criterion (protocol §2(e))."
   },
   {
     "doc_id": "cl9963611",
@@ -1203,8 +1159,7 @@
     "chunks": 11,
     "api_url": "https://www.courtlistener.com/api/rest/v4/opinions/9963611/",
     "source": "CourtListener REST API v4 (Free Law Project)",
-    "precedential_status": "unknown",
-    "precedential_status_basis": "not screened",
-    "precedential_status_checked": null
+    "precedential_status": "not_checked",
+    "precedential_status_note": "not_checked: CourtListener exposes no subsequent-history flags; the one abrogation found during collection (Hamilton v. Dallas County, 5th Cir. 2022 panel opinion) was removed and logged in exclusions.json; status is recorded, not a selection criterion (protocol §2(e))."
   }
 ]

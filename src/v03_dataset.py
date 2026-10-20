@@ -196,15 +196,15 @@ def cmd_validate(args):
     }
     # precedential status of every opinion an item touches (source, window, context) — LABELING_PROTOCOL §2
     status_notes = []
-    status = {d: s.get("precedential_status", "unknown") for d, s in sources.items()}
+    status = {d: s.get("precedential_status", "not_checked") for d, s in sources.items()}
     for it in items:
         docs = {doc_of(c) for c in it.get("candidate_window", []) + it.get("context_chunks", [])} | {it["provenance"]["doc_id"]}
         for d in sorted(docs):
-            if status.get(d) != "good law":
-                status_notes.append(f"{it['id']}: uses {d} (precedential_status={status.get(d, 'unknown')})")
+            if status.get(d) in ("abrogated", "overruled"):
+                status_notes.append(f"{it['id']}: uses {d} (precedential_status={status[d]})")
     # recorded, not a selection criterion (protocol v1.1 §2) — reported loudly, never silently
     report["precedential_status"] = dict(Counter(status.values()))
-    report["items_touching_non_good_law"] = status_notes
+    report["items_touching_abrogated_or_overruled"] = status_notes
     if report["distinct_opinions"] < 40: problems.append("fewer than 40 distinct opinions")
     if report["max_items_per_opinion"] > 4: problems.append("an opinion supplies more than 4 items")
     if not 0.4 <= report["federal_share"] <= 0.6: problems.append("federal share outside 40–60%")
@@ -212,7 +212,7 @@ def cmd_validate(args):
     if report["max_area_share"] > 0.30: problems.append("an area_of_law tag above 30%")
     (V3 / "validation.json").write_text(json.dumps(report, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     print(json.dumps({k: v for k, v in report.items() if k != "problems"}, indent=2))
-    print(f"precedential_status: {report['precedential_status']}; items touching a non-'good law' opinion: {len(status_notes)}")
+    print(f"precedential_status: {report['precedential_status']}; items touching an abrogated/overruled opinion: {len(status_notes)}")
     for n in status_notes[:20]:
         print("  ! ", n)
     print(f"{len(problems)} problems")
@@ -356,7 +356,9 @@ def cmd_apply_adjudication(_):
     adj = {r["id"]: r for r in jl_read(path)} if path.exists() else {}
     chunks = load_chunks()
     rebuilt = {i for i, r in adj.items() if "rewritten" in r.get("note", "")}
-    changed = 0
+    rpath = V3 / "labels" / "relabel_v11.jsonl"
+    relabel = {r["id"]: r for r in jl_read(rpath)} if rpath.exists() else {}
+    changed = relabeled = 0
     for fname in ("qa_citation.jsonl", "citation_check.jsonl"):
         items = jl_read(V3 / fname)
         for it in items:
@@ -376,12 +378,25 @@ def cmd_apply_adjudication(_):
             it["label_source"] = "adjudicated"
         for it in items:
             it.setdefault("label_source", "rater A = rater B (agreed)")
+            # v1.1 single-rater re-label of the non-queued qa_citation items (AGREEMENT.md)
+            rr = relabel.get(it["id"])
+            if rr and it["type"] == "qa_citation" and it["label_source"] != "adjudicated":
+                final = sorted(rr["label"], key=lambda c: int(c.split(":")[1]))
+                if final and set(final) != set(it["ground_truth_chunks"]):
+                    assert set(final) <= set(it["candidate_window"]), it["id"]
+                    it["ground_truth_chunks"] = final
+                    it["provenance"]["passage"] = "\n".join(chunks[c] for c in final)
+                    it["label_source"] = "v1.1 re-label (changed)"
+                    relabeled += 1
+                else:
+                    it["label_source"] = "rater A = rater B (agreed); confirmed under v1.1"
         jl_write(V3 / fname, items)
-    print(f"applied {len(adj) - len(rebuilt)} adjudications ({changed} labels changed); {len(rebuilt)} rebuilt item(s) kept as rebuilt")
+    print(f"applied {len(adj) - len(rebuilt)} adjudications ({changed} labels changed); {len(rebuilt)} rebuilt item(s) kept as rebuilt; "
+          f"v1.1 re-label: {len(relabel)} items, {relabeled} changed")
 
 
 # --------------------------------------------------------------------------- treatment
-STATUSES = ("good law", "abrogated", "overruled", "unknown")
+STATUSES = ("good law", "abrogated", "overruled", "unknown", "not_checked")
 TREATMENT = V3 / "treatment.json"
 
 

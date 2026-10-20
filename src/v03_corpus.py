@@ -26,6 +26,7 @@ ROOT = Path(__file__).resolve().parent.parent
 RAW = ROOT / "data" / "raw" / "opinions"
 OUT = ROOT / "data" / "v0.3"
 
+NOT_CHECKED_NOTE = 'not_checked: CourtListener exposes no subsequent-history flags; the one abrogation found during collection (Hamilton v. Dallas County, 5th Cir. 2022 panel opinion) was removed and logged in exclusions.json; status is recorded, not a selection criterion (protocol §2(e)).'
 PAGE_HEADER_RE = re.compile(r"^\s*(USCA\d+ Appeal:|Appellate Case:|Case:\s*\d|USCA Case #).*$", re.I)
 PAGE_NUMBER_RE = re.compile(r"^\s*-?\s*\d{1,3}\s*-?\s*$")
 # running headers such as "2  ESTATE OF NAJERA-AGUIRRE V. CITY OF RIVERSIDE" (either side of the number)
@@ -128,14 +129,13 @@ def main():
         })
         print(f"{doc_id:14} {meta['court_id']:6} {meta['date_filed']}  {len(text.split()):6} words  "
               f"{len(chunks):3} chunks  {meta['case_name'][:50]}")
-    # precedential status (good law / abrogated / overruled / unknown) from the treatment screen + review
+    # precedential status (good law / abrogated / overruled / unknown / not_checked); v0.3 ships not_checked
     treatment_path = OUT / "treatment.json"
     treatment = json.loads(treatment_path.read_text(encoding="utf-8")) if treatment_path.exists() else {}
     for s in sources:
         t = treatment.get(str(s["opinion_id"]), {})
-        s["precedential_status"] = t.get("precedential_status", "unknown")
-        s["precedential_status_basis"] = t.get("basis", "not screened")
-        s["precedential_status_checked"] = t.get("reviewed_at") or t.get("screened_at")
+        s["precedential_status"] = t.get("precedential_status", "not_checked")
+        s["precedential_status_note"] = t.get("basis", NOT_CHECKED_NOTE)
     sources.sort(key=lambda s: s["doc_id"])
     (OUT / "sources.json").write_text(json.dumps(sources, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     print(f"\n{len(sources)} documents -> {OUT / 'corpus'}")
