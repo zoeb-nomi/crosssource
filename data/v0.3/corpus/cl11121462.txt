@@ -1,0 +1,90 @@
+United States Court of Appeals
+for the Fifth Circuit
+____________ United States Court of Appeals
+Fifth Circuit
+No. 24-20431 FILED
+____________ August 15, 2025
+Lyle W. Cayce Evan Norman, Clerk
+Plaintiff—Appellee,
+versus Lee Ingle; Christopher Sutton,
+Defendants—Appellants.
+______________________________
+Appeal from the United States District Court
+for the Southern District of Texas
+USDC No. 4:23-CV-1042
+______________________________ Before Higginbotham, Jones, and Southwick, Circuit Judges. Per Curiam:
+Evan Norman alleges that Deputies Lee Ingle and Christopher Sutton violated his constitutional rights by applying excessive force, denying or delaying medical care, failing to intervene, wrongfully arresting Norman, maliciously prosecuting him, and violating his First Amendment rights. We find no questions of material fact or denial of constitutional rights, and that the Deputies are entitled to qualified immunity. We REVERSE the judgment of the district court.
+No. 24- 20431
+I.
+On March 21, 2021, Evan Norman went to Bombshells Restaurant and Bar, consumed “at least seven alcoholic beverages within a two-hour time span,” and fell asleep . Deputy Ingle removed Norman from Bombshells at its request and instructed Norman to go home . Norman replied: “right, so you got a little short man complex?” Deputy Ingle offered Norman the choice of going home or being arrested for public intoxication. Norman responded with a request for Deputy Ingle’s and Deputy Sutton’s names and badge number s. Deputy Ingle provided his and Deputy Sutton did not. As Deputy Ingle began to walk back into Bombshells, Norman asked if he was “running away.” Deputy Ingle responded “you are going to go home now.” Deputy Sutton encouraged Deputy Ingle to return to the bar and put his arm between them . When Norman reached over Deputy Sutton’s arm and pointed his finger at Deputy Ingle, Deputy Sutton shoved Norman while telling him to “get back.” As the Deputies returned to Bombshells, Norman followed them, again asking for Deputy Sutton’s name and badge number. As t he Deputies turned toward Norman, Deputy Sutton put his finger in Norman’s face saying “if you walk up on me again, I’m gon’ get—” and shoved Norman with both hands while shouting “get back!”
+As the Deputies continued the walk toward Bomb shells, Norman followed. Then, in a matter of seconds, Deputy Ingle shoved Norman away from the entrance and, as Norman stumbled, walked toward him yelling “get the f--- back!” Norman regained his footing and swung his closed fist at Deputy Ingle, narrowly missing his head, but with his arm behind Deputy Ingle’s head, Norman had him in a headlock. With Deputy Ingle’s arm around Norman and tussling on foot, Deputy Sutton punched Norman in the head. As Norman fell to the ground, Deputy Ingle punched him in the head three times. As they hit the ground, a third officer grabbed Norman’s right arm while Deputy Ingle kneeled on Norman’s left arm and punched him in
+No. 24- 20431 the head at least six times in quick succession. Video evidence does not show that Norman resisted arrest while on the ground. While still kneeling on Norman’s left arm, Deputy Ingle asked “you done?” three times. F our seconds after his last punch, Deputy Ingle punched him in the head again. The Deputies then placed Norman under arrest.
+At this point, the Deputies addressed concerned bystanders and then Deputy Sutton immediately requested medical help for Norman. The Deputies left Norman facedown for around ten minutes awaiting medical assistance. Norman suffered a fractured orbital rim and orbital roof, a broken nose, hemorrhaging in his sinus cavity, and subcutaneous emphysema.
+Norman filed this suit against Harris County, Deputy Ingle, Deputy Sutton, and Sheriff Ed Gonzalez. The district court dismissed the claims against Harris County and Sheriff Gonzalez, leaving claims against the Deputies for assault, excessive force, false arrest, failure to give medical attention, malicious prosecution, wrongful prosecution, and failure to intervene.
+The Deputies filed motions for summary judgment, asserting qualified immunity among other defenses . The district court denied the motions, finding genuine disputes of fact as to whether Norman posed an immediate threat to the safety of the officers or others, resisted arrest, and was denied immediate medical attention, and that Norman’s assault claims were barred by the Texas Torts Claims Act, but that the Deputies were not entitled to qualified immunity. The Deputies timely appealed.
+No. 24- 20431
+II.
+Norman argues that this court lacks jurisdiction because the district court found that a genuine dispute of fact prevents summary judgment, foreclosing jurisdiction under 28 U.S.C. § 1291. When a defendant appeals a denial of summary judgment based on qualified immunity, we “have interlocutory jurisdiction to determine whether [the plaintiff’s] summary judgment facts state a claim under clearly established law.”1 To the extent that there are factual disputes, the video evidence of the encounter permits us to review the materiality and genuineness of those disputes.2 This court has jurisdiction over this appeal.
+III.
+We review a denial of qualified immunity de novo, 3 deciding issues of law, such as whether the officer’s conduct is “objectively unreasonable in light of clearly established law,”4 as well as “the materiality ( i.e., legal significance) of factual disputes the district court determined were genuine, not their genuineness (i.e., existence).” 5 We may also review genuineness when, as here, video evidence is available.6
+On summary judgment, the movant must generally show that “ there is no genuine dispute as to any material fact and the movant is entitled to
+_____________________
+1 Flores v. City of Palacios, 381 F.3d 391, 394 (5th Cir. 2004) (quoting Nerren v. Livingston Police Dep’t, 86 F.3d 469, 472 (5th Cir. 1996)).
+2 See Argueta v. Jaradi, 86 F.4th 1084, 1088 (5th Cir. 2023).
+3 Id.
+4 Betts v. Brennan, 22 F.4th 577, 581 (5th Cir. 2022) (quoting Hogan v. Cunningham , 722 F.3d 725, 731 (5th Cir. 2013)).
+5 Argueta, 86 F.4th at 1088.
+6 Id.
+No. 24- 20431 judgment as a matter of law.”7 “The court reviews the evidence in the light most favorable to the nonmoving party and draws all reasonable inferences in its favor.”8 However, when “contrary video evidence provides so much clarity that a reasonable jury could not believe [the nonmovant’s] account,” a court may discredit the nonmovant’s version of events.9
+IV.
+When a defendant is a public official who makes “‘a good -faith assertion of qualified immunity,’ that ‘alters the usual summary-judgment burden of proof, shifting it to the plaintiff to show that the defense is not available.’”10 To do so, the plaintiff must show that a constitutional right asserted was “clearly established” at the time of the violation.11
+The Deputies here made a good-faith assertion of qualified immunity, and Norman has the burden of showing that qualified immunity is unavailable because they violated at least one clearly established constitutional right. Norman argues that the Deputies applied excessive force, denied or delayed medical care, failed to intervene, wrongfully arrested Norman, maliciously prosecuted him, and violated his First Amendment rights.
+The Deputies contend that the district court erred by failing to analyze their qualified immunity defenses separately. They are correct. When a
+_____________________
+7 Martinez v. City of Rosenberg, 123 F.4th 285, 289-90 (5th Cir. 2024) (quoting F ED. R. CIV. P. 56(a)).
+8 Id.
+9 Aguirre v. City of San Antonio, 995 F.3d 395, 410 (5th Cir. 2021) (quoting Darden v. City of Fort Worth, 880 F.3d 722, 730 (5th Cir. 2018)).
+10 Joseph ex rel. Est. of Joseph v. Bartlett, 981 F.3d 319, 329-30 (5th Cir. 2020) (quoting Orr v. Copeland, 844 F.3d 484, 490 (5th Cir. 2016)).
+11 Id. at 329.
+No. 24- 20431 plaintiff asserts claims against multiple officers stemming from a single event, “a reviewing court of course ‘ must analyze the officers’ actions separately.’”12
+The Deputies assert that no dispute of material fact exists because there are video recordings of the events. Moreover, according to Deputy Sutton, because Norman has no memory of the incident, the video evidence controls, and the case turns on an issue of law. Norman retorts that although the video captures “some undisputed, material facts,” the Deputies’ version of events “are wrong, disputed, not material, or significantly spun.”
+Here, video evidence provides sufficient clarity that no reasonable jury could find that either deputy violated Norman’s constitutional rights— clearly established or not.
+Excessive Force
+Norman argues that the Deputies violated his constitutional right to be free of excessive force. To prove excessive force, Norman must show “(1) injury, (2) which resulted directly and only from a use of force that was clearly excessive, and (3) the excessiveness of which was clearly unreasonable.”13 The last two elements “ collapse into a single objective-reasonableness inquiry.”14
+We use the Graham factors to determine the reasonableness of the officer’s use of force, “judg[ing] from the perspective of a reasonable officer
+_____________________
+12 Buehler v. Dear, 27 F.4th 969, 985 (5th Cir. 2022) (quoting Darden, 880 F.3d at 731).
+13 Bailey v. Ramos, 125 F.4th 667, 680 (5th Cir. 2025) (quoting Deville v. Marcantel, 567 F.3d 156, 167 (5th Cir. 2009)).
+14 Id. (quoting Pena v. City of Rio Grande City, 879 F.3d 613, 619 (5th Cir. 2018)).
+No. 24- 20431 on the scene”:15 “(1) the severity of the crime at issue, (2) whether the suspect poses an immediate threat to the safety of the officers or others, and (3) whether he is actively resisting arrest or attempting to evade arrest by flight.”16 Here, the Graham factors lead us to determine that each deputy’s use of force was reasonable.
+We also assess “the relationship between the need and the amount of force used.”17 An analysis of an officer’s use of force should consider “[t]he timing, amount, and form” of the suspect’s resistance.18 The crux of the matter is that Norman attempted to punch a sheriff’s deputy and placed him in a headlock. Each individual deputy’s response to that act occurred within seconds of battling with Norman. Given Norman’s effort to strike an officer with a closed fist, subsequent headlock, and the speed with which this event progressed, a total of mere seconds, we cannot now find that the responsive actions of the D eputies were clearly unreasonable. We are not persuaded that the force used by each deputy in the exchange was excessive.
+Denial or Delay of Medical Care
+Norman’s argument as to medical care is brief—two sentences. He asserts, without any legal citation, that “Deputy Ingle admits, and the videos show, that Evan was left face down for 11 minutes before he was adjusted upright. This positional asphyxiation was against policy and was deliberately indifferent to his medical need to breathe.”
+_____________________
+15 Id.; see Graham v. Conner, 490 U.S. 386, 396 (1989).
+16 Bailey, 125 F.4th at 680 (internal quotation marks omitted) (quoting Deville , 567 F.3d at 167).
+17 Joseph, 981 F.3d at 332 (internal quotation marks omitted) (quoting Deville , 567 F.3d at 167).
+18 Id. (internal quotation marks omitted) (quoting Deville , 567 F.3d at 167).
+No. 24- 20431
+Deputy Sutton used his radio to call for medical assistance as soon as Norman was secure and any potential conflict between the D eputies and Bombshells’ patrons was extinguished.19 There can be no genuine dispute of material fact on this point, and Norman’s two-sentence argument is insufficient to satisfy his burden of proving a constitutional violation due to denial or delay of medical care rising to a denial of constitutional rights.
+Failure to Intervene
+Norman contends that Deputy Sutton failed to intervene to stop Deputy Ingle’s use of excessive force, encouraged Officer Ingle to hit Norman, and held Norman during the use of excessive force. Deputy Sutton responds that there is no genuine dispute of fact that he had only five or six seconds to intervene. Deputy Ingle’s application of force lasted for only a few seconds, during which Deputy Sutton both encouraged the use of force and its end.
+“[A]n officer may be liable under § 1983 under a theory of bystander liability where the officer ‘(1) knows that a fellow officer is violating an individual’ s constitutional rights; (2) has a reasonable opportunity to prevent the harm; and (3) chooses not to act.’”20 “[W]e also consider whether an officer ‘acquiesce[d] in’ the alleged constitutional violation.” 21 Finally, because the Deputies have asserted qualified immunity, Norman must also
+_____________________
+19 See Baldwin v. Dorsey, 964 F.3d 320, 327 (5th Cir. 2020).
+20 Whitley v. Hanna, 726 F.3d 631, 646 (5th Cir. 2013) (quoting Randall v. Prince George’ s Cnty. Police Dep’t, 302 F.3d 188, 204 (4th Cir. 2002)).
+21 Id. at 647 (quoting Hale v. Townley, 45 F.3d 914, 919 (5th Cir. 1995)) (second alteration in original).
+No. 24- 20431 “identify clearly established law requiring an officer” to intervene under similar circumstances.22
+Norman points to no case for failure to intervene specifically, but argues generally that “[w]ith respect to qualified immunity, the Graham factors themselves and the Joseph case are both instructive.” In Joseph, the plaintiff brought failure to intervene claims against a group of police officers. The officers held the plaintiff down, provided the baton, offered a taser, and assisted in dragging the plaintiff “toward a more open area.”23 The court found a genuine dispute of fact that should be resolved by the jury, but ultimately granted qualified immunity to the bystander officers on the clearly established prong.24
+Here, Deputy Sutton did not actively participate in the challenged conduct, offering only a few words in the few seconds of the challenged conduct. Norman offers no analogous case law that a reasonable officer would know of his duty to intervene under these circumstances. And as in Joseph, “[t]he [district] court did not assess the clearly established law applicable” to the bystanding officer.25 As there is no briefing from Norman on this claim and “no district- court analysis to review,”26 Norman has not met his burden of demonstrating that this claim of bystander liability is not barred by qualified immunity.
+_____________________
+22 Id. at 647 n.13.
+23 Joseph, 981 F.3d at 344.
+24 Id. at 345-46.
+25 Id. at 346.
+26 Id.
+No. 24- 20431
+Wrongful Arrest, Malicious Prosecution, and First Amendment
+The Deputies argue that Norman abandoned his false arrest, malicious prosecution, and First Amendment claims and to the extent Norman is pursuing these claims, they fail. Norman’s response to the motions for summary judgment provides the following: “Although Plaintiff refers to false arrest, malicious prosecution, and First Amendment claims in his complaint, upon review of the evidence provided, he does not pursue them here.” These claims are abandoned and fail.
+V.
+Given the video evidence, we find no question of material fact and that no constitutional right was violated and REVERSE.

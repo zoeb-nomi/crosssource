@@ -1,0 +1,17 @@
+[
+  {"topic_key": "qi_excessive_force", "area_of_law": "constitutional", "q": "\"qualified immunity\" AND \"excessive force\" AND \"clearly established\"", "courts": ["ca4", "ca5", "ca9", "ca10", "ca11"]},
+  {"topic_key": "vehicle_search", "area_of_law": "criminal", "q": "\"automobile exception\" AND \"probable cause\" AND search", "courts": ["ca7", "ca8", "cal", "mass", "minn"]},
+  {"topic_key": "miranda_custody", "area_of_law": "criminal", "q": "Miranda AND \"custodial interrogation\" AND custody", "courts": ["ny", "ohio", "mich", "ca1", "ca6"]},
+  {"topic_key": "arbitration_enforce", "area_of_law": "contracts", "q": "\"arbitration agreement\" AND (unconscionable OR unconscionability) AND enforce", "courts": ["ca3", "ca9", "cal", "nj", "tex"]},
+  {"topic_key": "personal_jurisdiction", "area_of_law": "civil_procedure", "q": "\"specific jurisdiction\" AND \"minimum contacts\" AND \"purposefully availed\"", "courts": ["ca2", "ca6", "ill", "wash", "colo"]},
+  {"topic_key": "contract_interpretation", "area_of_law": "contracts", "q": "\"plain meaning\" AND contract AND ambiguous AND interpretation", "courts": ["tex", "ny", "ga", "pa", "nj"]},
+  {"topic_key": "insurance_duty_defend", "area_of_law": "contracts", "q": "\"duty to defend\" AND insurer AND policy AND coverage", "courts": ["ill", "mich", "colo", "wash", "minn"]},
+  {"topic_key": "title_vii_retaliation", "area_of_law": "employment", "q": "\"Title VII\" AND retaliation AND \"adverse employment action\"", "courts": ["ca5", "ca7", "ca11", "cadc", "ca1"]},
+  {"topic_key": "article_iii_standing", "area_of_law": "civil_procedure", "q": "standing AND \"injury in fact\" AND \"Article III\" AND traceable", "courts": ["cadc", "ca2", "ca3", "ca8", "ca10"]},
+  {"topic_key": "negligence_duty", "area_of_law": "torts", "q": "negligence AND \"duty of care\" AND foreseeability", "courts": ["cal", "mass", "ohio", "ga", "pa"]},
+  {"topic_key": "first_amendment_employee", "area_of_law": "constitutional", "q": "\"First Amendment\" AND retaliation AND \"public employee\" AND Pickering", "courts": ["ca1", "ca4", "ca6", "ca9", "ca2"]},
+  {"topic_key": "patent_obviousness", "area_of_law": "ip", "q": "obviousness AND \"motivation to combine\" AND \"prior art\"", "courts": ["cafc"]},
+  {"topic_key": "agency_arbitrary_capricious", "area_of_law": "administrative", "q": "\"arbitrary and capricious\" AND \"Administrative Procedure Act\" AND agency AND \"reasoned explanation\"", "courts": ["cadc", "ca5", "ca9"]},
+  {"topic_key": "limitations_discovery_rule", "area_of_law": "torts", "q": "\"statute of limitations\" AND \"discovery rule\" AND accrual", "courts": ["wash", "colo", "minn", "nj", "tex"]},
+  {"topic_key": "ineffective_assistance", "area_of_law": "criminal", "q": "\"ineffective assistance\" AND Strickland AND prejudice AND \"deficient performance\"", "courts": ["ill", "ny", "ca3", "ca8", "mich"]}
+]

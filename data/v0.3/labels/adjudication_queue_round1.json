@@ -1,0 +1,36 @@
+{
+  "disagreements_and_flags": [
+    "agency_arbitrary_capricious-qa-2",
+    "agency_arbitrary_capricious-qa-3",
+    "arbitration_enforce-qa-1",
+    "arbitration_enforce-qa-5",
+    "contract_interpretation-qa-3",
+    "first_amendment_employee-cc-5",
+    "ineffective_assistance-qa-3",
+    "ineffective_assistance-qa-4",
+    "ineffective_assistance-qa-5",
+    "limitations_discovery_rule-qa-4",
+    "limitations_discovery_rule-qa-5",
+    "miranda_custody-qa-4",
+    "negligence_duty-qa-1",
+    "negligence_duty-qa-4",
+    "patent_obviousness-qa-5",
+    "personal_jurisdiction-qa-2",
+    "title_vii_retaliation-qa-4"
+  ],
+  "audit_sample": [
+    "agency_arbitrary_capricious-cc-2",
+    "agency_arbitrary_capricious-qa-5",
+    "contract_interpretation-cc-5",
+    "first_amendment_employee-cc-1",
+    "insurance_duty_defend-cc-4",
+    "limitations_discovery_rule-qa-3",
+    "miranda_custody-cc-1",
+    "miranda_custody-qa-1",
+    "miranda_custody-qa-2",
+    "negligence_duty-cc-5",
+    "patent_obviousness-cc-4",
+    "qi_excessive_force-qa-4",
+    "title_vii_retaliation-qa-2"
+  ]
+}

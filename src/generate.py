@@ -15,9 +15,9 @@ import os
 import re
 import sys
 
-import anthropic
 from dotenv import load_dotenv
 
+from llm import complete
 from retrieval import Retriever
 
 load_dotenv()
@@ -61,19 +61,13 @@ def parse_citations(text: str) -> list[str]:
     return seen
 
 
-def answer(question: str, config: str, retriever: Retriever, client: anthropic.Anthropic, k: int = 5) -> dict:
+def answer(question: str, config: str, retriever: Retriever, model: str = MODEL, k: int = 5) -> dict:
     chunks = retriever.retrieve(question, k=k)
-    response = client.messages.create(
-        model=MODEL,
-        max_tokens=MAX_TOKENS,
-        system=CONFIGS[config]["system"],
-        messages=[{"role": "user", "content": build_prompt(question, chunks)}],
-    )
-    text = next((b.text for b in response.content if b.type == "text"), "")
+    text = complete(model, CONFIGS[config]["system"], build_prompt(question, chunks), MAX_TOKENS, role="generate")
     return {
         "question": question,
         "config": config,
-        "model": MODEL,
+        "model": model,
         "answer": text,
         "citations": parse_citations(text),
         "retrieved": [c["id"] for c in chunks],
@@ -85,9 +79,8 @@ def main():
         sys.exit("ANTHROPIC_API_KEY is not set — add it to .env (see .env.example)")
     question = sys.argv[1] if len(sys.argv) > 1 else "What standard governs stop and frisk?"
     retriever = Retriever()
-    client = anthropic.Anthropic()
     for config in CONFIGS:
-        result = answer(question, config, retriever, client)
+        result = answer(question, config, retriever)
         print(f"\n=== {config} ===\n{result['answer']}\n")
         print(f"parsed citations: {result['citations']}")
         print(f"retrieved:        {result['retrieved']}")

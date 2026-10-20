@@ -1,0 +1,50 @@
+{
+  "missing_b": [],
+  "citation_check": {
+    "n": 75,
+    "percent_agreement": 1.0,
+    "kappa": 1.0,
+    "confusion_a_rows_b_cols": {
+      "unsupported_claim": {
+        "unsupported_claim": 15
+      },
+      "supported": {
+        "supported": 30
+      },
+      "right_doc_wrong_passage": {
+        "right_doc_wrong_passage": 15
+      },
+      "wrong_document": {
+        "wrong_document": 15
+      }
+    },
+    "disagreements": []
+  },
+  "qa_citation": {
+    "n": 75,
+    "exact_set_agreement": 0.7867,
+    "chunk_decisions": 375,
+    "chunk_percent_agreement": 0.9413,
+    "chunk_kappa": 0.8348,
+    "mean_jaccard": 0.8811,
+    "disagreements": [
+      "agency_arbitrary_capricious-qa-2",
+      "agency_arbitrary_capricious-qa-3",
+      "arbitration_enforce-qa-1",
+      "arbitration_enforce-qa-5",
+      "contract_interpretation-qa-3",
+      "ineffective_assistance-qa-3",
+      "ineffective_assistance-qa-4",
+      "ineffective_assistance-qa-5",
+      "limitations_discovery_rule-qa-4",
+      "limitations_discovery_rule-qa-5",
+      "miranda_custody-qa-4",
+      "negligence_duty-qa-1",
+      "negligence_duty-qa-4",
+      "patent_obviousness-qa-5",
+      "personal_jurisdiction-qa-2",
+      "title_vii_retaliation-qa-4"
+    ]
+  },
+  "bad_item_flags": []
+}

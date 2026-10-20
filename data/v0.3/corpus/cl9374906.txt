@@ -1,0 +1,104 @@
+United States Court of Appeals
+For the Eighth Circuit
+___________________________
+No. 21-2864
+___________________________ Kelly Bassett, individually and as heir of James M. Bassett, on behalf of herself
+and all other similarly situated
+Plaintiff - Appellee
+v.
+Credit Bureau Services, Inc.; C.J. Tighe
+Defendants - Appellants
+___________________________
+No. 22-1206
+___________________________ Kelly Bassett, individually and as heir of James M. Bassett, on behalf of herself
+and all other similarly situated
+Plaintiff - Appellee
+v.
+Credit Bureau Services, Inc.; C.J. Tighe
+Defendants - Appellants
+____________
+Appeal from United States District Court
+for the District of Nebraska - Omaha
+____________
+Submitted: November 15, 2022
+Filed: February 24, 2023
+____________ Before BENTON, KELLY, and ERICKSON, Circuit Judges.
+____________ BENTON, Circuit Judge.
+Kelly M. Bassett sued Credit Bureau Services, Inc. and C.J. Tighe (collectively, the “collectors”) for unfair debt- collection practices. The district court granted judgment as a matter of law to Bassett and the plaintiff class. Because Bassett did not suffer a concrete injury in fact, she lacks Article III standing. Having jurisdiction under 28 U.S.C. § 1291, this court vacates and remands.
+I.
+The collectors sent Bassett (and her deceased husband) a letter demanding payment for medical bills. The letter listed amounts owed without distinguishing interest from principal. The letter said, “Interest and other charges may accrue daily.” The amounts included interest on Bassett’s debts for which assessing interest was disputed and legally uncertain. Tighe drafted the template for the letter (which the collectors used at least 9,796 times). Bassett brought a class action against the collectors, alleging violations of the Fair Debt Collection Practices Act, 15 U.S.C. § 1692 (“FDCPA”), and the Nebraska Consumer Practices Act, Neb. Rev. Stat. § 59 - 1601 (“NCPA”).
+The collectors moved for summary judgment, alleging Bassett lacked Article III standing. The district court denied the motion. A jury returned a verdict for the collectors on all counts except the NCPA claim, which was not tried before a jury. After trial, the district court ruled it had provided inaccurate instructions to the jury and, sua sponte, entered judgment as a matter of law for Bassett on the NCPA and FDCPA claims. The district court specifically ruled that the NCPA does not authorize collection of prejudgment interest without a judgment.
+The collectors appeal, alleging (i) Bassett does not have Article III standing, (ii) the district court erred in allowing her to introduce an issue at trial without notice, (iii) the district court erred in determining that the NCPA requires a judgment before collecting prejudgment interest, (iv) the district court abused its discretion in finding Bassett an adequate class representative, (v) the district court abused its discretion in certifying the FDCPA class, (vi) the district court erred in denying the collectors a jury trial for the NCPA claim, (vii) the district court abused its discretion in certifying the NCPA class, (viii) the district court erred in holding Tighe individually liable for the collectors’ conduct, and (ix) the district court abused its discretion in awarding Bassett attorneys’ fees, costs, and an incentive award.
+II.
+The collectors allege that Bassett lacks standing because the debt- collection letter did not cause Bassett concrete harm. “This court reviews standing de novo.” Dalton v. NPC Int’l, Inc., 932 F.3d 693, 695 (8th Cir. 2019).
+“[S]tanding consists of three elements. The plaintiff must have (1) suffered an injury in fact, (2) that is fairly traceable to the challenged conduct of the defendant, and (3) that is likely to be redressed by a favorable judicial decision.” Spokeo, Inc. v. Robins, 578 U.S. 330, 338 (2016), citing Lujan v. Defenders of Wildlife, 504 U.S. 555, 560-61 (1992). “To establish injury in fact, a plaintiff must show that he or she suffered ‘an invasion of a legally protected interest’ that is ‘concrete and particularized’ and ‘actual or imminent, not conjectural or hypothetical.’” Id. at 339, quoting Lujan, 504 U.S. at 560 (1992). “No concrete harm, no standing. Central to assessing concreteness is whether the asserted harm has a ‘close relationship’ to a harm traditionally recognized as providing a basis for a lawsuit in American courts—such as physical harm, m onetary harm, or various intangible harms.” TransUnion LLC v. Ramirez, 141 S. Ct. 2190, 2200 (2021), citing Spokeo, 578 U.S. at 340- 41. “Under Article III, federal courts do not adjudicate hypothetical or abstract disputes.” Id. at 2203. The Supreme Court explained the concreteness requirement in TransUnion:
+What makes a harm concrete for purposes of Article III? As a
+general matter, the Court has explained that history and tradition offer
+a meaningful guide to the types of cases that Article III empowers
+federal courts to consider. And with respect to the concrete- harm
+requirement in particular, this Court’s opinion
+in Spokeo v. Robins indicated that courts should assess whether the
+alleged injury to the plaintiff has a close relationship to a harm
+traditionally recognized as providing a basis for a lawsuit in American
+courts. That inquiry asks whether plaintiffs have identified a close
+historical or common-law analogue for their asserted
+injury. Spokeo does not require an exact duplicate in American history
+and tradition. But Spokeo is not an open-ended invitation for federal
+courts to loosen Article III based on contemporary, evolving beliefs
+about what kinds of suits should be heard in federal courts.
+. . . .
+In determining whether a harm is sufficiently concrete to qualify
+as an injury in fact, the Court in Spokeo said that Congress’s views may
+be instructive. Courts must afford due respect to Congress’s decision
+to impose a statutory prohibition or obligation on a defendant, and to
+grant a plaintiff a cause of action to sue over the defendant’s violation
+of that statutory prohibition or obligation. In that way, Congress may
+elevate to the status of legally cognizable injuries concrete, de
+facto injuries that were previously inadequate in law. But even though
+Congress may elevate harms that exist in the real world before Congress
+recognized them to actionable legal status, it may not simply enact an
+injury into existence, using its lawmaking power to transform
+something that is not remotely harmful into something that is. Id. at 2204- 05 (citations omitted). The Court “has rejected the proposition that ‘a plaintiff automatically satisfies the injury-in -fact requirement whenever a statute grants a person a statutory right and purports to authorize that person to sue to vindicate that right.” Id. at 2205, quoting Spokeo, 578 U.S. at 341. “Article III standing requires a concrete injury even in the context of a statutory violation.” Spokeo, 578 U.S. at 341.
+For standing purposes, therefore, an important difference exists
+between (i) a plaintiff’s statutory cause of action to sue a defendant over
+the defendant’s violation of federal law, and (ii) a plaintiff’s suffering
+concrete harm because of the defendant’s violation of federal law.
+Congress may enact legal prohibitions and obligations. And Congress
+may create causes of action for plaintiffs to sue defendants who violate
+those legal prohibitions and obligations. But under Article III, an injury
+in law is not an injury in fact. Only those plaintiffs who have been
+concretely harmed by a defendant’s statutory violation may sue that
+private defendant over that violation in federal court. TransUnion, 141 S. Ct. at 2205.
+Here, federal and state legislatures enacted legal prohibitions against unfair debt-collection practices. See 15 U.S.C. § 1692; Neb. Rev. Stat. § 59-1601 . But the collectors’ alleged violation s1 of the FDCPA and the NCPA do not alone provide
+1“[This court] ha[s] affirmed the dismissal of § 1692f(1) claims where the debt collector sought to collect interest whose availability was at the time legally uncertain.” Smith v. Stewart, Zlimen & Jungers, Ltd. , 990 F.3d 640, 648 (8th Cir. 2021), citing Hill v. Accts. Receivable Servs., LLC, 888 F.3d 343, 346- 47 (8th Cir. 2018). This court held that, where, as here, (i) the state supreme court has not yet decided whether a statute allows for recovery of prejudgment interest and (ii) the text of the statute does not prohibit recovery of prejudgment interest, debt collectors have not violated the statute by attempting to recover prejudgment interest. See Hill, 888 F.3d at 347. See also Klein v. Credico Inc., 922 F.3d 393, 397 (8th Cir. 2019) (same). The Nebraska Supreme Court has not explicitly held that the NCPA prohibits the recovery of prejudgment interest without a judgment. The text of the NCPA also does not contain this prohibition. A statutory violation alone is not enough to constitute an injury in fact, see Spokeo, 578 U.S. at 341, and Bassett might not be able to prove a statutory violation where the availability of the prejudgment interest under the NCPA is “at the time legally uncertain.” Smith, 990 F.3d at 648. standing for Bassett. See Spokeo, 578 U.S. at 341. Bassett must have suffered an injury in fact.
+Bassett contends that she suffered an injury in fact when the collectors demanded interest on her debts without a judgment. Bassett only received the letter and never paid any part of the interest or principal. Without suffering a tangible harm, Bassett must point to an injury that “has a ‘close relationship’ to a harm ‘traditionally’ recognized as providing a basis for a lawsuit in American courts.” TransUnion, 141 S. Ct. at 2204, quoting Spokeo, 578 U.S. at 341.
+Bassett analogizes her alleged injury to the type of harm recognized in common -law fraudulent misrepresentation and conversion. 2 F raudulent misrepresentation recognizes harm flowing from plaintiffs’ reasonable reliance on a misrepresentation. See Flamme v. Wolf Ins. Agency, 476 N.W.2d 802, 809 (Neb. 1991). C onversion recognizes harm resulting from a wrongful deprivation of or interference with plaintiffs’ property. See Zimmerman v. FirsTier Bank, 585 N.W.2d 445, 451 (Neb. 1998).
+Bassett has not shown any harm that bears a “close relationship” to the type of injury that results from reliance on a misrepresentation or wrongful interference with property rights. Spokeo, 578 U.S. at 341; cf. TransUnion, 141 S. Ct. at 2209
+2Infliction of emotional distress and intrusion upon seclusion may be close common-law analogues to Bassett’s alleged injury. See Lupia v. Medicredit, Inc., 8 F.4th 1184, 1191 (10th Cir. 2021) (holding that a plaintiff in receipt of an unwanted call and voicemail had standing to bring FDCPA claims because the harm bore “a ‘close relationship ’ to the tort of intrusion upon seclusion”). But see Restatement (Second) of Torts, §652B (1977) (receipt of a letter alone may not be an intrusion that “would be highly offensive to a reasonable person”) . Regardless, Bassett waived individual damages and has not presented these analogues at any time . See Jenkins v. Winter, 540 F.3d 742, 751 (8th Cir. 2008) (“Claims not raised in an opening brief are deemed waived.”); Heuton v. Ford Motor Co., 930 F.3d 1015, 1022 (8th Cir. 2019) (“Absent exceptional circumstances, not present here, [this court] cannot consider issues not raised in the district court.”). (“[T]he harm from a misleading statement . . . bears a sufficiently close relationship to the harm from a false and defamatory statement.”). Although “Spokeo does not require an exact duplicate in American history and tradition,” TransUnion, 141 S. Ct. at 2204, the absence of any injury resembling these harms means that Bassett did not suffer a concrete injury in fact. See Trichell v. Midland Credit Mgmt., 964 F.3d 990, 998 (11th Cir. 2020) (“The plaintiffs seek to recover for representations that they contend were misleading or unfair, but without proving even that they relied on the representations, much less that the reliance caused them any damages. . . . [P]laintiffs assert claims with no relationship to harms traditionally remediable in American or English courts.”). See also Shiel ds v. Professional Bureau of Collections of Md., Inc., 55 F.4th 823, 830 (10th Cir. 2022) (“Shields tries to link her alleged harms to common-law fraud. But fraud recognizes that harm may flow from relying on a misrepresentation, and Shields never pleaded reliance. In other words, she did not allege the same kind of harm as required by the tort of fraud.” (citations omitted)).
+Bassett alleges that the collectors violated the FDCPA and NCPA with the contents of their letter, which gives her standin g. But the Court has rejected this proposition. See TransUnion, 141 S. Ct. at 2205, quoting Spokeo, 578 U.S. at 341. The Court provided an analogy to illustrate the importance of the concrete harm requirement:
+To appreciate how the Article III “concrete harm” principle
+operates in practice, consider two different hypothetical plaintiffs.
+Suppose first that a Maine citizen’s land is polluted by a nearby factory.
+She sues the company, alleging that it violated a federal environmental
+law and damaged her property. Suppose also that a second plaintiff in
+Hawaii files a federal lawsuit alleging that the same company in Maine
+violated that same environmental law by polluting land in Maine. The
+violation did not personally harm the plaintiff in Hawaii.
+Even if Congress affords both hypothetical plaintiffs a cause of
+action (with statutory damages available) to sue over the defendant’s
+legal violation, Article III standing doctrine sharply distinguishes
+between those two scenarios. The first lawsuit may of course proceed
+in federal court because the plaintiff has suffered concrete harm to her
+property. But the second lawsuit may not proceed because that plaintiff
+has not suffered any physical, monetary, or cognizable intangible harm
+traditionally recognized as providing a basis for a lawsuit in American
+courts. An uninjured plaintiff who sues in those circumstances is, by
+definition, not seeking to remedy any harm to herself but instead is
+merely seeking to ensure a defendant’s compliance with regulatory law
+(and, of course, to obtain some money via the statutory damages). Id. at 2205-06 (citation omitted).
+Bassett received a letter. Without more—without a concrete injury in fact— Bassett is “not seeking to remedy any harm to herself but instead is merely seeking to ensure a defendant’s compliance with regulatory law (and, of course, to obtain some money via the statutory damages).” Id. (citation omitted). This conclusion comports with other circuit courts. See, e. g., Pierre v. Midland Credit Mgmt., Inc., 29 F.4th 934, 939 (7th Cir. 2022) (dismissing for lack of standing a similar FDCPA claim by a plaintiff in receipt of a debt- collection letter because “critically, [plaintiff] didn’t make a payment, promise to do so, or other-wise act to her detriment in response to anything in or omitted from the letter”); Smith v. GC Servs. L.P., 986 F.3d 708, 710 (7th Cir. 2021) (“[Plaintiff], who says that she was confused by the letter she received, does not contend that the letter’s supposed lack of clarity led her to take any detrimental step, such as paying money she did not owe. She therefore needs some other way to show injury.”); Brunett v. Convergent Outsourcing, Inc. , 982 F.3d 1067, 1069 (7th Cir. 2020) (dismissing FDCPA claims for lack of standing where a plaintiff received a misleading debt-collection letter but did not rely on it to her detriment); Shields v. Professional Bureau of Collections of Md., Inc., 55 F.4th 823, 830 (10th Cir. 2022) (dismissing FDCPA clai ms for lack of standing because plaintiff “never alleged the letters caused her to do anything”); Trichell v. Midland Credit Mgmt., 964 F.3d 990, 994 (11th Cir. 2020) (holding that plaintiffs lacked standing to bring FDCPA claims that debt-collection letters were misleading when “neither of [the plaintiffs] claims to have been misled ”); Frank v. Autovest, LLC, 961 F.3d 1185, 1188 (D.C. Cir. 2020) (holding that plaintiff did not suffer “a concrete personal injury traceable to the false representations” because she “testified unequivocally that she neither took nor failed to take any action because of these statements”).
+Because Bassett did not suffer a concrete injury in fact as a result of the alleged statutory violations, she lacks Article III standing.3
+* * * * * * *
+The judgment is vacated, and the case remanded for further proceedings consistent with this opinion.
+______________________________
+3Without standing, “this court does not have jurisdiction to decide any other issues raised on appeal.” Starr v. Mandanici, 152 F.3d 741, 747 (8th Cir. 1998), citing Steel Co. v. Citizens for a Better Env’t, 523 U.S. 83, 94 (1998). See also City of Clarkson Valley v. Mineta, 495 F.3d 567, 569 (8th Cir. 2007) (“[S]tanding is a jurisdictional prerequisite” and “a threshold inquiry that eschews evaluation on the merits.”). “Without jurisdiction, which is clearly absent here, this court ‘cannot proceed at all in any cause. Jurisdiction is power to declare the law, and when it ceases [or fails to exist in the first instance], the only function remaining to the court is that of announcing the fact and dismissing the cause.’” Starr, 152 F.3d at 752 (Beam, J., concurring) (alteration in original), quoting Steel Co., 522 U.S. at 94.

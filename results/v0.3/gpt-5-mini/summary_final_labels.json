@@ -1,0 +1,78 @@
+{
+  "model": "gpt-5-mini",
+  "judge_model": "claude-sonnet-5-5",
+  "rescored_against": "final labels (v0.3 final)",
+  "qa_citation": {
+    "baseline": {
+      "items": 13,
+      "citation_precision": 0.7628,
+      "citation_recall": 0.718,
+      "faithfulness": 0.9505,
+      "relevance": 1.0,
+      "failure_labels": {
+        "unsupported_claim": 1,
+        "right_doc_wrong_passage": 7,
+        "missing_authority": 6
+      }
+    },
+    "strict": {
+      "items": 13,
+      "citation_precision": 0.8782,
+      "citation_recall": 0.6923,
+      "faithfulness": 0.9551,
+      "relevance": 0.9231,
+      "failure_labels": {
+        "wrong_document": 1,
+        "missing_authority": 7,
+        "right_doc_wrong_passage": 4,
+        "unsupported_claim": 1
+      }
+    }
+  },
+  "citation_check": {
+    "items": 15,
+    "accuracy": 0.9333,
+    "kappa": 0.9013,
+    "confusion_gold_rows_pred_cols": {
+      "right_doc_wrong_passage": {
+        "right_doc_wrong_passage": 2,
+        "supported": 1
+      },
+      "supported": {
+        "supported": 5
+      },
+      "unsupported_claim": {
+        "unsupported_claim": 6
+      },
+      "wrong_document": {
+        "wrong_document": 1
+      }
+    }
+  },
+  "dropped_rows": [
+    [
+      "qi_excessive_force-qa-1",
+      "question changed (item rebuilt after the run)"
+    ],
+    [
+      "title_vii_retaliation-qa-5",
+      "question changed (item rebuilt after the run)"
+    ]
+  ],
+  "rows_with_changed_labels": 6,
+  "api_calls": 0,
+  "usage_of_original_run": {
+    "gpt-5-mini": {
+      "calls": 45,
+      "input_tokens": 108514,
+      "output_tokens": 37471,
+      "usd": 0.1021
+    },
+    "claude-sonnet-5-5": {
+      "calls": 156,
+      "input_tokens": 553633,
+      "output_tokens": 31046,
+      "usd": 1.4177
+    }
+  }
+}

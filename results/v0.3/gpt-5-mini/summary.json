@@ -1,0 +1,66 @@
+{
+  "model": "gpt-5-mini",
+  "judge_model": "claude-sonnet-5-5",
+  "qa_citation": {
+    "baseline": {
+      "items": 15,
+      "citation_precision": 0.7444,
+      "citation_recall": 0.7,
+      "faithfulness": 0.9571,
+      "relevance": 1.0,
+      "failure_labels": {
+        "unsupported_claim": 1,
+        "right_doc_wrong_passage": 10,
+        "missing_authority": 5
+      }
+    },
+    "strict": {
+      "items": 15,
+      "citation_precision": 0.8411,
+      "citation_recall": 0.7,
+      "faithfulness": 0.9611,
+      "relevance": 0.9333,
+      "failure_labels": {
+        "wrong_document": 1,
+        "missing_authority": 5,
+        "right_doc_wrong_passage": 8,
+        "unsupported_claim": 1
+      }
+    }
+  },
+  "citation_check": {
+    "items": 15,
+    "accuracy": 0.9333,
+    "kappa": 0.9013,
+    "confusion_gold_rows_pred_cols": {
+      "right_doc_wrong_passage": {
+        "right_doc_wrong_passage": 2,
+        "supported": 1
+      },
+      "supported": {
+        "supported": 5
+      },
+      "unsupported_claim": {
+        "unsupported_claim": 6
+      },
+      "wrong_document": {
+        "wrong_document": 1
+      }
+    }
+  },
+  "usage_this_run": {
+    "gpt-5-mini": {
+      "calls": 45,
+      "input_tokens": 108514,
+      "output_tokens": 37471,
+      "usd": 0.1021
+    },
+    "claude-sonnet-5-5": {
+      "calls": 156,
+      "input_tokens": 553633,
+      "output_tokens": 31046,
+      "usd": 1.4177
+    }
+  },
+  "failures": []
+}

@@ -1,0 +1,77 @@
+United States Court of Appeals
+for the Fifth Circuit United States Court of Appeals
+Fifth Circuit
+FILED
+March 15, 2023
+No. 22-60217 Lyle W. Cayce
+Clerk BNSF Railway Company,
+Petitioner,
+versus Federal Railroad Administration; Amit Bose, in his official capacity as Administrator, Federal Railroad Administration; United States Department of Transportation,
+Respondents.
+Petition for Review of an Order of
+the Federal Railroad Administration
+Agency No. 2020-64 Before Jones, Smith, and Graves, Circuit Judges. Jerry E. Smith, Circuit Judge:
+BNSF Railway Co. (“BNSF”) petitions for review, contending that the refusal of the Federal Railroad Administration (“FRA”) to grant a waiver of standard track-inspection regulations so that BNSF could test a new tech-nology was arbitrary and capricious. Agreeing with BNSF, we grant review, vacate, and remand.
+No. 22-60217
+I.
+The Federal Railroad Administration Act was enacted to “promote safety in every area of railroad operations and reduce railroad-related acci-dents and incidents.” United Transp. Union v. Foster, 205 F.3d 851, 859 (5th Cir. 2000) (quoting 49 U.S.C. § 20101). The Act authorizes the Secretary of Transportation to “prescribe regulations and issue orders for every area of railroad safety.” 49 U.S.C. § 20103(a). The Secretary, in turn, has delegated that authority to the FRA. 49 C.F.R. § 1.89(a).
+The FRA regulates how railroad tracks throughout the United States should be inspected. For decades, the FRA has required that “[e]ach inspec-tion . . . be made on foot or by traversing the track in a vehicle at a speed that allows the person making the inspection to visually inspect the track struc-ture.” Id. § 213.233(b). The regulations include a schedule under which such inspections must be conducted. See id. § 213.233(c). Importantly, while the regulation requires the use of visual inspections, it does not forbid the additional use of other types of inspections. “Railroads are free to supple-ment these minimum visual inspection requirements with automated tech-nologies and other tools.” 49 C.F.R. § 213.233(b).
+This case centers on a new technology called “Automated Track Inspection,” or “ATI.” As reported by BNSF, ATI employs a device on an unmanned train car that “travels the rails” and “uses lasers and sensors to identify internal defects and other flaws in the rails invisible to the human eye.” Then, it “collect[s] and process[es] enormous amounts of raw data and send[s] reports to rail inspectors in real time, enabling railroads to predict stretches of track that might need maintenance before a deficiency grows into a defect.”
+BNSF points to ongoing studies suggesting that ATI has at least four benefits over visual inspection alone. First, ATI finds significantly more defects—according to observation by BNSF, manual inspections detected
+No. 22-60217 0.01 defects per 100 miles compared to 4.54 using ATI technology. Second, ATI allows inspectors to identify and follow patterns or warning signs that may lead to a defect instead of identifying it post-formation. That shift from reactive identification to proactive predictions “enables a railroad to re-deploy its track inspectors to perform inspections for developing issues in areas specifically identified by ATI.” In other words, visual inspections can be used more strategically. Third, the ATI operates without manpower, which leads to fewer employees’ walking down the tracks, reducing the risk of on-track injuries. Finally, an increased rate of efficiency in defect identifi-cation leads to increased railroad operational efficiency, given that fewer trains are delayed on account of track inspections and service interruptions.
+BNSF began testing ATI in 2014. As part of those tests, BNSF in 2018 petitioned the FRA for a waiver of its visual-inspection responsibilities, but only in certain geographical territories (“Waiver Request #1”). Specifi-cally, BNSF asked the FRA to waive the scheduling requirements for visual inspections in those territories. BNSF planned to continue using visual inspections, but only to supplement ATI. It intended to use those inspections strategically to target areas of track that the ATI-collected data indicated could be prone to defects. 83 Fed. Reg. 55,449, 55,450 (Nov. 5, 2018).
+The FRA has the authority to waive its visual-inspection requirements “if such waiver or suspension is in the public interest and consistent with railroad safety.” 49 U.S.C. § 20103(d)(1). Applying those standards, the FRA approved the waiver in November 2018 for the Powder River territory. 1
+The test program was a success—the FRA found that ATI identified two hundred defects for every one identified by visual inspection, improved
+The Powder River territory covers “approximately 1,348 miles of main and siding tracks from Lincoln, Nebraska and Donkey Creek, Wyoming and back to Lincoln, Nebraska.” 83 Fed. Reg. at 55,449.
+No. 22-60217 the efficiency of the strategically employed visual inspections, and decreased the number of workers on the tracks.
+So, in July 2020, BNSF applied for another waiver (“Waiver Request #2”). BNSF proposed gradual implementation of the ATI Program through its network. It planned to introduce ATI into a new territory only when that territory had achieved a sufficiently low defect rate. Again, BNSF planned to use ATI with visual inspections as a strategically employed supplement.
+The FRA approved the request to exempt BNSF from the schedule laid out in 49 C.F.R. § 213.233. That exemption was limited to two terri-tories: the Powder River territory and the Southern Transcon route. 2 The FRA concluded that “unrestrained system-wide implementation” was not “appropriate at this point.” But as part of the waiver, the FRA named “spe-cific conditions, which if met, will allow BNSF to expand implementation of the relief in a consistent and safe manner.” Specifically “contingent on suc-cessful implementation [of the ATI Program] on the Powder River and Southern Transcon Territories,” BNSF could petition “to include other ter-ritories in the waiver.”
+Again, the implementation was a success: The defect rate decreased, the number of employees on the track decreased, and the efficiency of the railroad increased. So, in June 2021, the BNSF asked for a third waiver expansion to implement use of ATI in the Northern Transcon territory and the Orin Subdivision (“Waiver Request #3”). 3 BNSF contended that “there
+The Powder River territory covered the same territory as the test program, and the Southern Transcon route was a “4,635-mile route that runs from Chicago to Los Angeles and back.”
+According to BNSF’s briefing, the Northern Transcon territory is “a 4,322-mile track that runs from Chicago to Seattle and back,” and the Orin Subdivision is “a 395-mile track in Wyoming that connects parts of the Powder River territory but was not included in the original waiver.”
+No. 22-60217 [were] no conditions present on either territory that would prevent the suc-cessful implementation” of ATI and that the new territories “would be sub-ject to all the conditions, requirements, and limitations” contained in the original waiver.
+The FRA took several months to rule on the request, and in the interim, BNSF submitted more data showing continued increases in safety and defect identification. Yet on March 21, 2022, the FRA denied the waiver, stating,
+[T]he Railroad Safety Advisory Committee (RSAC) is cur-
+rently tasked to develop a consensus recommendation for in-
+corporating ATI technology into the applicable regulatory
+framework . . . .
+...
+. . . FRA finds that given the ongoing RSAC task related
+to ATI, expanding the existing relief at this time is not justified.
+FRA notes that the ongoing RSAC task related to ATI is de-
+signed to examine the feasibility of using a combination of vis-
+ual inspections and ATI technologies to maximize the effec-
+tiveness of railroads’ track inspection programs. In other
+words, the RSAC task is designed to help identify the optimal
+approach to track inspection, potentially utilizing a combina-
+tion of track inspection methodologies. FRA notes that in car-
+rying out this task, the RSAC will need to consider data not
+only from the ATI Test Program underlying BNSF’s existing
+waiver in this docket, but data from relevant ATI Test Pro-
+grams that are still underway on multiple railroads. FRA finds
+that short-circuiting this evaluation process on individual rail-
+roads is not in the public interest and consistent with railroad
+safety at this time.
+BNSF petitioned for review in this court, contending that the denial was arbitrary and capricious. Intervenor Brotherhood of Maintenance of Way Employees Division/IBT (“Brotherhood”), a labor union that has his-
+No. 22-60217 torically challenged many of BNSF’s exemption requests, has joined the case and asked the petition to be denied both for the Brotherhood’s own, inde-pendent reasons and “for the reasons stated by the [FRA] [in] its decision and brief.”
+II.
+We review final orders of agencies under the standard set out by the Administrative Procedure Act—we “hold unlawful and set aside agency action, findings, and conclusions found to be . . . arbitrary, capricious, an abuse of discretion, or otherwise not in accordance with law.” 5 U.S.C. § 706(2)(A); see also Texas v. United States, 40 F.4th 205, 226 (5th Cir. 2022) (per curiam), cert. granted, 143 S. Ct. 51 (2022).
+We require that “agency action be reasonable and reasonably ex-plained” and that “the agency has acted within a zone of reasonableness and, in particular, that the agency has reasonably considered the relevant issues and reasonably explained the decision.” FCC v. Prometheus Radio Project, 141 S. Ct. 1150, 1158 (2021) (citations omitted). “[T]he agency must exam-ine the relevant data and articulate a satisfactory explanation for its action including a ‘rational connection between the facts found and the choice made.’” Motor Vehicle Mfrs. Ass’n of the U.S. v. State Farm Mut. Auto. Ins. Co., 463 U.S. 29, 43 (1983) (quoting Burlington Truck Lines v. United States, 371 U.S. 156, 168 (1962)).
+Accordingly, “we must set aside any action premised on reasoning that fails to account for ‘relevant factors’ or evinces ‘a clear error of judg-ment.’” Univ. of Tex. M.D. Anderson Cancer Ctr. v.U.S. Dep’t of Health & Hum. Servs., 985 F.3d 472, 475 (5th Cir. 2021) (quoting Marsh v. Or. Nat. Res. Council, 490 U.S. 360, 378 (1989)). A decision is generally arbitrary and capricious if
+the agency has relied on factors which Congress has not in-
+No. 22-60217
+tended it to consider, entirely failed to consider an important
+aspect of the problem, offered an explanation for its decision
+that runs counter to the evidence before the agency, or is so
+implausible that it could not be ascribed to a difference in view
+or the product of agency expertise. Motor Vehicle Mfrs., 463 U.S. at 43.
+Finally, an “‘agency’s action must be upheld, if at all, on the basis articulated by the agency itself,’ not reasons developed post hoc.” 4 Although “we may not provide a reasoned basis for the agency’s action that the agency itself has not given,” we will “uphold a decision of less than ideal clarity if the agency’s path may reasonably be discerned.” Id. at 44 (internal quota-tions removed).
+III.
+BNSF presents a litany of reasons that the FRA’s decision was arbi-trary and capricious: BNSF claims that the FRA did not sufficiently consider safety in coming to its decision, 5 that its stated reason for denying BNSF’s exemption was without merit, and that its decision violates a condition FRA laid out for BNSF. 6 BNSF further claims that the FRA engendered reliance
+Texas, 40 F.4th at 226–27 (quoting Motor Vehicle Mfrs., 463 U.S. at 50); see also Dep’t of Homeland Sec. v. Regents of the Univ. of Cal., 140 S. Ct. 1891, 1907 (2020) (“It is a ‘foundational principle of administrative law’ that judicial review of agency action is lim-ited to ‘the grounds that the agency invoked when it took the action.’” (quoting Michigan v. EPA, 576 U.S. 743, 758 (2015))).
+See 49 U.S.C. § 103(c) (“In carrying out its duties, the [FRA] shall consider the assignment and maintenance of safety as the highest priority, recognizing the clear intent, encouragement, and dedication of Congress to the furtherance of the highest degree of safety in railroad transportation.”); id. § 20103(d)(1) (allowing the FRA to grant waivers “consistent with railroad safety”).
+The waiver granting BNSF’s second exemption request claimed to “provid[e] specific conditions, which if met, will allow BNSF to expand implementation of the relief in a consistent and safe manner.”
+No. 22-60217 interests by championing ATI and then changing its overall attitude toward ATI without formally announcing its now policy or reasoning through it. 7
+Perhaps these contentions have merit; maybe they do not. But unfor-tunately for the FRA, “[a]n agency’s action must be upheld, if at all, on the basis articulated by the agency itself,” Texas, 40 F.4th at 226–27, and here, the agency has barely articulated any basis at all. The paucity of reasoning is especially glaring in the face of the agency’s statutory mandate to prioritize safety. BNSF has made evidence-based claims that ATI is safer and more efficient than visual inspection alone. The implementation of ATI pursuant to the prior waiver appears to have been an unqualified success. The FRA is thus duty-bound to provide further justification for its rejection of the tech-nology’s expansion.
+We reiterate: “[A]gency action [must] be reasonable and reasonably explained.” Prometheus Radio Project, 141 S. Ct. at 1158. The agency must “articulate a satisfactory explanation for its action including a ‘rational con-nection between the facts found and the choice made.’” Motor Vehicle Mfrs., 463 U.S. at 43 (quoting Burlington Truck Lines, 371 U.S. at 168). Finding the FRA’s letter lacking in this regard, we GRANT review, VACATE, and REMAND for reconsideration. This is a limited remand; this panel retains jurisdiction. We direct the FRA to enter its decision no later than one hun-dred days from the announcement of this opinion.
+An agency must “provide a reasoned explanation for the change,” “at least ‘dis-play awareness that it is changing position[,]’ and ‘show that there are good reasons for the new policy.’” Encino Motorcars, LLC v. Navarro, 579 U.S. 211, 221 (2016) (quoting FCC v. Fox Television Stations, Inc., 556 U.S. 502, 515 (2009)). When reliance interests have been engendered by an existing policy, “an ‘[u]nexplained inconsistency’ in agency policy is ‘a reason for holding [a decision] to be an arbitrary and capricious change from agency practice.’” Id. (quoting Nat’l Cable & Telecomms. Ass’n v. Brand X Internet Servs., 545 U.S. 967, 981 (2005)).
