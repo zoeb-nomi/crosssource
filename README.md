@@ -52,7 +52,7 @@ This project is an independent implementation of published RAG-evaluation method
 - **Adjudication:** [ADJUDICATION.md](ADJUDICATION.md) covers the 17 disagreements and a 10% audit, each with both labels, reasons, the recommendation and the final decision. Decisions are in `data/v0.3/labels/adjudicated.jsonl` and applied by `src/v03_dataset.py apply-adjudication`. Each item records `label_source` (`adjudicated` or agreed).
 - **Data:** `data/v0.3/qa_citation.jsonl`, `data/v0.3/citation_check.jsonl`, `data/v0.3/corpus/` (normalised opinion text), `data/v0.3/sources.json` (per-opinion provenance, including text source), `data/v0.3/labels/`.
 - **Rebuild:** `src/v03_fetch.py` (search and fetch; needs `COURTLISTENER_API_TOKEN`), then `src/v03_corpus.py`, then `src/v03_dataset.py` (packets, assemble, validate, rater input, agreement, adjudication). Raw API responses are cached in `data/raw/`, which is gitignored. 33 opinions come from the REST API; 12 come from CourtListener storage PDFs, SHA-1-verified against the search response. Opinions removed during curation, with reasons, are in `data/v0.3/exclusions.json`. `precedential_status` is `not_checked` for all 45 opinions: CourtListener exposes no subsequent-history flags; the one abrogation found during collection was removed and logged in `exclusions.json`; status is recorded, not a selection criterion (protocol §2(e)).
-- **Method note:** unlike v0.1, v0.3 items were **drafted by a model** following the protocol, labelled independently by a second blind model run, and then human-adjudicated (disagreements plus an audit sample). The v0.1 statement that every question is human-written applies to v0.1 only.
+- **Method note:** unlike v0.1, v0.3 items were **drafted by a model** following the protocol, labelled independently by a second blind model run, and then adjudicated by the maintainer with a third independent model rater (disagreements plus an audit sample); no human labelled every item. The v0.1 statement that every question is human-written applies to v0.1 only.
 
 ### v0.3 harness sanity pass (30-item seeded sample, pipeline check only)
 
@@ -96,7 +96,7 @@ cp .env.example .env   # add your Anthropic API key
 - **Human labeling caught a harness bug**: consecutive citations (`[a:1], [a:2]`) produced punctuation-only claim spans, which the judge scored as failures. All three original `unsupported_claim` counts were this artifact; affected items were re-scored after the fix. Kept here because it's the strongest argument in the repo for validating your judge with human eyes.
 - **Retrieval is the recall ceiling** (BM25, k=5, no reranking) — by design, but it means citation recall partly measures the retriever.
 - **v0.1 corpus** uses CAP static files; v0.3 uses CourtListener (authenticated REST API v4, plus SHA-1-verified storage PDFs).
-- **v0.3 labels are model-drafted and model-checked**, human-adjudicated only on the 30-item queue; the `citation_check` agreement is near ceiling, likely partly because items are constructed and raters share a model family (see AGREEMENT.md).
+- **v0.3 labels are model-drafted and model-checked**, adjudicated (maintainer plus a third independent model rater) only on the 30-item queue; the `citation_check` agreement is near ceiling, likely partly because items are constructed and raters share a model family (see AGREEMENT.md).
 
 ## v0.2 ideas
 
