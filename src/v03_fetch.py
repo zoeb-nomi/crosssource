@@ -30,12 +30,15 @@ import time
 from datetime import datetime, timezone
 from pathlib import Path
 
+import hashlib
+
 import requests
 
 ROOT = Path(__file__).resolve().parent.parent
 RAW = ROOT / "data" / "raw"
 V3 = ROOT / "data" / "v0.3"
 API = "https://www.courtlistener.com/api/rest/v4"
+STORAGE = "https://storage.courtlistener.com"
 
 # search returns display names, the REST opinion endpoint returns codes ("015unamimous" is CourtListener's spelling)
 ALLOWED_TYPES = {"combined-opinion", "lead-opinion", "majority-opinion", "unanimous-opinion",
@@ -90,6 +93,31 @@ class Client:
         cache.parent.mkdir(parents=True, exist_ok=True)
         cache.write_bytes(r.content)
         return r.json()
+
+
+def storage_pdf_opinion(storage, result, oid):
+    """Opinion text from CourtListener's public file storage instead of the API (no API quota).
+
+    The PDF is cached at data/raw/pdf/<oid>.pdf and must match the sha1 that the
+    verbatim REST search response lists for that opinion."""
+    sys.path.insert(0, str(Path(__file__).resolve().parent))
+    from v03_corpus import pdf_text
+    o = next(o for o in result["opinions"] if o["id"] == oid)
+    if not (o.get("local_path") or "").endswith(".pdf") or not o.get("sha1"):
+        return None, "no storage PDF listed"
+    path = RAW / "pdf" / f"{oid}.pdf"
+    if not path.exists():
+        time.sleep(1.0)
+        r = storage.get(f"{STORAGE}/{o['local_path']}", timeout=90)
+        r.raise_for_status()
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_bytes(r.content)
+    digest = hashlib.sha1(path.read_bytes()).hexdigest()
+    if digest != o["sha1"]:
+        return None, f"sha1 mismatch ({digest[:10]} != {o['sha1'][:10]})"
+    op = {"id": oid, "type": o.get("type"), "per_curiam": o.get("per_curiam"), "plain_text": pdf_text(path),
+          "_pdf_url": f"{STORAGE}/{o['local_path']}", "_sha1": digest}
+    return op, None
 
 
 def search_params(topic):
@@ -181,6 +209,8 @@ def main():
     ap.add_argument("--per-topic", type=int, default=3)
     ap.add_argument("--delay", type=float, default=1.0)
     ap.add_argument("--topics", default="")
+    ap.add_argument("--source", choices=["api", "pdf"], default="api",
+                    help="fetch: opinion text from the REST API, or from CourtListener's storage PDFs (sha1-verified)")
     args = ap.parse_args()
     token = os.environ.get("COURTLISTENER_API_TOKEN")
     if not token:
@@ -189,6 +219,8 @@ def main():
     if args.topics:
         topics = [t for t in topics if t["topic_key"] in args.topics.split(",")]
     client = Client(token, args.delay)
+    storage = requests.Session()
+    storage.headers["User-Agent"] = "crosssource-v0.3 (research; MIT)"
     if args.cmd == "search":
         cmd_search(client, topics)
         print(f"\n{client.requests} API requests this run")
@@ -219,7 +251,13 @@ def main():
                     continue  # decided from search metadata alone; no request spent
                 if (result["caseName"].lower(), result["dateFiled"]) in same_case:
                     continue  # duplicate cluster of a case already accepted
-                op = client.get(f"opinions/{oid}/", RAW / "opinions" / f"{oid}.json")
+                if args.source == "pdf":
+                    op, why = storage_pdf_opinion(storage, result, oid)
+                    if op is None:
+                        print(f"  - {oid} {result['caseName'][:50]}: {why}")
+                        continue
+                else:
+                    op = client.get(f"opinions/{oid}/", RAW / "opinions" / f"{oid}.json")
                 # cluster metadata comes from the verbatim search response (same fields as clusters/<id>/),
                 # which halves the requests against CourtListener's 50/hour, 125/day quota
                 cached = RAW / "clusters" / f"{result['cluster_id']}.json"
@@ -244,7 +282,9 @@ def main():
                     "absolute_url": cluster.get("absolute_url") or result["absolute_url"],
                     "url": "https://www.courtlistener.com" + (cluster.get("absolute_url") or result["absolute_url"]),
                     "api_url": f"{API}/opinions/{oid}/", "opinion_type": op.get("type"),
-                    "per_curiam": op.get("per_curiam"), "text_field": field,
+                    "per_curiam": op.get("per_curiam"),
+                    "text_field": "storage_pdf" if args.source == "pdf" else field,
+                    **({"pdf_url": op["_pdf_url"], "pdf_sha1": op["_sha1"]} if args.source == "pdf" else {}),
                     "precedential_status": cluster.get("precedential_status"),
                     "topic_key": topic["topic_key"], "area_of_law": topic["area_of_law"],
                     "fetched_at": entry["at"],

@@ -34,6 +34,12 @@ BLOCK_TAG_RE = re.compile(r"</?(p|div|br|h\d|li|blockquote|tr)\b[^>]*>", re.I)
 TAG_RE = re.compile(r"<[^>]+>")
 
 
+def pdf_text(pdf_path) -> str:
+    """Deterministic text from a CourtListener storage PDF (pypdf layout mode keeps paragraph indents)."""
+    from pypdf import PdfReader
+    return "\f".join(page.extract_text(extraction_mode="layout") or "" for page in PdfReader(pdf_path).pages)
+
+
 def strip_html(raw: str, plain: bool = False) -> tuple[str, bool]:
     """Return (text, is_preformatted). plain_text and <pre> output keep their line layout."""
     preformatted = plain or "<pre" in raw[:2000].lower()
@@ -92,10 +98,15 @@ def main():
     for mpath in metas:
         meta = json.loads(mpath.read_text(encoding="utf-8"))
         oid = meta["opinion_id"]
-        resp = json.loads((RAW / f"{oid}.json").read_text(encoding="utf-8"))
-        assert resp.get("id") == oid, f"{oid}: raw response id mismatch"
         field = meta["text_field"]
-        text = normalise(resp[field], plain=field == "plain_text")
+        if field == "storage_pdf":
+            raw_text = pdf_text(ROOT / "data" / "raw" / "pdf" / f"{oid}.pdf")
+            text = normalise(raw_text, plain=True)
+        else:
+            resp = json.loads((RAW / f"{oid}.json").read_text(encoding="utf-8"))
+            assert resp.get("id") == oid, f"{oid}: raw response id mismatch"
+            raw_text = resp[field]
+            text = normalise(raw_text, plain=field == "plain_text")
         doc_id = f"cl{oid}"
         (OUT / "corpus" / f"{doc_id}.txt").write_text(text, encoding="utf-8")
         chunks = chunk_text(text)
@@ -104,12 +115,14 @@ def main():
             **{k: meta.get(k) for k in ("opinion_id", "cluster_id", "case_name", "court_id", "date_filed",
                                          "citation", "docket_number", "url", "opinion_type", "topic_key",
                                          "area_of_law")},
-            "text_field": field, "raw_chars": len(resp[field]),
+            "text_field": field, "raw_chars": len(raw_text),
+            **({k: meta[k] for k in ("pdf_url", "pdf_sha1")} if field == "storage_pdf" else {}),
             "chars": len(text),
             "words": len(text.split()),
             "chunks": len(chunks),
             "api_url": meta["api_url"],
-            "source": "CourtListener REST API v4 (Free Law Project)",
+            "source": ("CourtListener file storage PDF, SHA-1 verified against the REST v4 search response (Free Law Project)"
+                       if field == "storage_pdf" else "CourtListener REST API v4 (Free Law Project)"),
         })
         print(f"{doc_id:14} {meta['court_id']:6} {meta['date_filed']}  {len(text.split()):6} words  "
               f"{len(chunks):3} chunks  {meta['case_name'][:50]}")
