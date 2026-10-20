@@ -55,6 +55,8 @@ EXCLUDE_TEXT_RE = re.compile(r"sexual(ly)? assault|\brape\b|child pornography|se
 HEAD_REJECT_RE = re.compile(r"DISSENTING OPINION|CONCURRING OPINION|OPINION IN SUPPORT OF (AFFIRMANCE|REVERSAL)|"
                             r"\bOn order of the Court\b|MEMORANDUM OPINION|"
                             r"\bPls?\.[’'] (Mem|Opp|Mot)\.", re.I)
+# parties named by initials in the caption ("J.S.; A.S.; Y.S.") usually means minors — §2 no-minors rule
+CAPTION_INITIALS_RE = re.compile(r"(?<![A-Z]\.)\b(?!U\.S\.|D\.C\.|N\.A\.|L\.P\.|P\.C\.|S\.A\.|C\.J\.|P\.J\.|J\.J\.|S\.J\.)[A-Z]\.\s?[A-Z]\.(?:\s?[A-Z]\.)?\s?[;,]")
 FEDERAL_APPEALS_RE = re.compile(r"Circuit Judges?|COURT OF APPEALS", re.I)
 
 
@@ -191,8 +193,7 @@ def check(result, op, cluster, topic):
         return f"date_filed {cluster.get('date_filed')}"
     if op.get("type") not in ALLOWED_TYPES:
         return f"opinion type {op.get('type')}"
-    if op.get("per_curiam"):
-        return "per curiam"
+    # reasoned per curiam opinions are allowed (protocol v1.1 §2); summary orders fail the word floor / head check
     name = cluster.get("case_name") or result["caseName"]
     if EXCLUDE_NAME_RE.search(name):
         return f"excluded case type by name: {name}"
@@ -207,6 +208,9 @@ def check(result, op, cluster, topic):
     m = EXCLUDE_TEXT_RE.search(plain)
     if m:
         return f"excluded subject matter: {m.group(0)!r}"
+    m = CAPTION_INITIALS_RE.search(plain[:2500])
+    if m:
+        return f"caption names a party by initials (likely a minor): {m.group(0)!r}"
     m = HEAD_REJECT_RE.search(plain[:3000])
     if m:
         return f"not a majority appellate opinion: {m.group(0)!r}"
@@ -274,7 +278,7 @@ def main():
         accepted = [m["opinion_id"] for m in metas if m.get("topic_key") == topic["topic_key"]]
         # CourtListener sometimes holds one decision under two clusters; dedupe on name + date
         same_case = {(m["case_name"].lower(), m["date_filed"]) for m in metas}
-        courts_used = set()
+        courts_used = {m["court_id"] for m in metas if m.get("topic_key") == topic["topic_key"]}
         # two passes: first prefer one opinion per court, then fill
         for distinct in (True, False):
             for result, oid in cands:

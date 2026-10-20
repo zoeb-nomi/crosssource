@@ -26,6 +26,7 @@ Work **one topic at a time**: read the packet, write that topic's drafts file, t
 - Spread: per topic, no opinion may supply more than 4 of the 10 items (an item belongs to the opinion of its ground-truth chunk / cited chunk). Use all 3 opinions.
 - Never use text the court did not write: staff-prepared SUMMARY / syllabus / headnotes (e.g. the Ninth Circuit's "SUMMARY" block, which says it is not part of the opinion), captions, counsel lists.
 - Skip boilerplate chunks (standard of review, jurisdiction, procedural history, caption/counsel lists) and chunks that are mostly a block quote of a statute or contract (§5).
+- A claim must be verifiable from the shown passages alone: no name, title, role or date that appears only outside the context set (protocol v1.1 §5).
 - Claims and questions in plain professional English; don't copy a full sentence of the passage into a question or claim.
 
 ## Self-check before moving on

@@ -195,15 +195,16 @@ def cmd_validate(args):
         "problems": problems,
     }
     # precedential status of every opinion an item touches (source, window, context) — LABELING_PROTOCOL §2
+    status_notes = []
     status = {d: s.get("precedential_status", "unknown") for d, s in sources.items()}
     for it in items:
         docs = {doc_of(c) for c in it.get("candidate_window", []) + it.get("context_chunks", [])} | {it["provenance"]["doc_id"]}
         for d in sorted(docs):
-            if status.get(d) in ("abrogated", "overruled"):
-                problems.append(f"{it['id']}: uses {d}, precedential_status={status[d]}")
-            elif status.get(d) == "unknown" and not getattr(args, "allow_unknown", False):
-                problems.append(f"{it['id']}: uses {d}, precedential_status unknown (screen/review it, or pass --allow-unknown)")
+            if status.get(d) != "good law":
+                status_notes.append(f"{it['id']}: uses {d} (precedential_status={status.get(d, 'unknown')})")
+    # recorded, not a selection criterion (protocol v1.1 §2) — reported loudly, never silently
     report["precedential_status"] = dict(Counter(status.values()))
+    report["items_touching_non_good_law"] = status_notes
     if report["distinct_opinions"] < 40: problems.append("fewer than 40 distinct opinions")
     if report["max_items_per_opinion"] > 4: problems.append("an opinion supplies more than 4 items")
     if not 0.4 <= report["federal_share"] <= 0.6: problems.append("federal share outside 40–60%")
@@ -211,6 +212,9 @@ def cmd_validate(args):
     if report["max_area_share"] > 0.30: problems.append("an area_of_law tag above 30%")
     (V3 / "validation.json").write_text(json.dumps(report, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     print(json.dumps({k: v for k, v in report.items() if k != "problems"}, indent=2))
+    print(f"precedential_status: {report['precedential_status']}; items touching a non-'good law' opinion: {len(status_notes)}")
+    for n in status_notes[:20]:
+        print("  ! ", n)
     print(f"{len(problems)} problems")
     for p in problems[:60]:
         print("  -", p)
@@ -342,6 +346,40 @@ def cmd_adjudication(args):
     print(f"{len(dis)} disagreements/flags + {len(audit)} audit = {len(dis) + len(audit)} -> {out}")
 
 
+# --------------------------------------------------------------------------- adjudication overlay
+def cmd_apply_adjudication(_):
+    """Overlay data/v0.3/labels/adjudicated.jsonl onto the assembled items (run after `assemble`).
+
+    qa: ground_truth_chunks := final set (provenance.passage follows); cc: label := final label.
+    Items rebuilt after adjudication (a `note` saying so, or a changed claim) keep their rebuilt label."""
+    path = V3 / "labels" / "adjudicated.jsonl"
+    adj = {r["id"]: r for r in jl_read(path)} if path.exists() else {}
+    chunks = load_chunks()
+    rebuilt = {i for i, r in adj.items() if "rewritten" in r.get("note", "")}
+    changed = 0
+    for fname in ("qa_citation.jsonl", "citation_check.jsonl"):
+        items = jl_read(V3 / fname)
+        for it in items:
+            r = adj.get(it["id"])
+            if not r or it["id"] in rebuilt:
+                continue
+            if it["type"] == "qa_citation":
+                final = sorted(r["final_label"], key=lambda c: int(c.split(":")[1]))
+                assert set(final) <= set(it["candidate_window"]), it["id"]
+                if final != it["ground_truth_chunks"]:
+                    it["ground_truth_chunks"] = final
+                    it["provenance"]["passage"] = "\n".join(chunks[c] for c in final)
+                    changed += 1
+            elif r["final_label"] != it["label"]:
+                it["label"] = r["final_label"]
+                changed += 1
+            it["label_source"] = "adjudicated"
+        for it in items:
+            it.setdefault("label_source", "rater A = rater B (agreed)")
+        jl_write(V3 / fname, items)
+    print(f"applied {len(adj) - len(rebuilt)} adjudications ({changed} labels changed); {len(rebuilt)} rebuilt item(s) kept as rebuilt")
+
+
 # --------------------------------------------------------------------------- treatment
 STATUSES = ("good law", "abrogated", "overruled", "unknown")
 TREATMENT = V3 / "treatment.json"
@@ -435,16 +473,15 @@ def cmd_render(args):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("cmd", choices=["packets", "assemble", "validate", "rater-input", "agreement", "adjudication", "render", "import-labels", "treatment-review"])
+    ap.add_argument("cmd", choices=["packets", "assemble", "validate", "rater-input", "agreement", "adjudication", "render", "import-labels", "treatment-review", "apply-adjudication"])
     ap.add_argument("--labels-b", default=str(V3 / "labels" / "rater_b_round1.jsonl"))
     ap.add_argument("--round", type=int, default=1)
     ap.add_argument("--out", default=None, help="rater-input: write batches here (e.g. an isolated scratch dir)")
     ap.add_argument("--src", default=None, help="import-labels: rater output file (opaque ids)")
     ap.add_argument("--append", action="store_true", help="import-labels: merge into an existing round file")
-    ap.add_argument("--allow-unknown", action="store_true", help="validate: don't fail on precedential_status unknown")
     args = ap.parse_args()
     {"packets": cmd_packets, "assemble": cmd_assemble, "validate": cmd_validate, "rater-input": cmd_rater_input,
-     "agreement": cmd_agreement, "adjudication": cmd_adjudication, "render": cmd_render, "import-labels": cmd_import_labels, "treatment-review": cmd_treatment_review}[args.cmd](args)
+     "agreement": cmd_agreement, "adjudication": cmd_adjudication, "render": cmd_render, "import-labels": cmd_import_labels, "treatment-review": cmd_treatment_review, "apply-adjudication": cmd_apply_adjudication}[args.cmd](args)
 
 
 if __name__ == "__main__":

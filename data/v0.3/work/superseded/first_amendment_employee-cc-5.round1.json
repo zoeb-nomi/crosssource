@@ -1,0 +1,18 @@
+{
+ "draft_key": "first_amendment_employee-cc-5",
+ "type": "citation_check",
+ "topic_key": "first_amendment_employee",
+ "claim": "The First Circuit concluded that the city officials' worries about disruption were reasonable, noting that the fishermen's association had told the mayor it viewed the Harbormaster's Office as anti-fisherman.",
+ "cited_chunk": "cl9905225:8",
+ "context_chunks": [
+  "cl9905225:8",
+  "cl9905225:7",
+  "cl9905225:9",
+  "cl11110987:18",
+  "cl11107767:24"
+ ],
+ "label": "supported",
+ "cited_authority": "Mihos v. Swift, 358 F.3d 91 (1st Cir. 2004)",
+ "rater_a_reason": "Step 1: cl9905225:8 says the officials' concerns 'were certainly reasonable' and that the MLA 'expressly told Theken that those fishermen considered the Harbormaster's Office to be \"anti-fisherman\"'.",
+ "construction_note": "Faithful paraphrase of cited chunk."
+}

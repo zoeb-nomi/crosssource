@@ -12,13 +12,46 @@
     "opinion_type": "010combined",
     "topic_key": "arbitration_enforce",
     "area_of_law": "contracts",
+    "publication_status": "Published",
     "text_field": "plain_text",
     "raw_chars": 59838,
     "chars": 55029,
     "words": 8544,
     "chunks": 29,
     "api_url": "https://www.courtlistener.com/api/rest/v4/opinions/10465611/",
-    "source": "CourtListener REST API v4 (Free Law Project)"
+    "source": "CourtListener REST API v4 (Free Law Project)",
+    "precedential_status": "unknown",
+    "precedential_status_basis": "not screened",
+    "precedential_status_checked": null
+  },
+  {
+    "doc_id": "cl10465655",
+    "opinion_id": 10465655,
+    "cluster_id": 9999054,
+    "case_name": "Rosa Cuevas v. City of Tulare",
+    "court_id": "ca9",
+    "date_filed": "2024-07-10",
+    "citation": [
+      "107 F.4th 894"
+    ],
+    "docket_number": "23-15953",
+    "url": "https://www.courtlistener.com/opinion/9999054/rosa-cuevas-v-city-of-tulare/",
+    "opinion_type": "combined-opinion",
+    "topic_key": "qi_excessive_force",
+    "area_of_law": "constitutional",
+    "publication_status": "Published",
+    "text_field": "storage_pdf",
+    "raw_chars": 25664,
+    "pdf_url": "https://storage.courtlistener.com/pdf/2024/07/10/rosa_cuevas_v._city_of_tulare.pdf",
+    "pdf_sha1": "ae5e9d038e19fb24e52184925956cba1e9c1ea43",
+    "chars": 22869,
+    "words": 3751,
+    "chunks": 13,
+    "api_url": "https://www.courtlistener.com/api/rest/v4/opinions/10465655/",
+    "source": "CourtListener file storage PDF, SHA-1 verified against the REST v4 search response (Free Law Project)",
+    "precedential_status": "unknown",
+    "precedential_status_basis": "not screened",
+    "precedential_status_checked": null
   },
   {
     "doc_id": "cl10737190",
@@ -35,6 +68,7 @@
     "opinion_type": "combined-opinion",
     "topic_key": "title_vii_retaliation",
     "area_of_law": "employment",
+    "publication_status": "Published",
     "text_field": "storage_pdf",
     "raw_chars": 27240,
     "pdf_url": "https://storage.courtlistener.com/pdf/2024/11/08/ayorinde_v._team_industrial.pdf",
@@ -43,7 +77,10 @@
     "words": 3409,
     "chunks": 11,
     "api_url": "https://www.courtlistener.com/api/rest/v4/opinions/10737190/",
-    "source": "CourtListener file storage PDF, SHA-1 verified against the REST v4 search response (Free Law Project)"
+    "source": "CourtListener file storage PDF, SHA-1 verified against the REST v4 search response (Free Law Project)",
+    "precedential_status": "unknown",
+    "precedential_status_basis": "not screened",
+    "precedential_status_checked": null
   },
   {
     "doc_id": "cl10759655",
@@ -58,13 +95,17 @@
     "opinion_type": "010combined",
     "topic_key": "patent_obviousness",
     "area_of_law": "ip",
+    "publication_status": "Published",
     "text_field": "plain_text",
     "raw_chars": 26502,
     "chars": 23921,
     "words": 3759,
     "chunks": 14,
     "api_url": "https://www.courtlistener.com/api/rest/v4/opinions/10759655/",
-    "source": "CourtListener REST API v4 (Free Law Project)"
+    "source": "CourtListener REST API v4 (Free Law Project)",
+    "precedential_status": "unknown",
+    "precedential_status_basis": "not screened",
+    "precedential_status_checked": null
   },
   {
     "doc_id": "cl10802953",
@@ -81,13 +122,17 @@
     "opinion_type": "010combined",
     "topic_key": "article_iii_standing",
     "area_of_law": "civil_procedure",
+    "publication_status": "Published",
     "text_field": "plain_text",
     "raw_chars": 13659,
     "chars": 12491,
     "words": 1907,
     "chunks": 7,
     "api_url": "https://www.courtlistener.com/api/rest/v4/opinions/10802953/",
-    "source": "CourtListener REST API v4 (Free Law Project)"
+    "source": "CourtListener REST API v4 (Free Law Project)",
+    "precedential_status": "unknown",
+    "precedential_status_basis": "not screened",
+    "precedential_status_checked": null
   },
   {
     "doc_id": "cl10815384",
@@ -104,6 +149,7 @@
     "opinion_type": "combined-opinion",
     "topic_key": "title_vii_retaliation",
     "area_of_law": "employment",
+    "publication_status": "Published",
     "text_field": "storage_pdf",
     "raw_chars": 34972,
     "pdf_url": "https://storage.courtlistener.com/pdf/2025/03/03/rodriguez_v._city_of_corpus_christi.pdf",
@@ -112,30 +158,10 @@
     "words": 4388,
     "chunks": 14,
     "api_url": "https://www.courtlistener.com/api/rest/v4/opinions/10815384/",
-    "source": "CourtListener file storage PDF, SHA-1 verified against the REST v4 search response (Free Law Project)"
-  },
-  {
-    "doc_id": "cl10820676",
-    "opinion_id": 10820676,
-    "cluster_id": 10354088,
-    "case_name": "Estate of Clemente Najera Aguirre v. County of Riverside",
-    "court_id": "ca9",
-    "date_filed": "2025-03-11",
-    "citation": [
-      "131 F.4th 702"
-    ],
-    "docket_number": "23-55718",
-    "url": "https://www.courtlistener.com/opinion/10354088/estate-of-clemente-najera-aguirre-v-county-of-riverside/",
-    "opinion_type": "010combined",
-    "topic_key": "qi_excessive_force",
-    "area_of_law": "constitutional",
-    "text_field": "plain_text",
-    "raw_chars": 24082,
-    "chars": 22488,
-    "words": 3686,
-    "chunks": 13,
-    "api_url": "https://www.courtlistener.com/api/rest/v4/opinions/10820676/",
-    "source": "CourtListener REST API v4 (Free Law Project)"
+    "source": "CourtListener file storage PDF, SHA-1 verified against the REST v4 search response (Free Law Project)",
+    "precedential_status": "unknown",
+    "precedential_status_basis": "not screened",
+    "precedential_status_checked": null
   },
   {
     "doc_id": "cl10835596",
@@ -152,13 +178,17 @@
     "opinion_type": "010combined",
     "topic_key": "ineffective_assistance",
     "area_of_law": "criminal",
+    "publication_status": "Published",
     "text_field": "plain_text",
     "raw_chars": 16414,
     "chars": 15211,
     "words": 2373,
     "chunks": 8,
     "api_url": "https://www.courtlistener.com/api/rest/v4/opinions/10835596/",
-    "source": "CourtListener REST API v4 (Free Law Project)"
+    "source": "CourtListener REST API v4 (Free Law Project)",
+    "precedential_status": "unknown",
+    "precedential_status_basis": "not screened",
+    "precedential_status_checked": null
   },
   {
     "doc_id": "cl10839652",
@@ -175,13 +205,17 @@
     "opinion_type": "010combined",
     "topic_key": "qi_excessive_force",
     "area_of_law": "constitutional",
+    "publication_status": "Published",
     "text_field": "plain_text",
     "raw_chars": 28988,
     "chars": 25385,
     "words": 3981,
     "chunks": 14,
     "api_url": "https://www.courtlistener.com/api/rest/v4/opinions/10839652/",
-    "source": "CourtListener REST API v4 (Free Law Project)"
+    "source": "CourtListener REST API v4 (Free Law Project)",
+    "precedential_status": "unknown",
+    "precedential_status_basis": "not screened",
+    "precedential_status_checked": null
   },
   {
     "doc_id": "cl11081153",
@@ -198,13 +232,17 @@
     "opinion_type": "010combined",
     "topic_key": "personal_jurisdiction",
     "area_of_law": "civil_procedure",
+    "publication_status": "Published",
     "text_field": "plain_text",
     "raw_chars": 29377,
     "chars": 26889,
     "words": 4199,
     "chunks": 15,
     "api_url": "https://www.courtlistener.com/api/rest/v4/opinions/11081153/",
-    "source": "CourtListener REST API v4 (Free Law Project)"
+    "source": "CourtListener REST API v4 (Free Law Project)",
+    "precedential_status": "unknown",
+    "precedential_status_basis": "not screened",
+    "precedential_status_checked": null
   },
   {
     "doc_id": "cl11107767",
@@ -219,13 +257,17 @@
     "opinion_type": "010combined",
     "topic_key": "first_amendment_employee",
     "area_of_law": "constitutional",
+    "publication_status": "Published",
     "text_field": "plain_text",
     "raw_chars": 51966,
     "chars": 48956,
     "words": 7675,
     "chunks": 28,
     "api_url": "https://www.courtlistener.com/api/rest/v4/opinions/11107767/",
-    "source": "CourtListener REST API v4 (Free Law Project)"
+    "source": "CourtListener REST API v4 (Free Law Project)",
+    "precedential_status": "unknown",
+    "precedential_status_basis": "not screened",
+    "precedential_status_checked": null
   },
   {
     "doc_id": "cl11110987",
@@ -240,13 +282,17 @@
     "opinion_type": "010combined",
     "topic_key": "first_amendment_employee",
     "area_of_law": "constitutional",
+    "publication_status": "Published",
     "text_field": "plain_text",
     "raw_chars": 51190,
     "chars": 47977,
     "words": 7590,
     "chunks": 28,
     "api_url": "https://www.courtlistener.com/api/rest/v4/opinions/11110987/",
-    "source": "CourtListener REST API v4 (Free Law Project)"
+    "source": "CourtListener REST API v4 (Free Law Project)",
+    "precedential_status": "unknown",
+    "precedential_status_basis": "not screened",
+    "precedential_status_checked": null
   },
   {
     "doc_id": "cl11115647",
@@ -261,6 +307,7 @@
     "opinion_type": "combined-opinion",
     "topic_key": "agency_arbitrary_capricious",
     "area_of_law": "administrative",
+    "publication_status": "Published",
     "text_field": "storage_pdf",
     "raw_chars": 36239,
     "pdf_url": "https://storage.courtlistener.com/pdf/2025/08/06/shenzhen_youme_v._fda.pdf",
@@ -269,7 +316,10 @@
     "words": 5155,
     "chunks": 18,
     "api_url": "https://www.courtlistener.com/api/rest/v4/opinions/11115647/",
-    "source": "CourtListener file storage PDF, SHA-1 verified against the REST v4 search response (Free Law Project)"
+    "source": "CourtListener file storage PDF, SHA-1 verified against the REST v4 search response (Free Law Project)",
+    "precedential_status": "unknown",
+    "precedential_status_basis": "not screened",
+    "precedential_status_checked": null
   },
   {
     "doc_id": "cl11116328",
@@ -284,13 +334,17 @@
     "opinion_type": "010combined",
     "topic_key": "article_iii_standing",
     "area_of_law": "civil_procedure",
+    "publication_status": "Published",
     "text_field": "plain_text",
     "raw_chars": 28966,
     "chars": 27186,
     "words": 4335,
     "chunks": 16,
     "api_url": "https://www.courtlistener.com/api/rest/v4/opinions/11116328/",
-    "source": "CourtListener REST API v4 (Free Law Project)"
+    "source": "CourtListener REST API v4 (Free Law Project)",
+    "precedential_status": "unknown",
+    "precedential_status_basis": "not screened",
+    "precedential_status_checked": null
   },
   {
     "doc_id": "cl11118835",
@@ -305,13 +359,17 @@
     "opinion_type": "010combined",
     "topic_key": "title_vii_retaliation",
     "area_of_law": "employment",
+    "publication_status": "Published",
     "text_field": "plain_text",
     "raw_chars": 37150,
     "chars": 35373,
     "words": 5596,
     "chunks": 21,
     "api_url": "https://www.courtlistener.com/api/rest/v4/opinions/11118835/",
-    "source": "CourtListener REST API v4 (Free Law Project)"
+    "source": "CourtListener REST API v4 (Free Law Project)",
+    "precedential_status": "unknown",
+    "precedential_status_basis": "not screened",
+    "precedential_status_checked": null
   },
   {
     "doc_id": "cl11121462",
@@ -326,6 +384,7 @@
     "opinion_type": "combined-opinion",
     "topic_key": "qi_excessive_force",
     "area_of_law": "constitutional",
+    "publication_status": "Published",
     "text_field": "storage_pdf",
     "raw_chars": 20007,
     "pdf_url": "https://storage.courtlistener.com/pdf/2025/08/15/norman_v._ingle.pdf",
@@ -334,7 +393,10 @@
     "words": 2430,
     "chunks": 8,
     "api_url": "https://www.courtlistener.com/api/rest/v4/opinions/11121462/",
-    "source": "CourtListener file storage PDF, SHA-1 verified against the REST v4 search response (Free Law Project)"
+    "source": "CourtListener file storage PDF, SHA-1 verified against the REST v4 search response (Free Law Project)",
+    "precedential_status": "unknown",
+    "precedential_status_basis": "not screened",
+    "precedential_status_checked": null
   },
   {
     "doc_id": "cl11176209",
@@ -351,13 +413,17 @@
     "opinion_type": "010combined",
     "topic_key": "miranda_custody",
     "area_of_law": "criminal",
+    "publication_status": "Published",
     "text_field": "html",
     "raw_chars": 14698,
     "chars": 13730,
     "words": 2143,
     "chunks": 8,
     "api_url": "https://www.courtlistener.com/api/rest/v4/opinions/11176209/",
-    "source": "CourtListener REST API v4 (Free Law Project)"
+    "source": "CourtListener REST API v4 (Free Law Project)",
+    "precedential_status": "unknown",
+    "precedential_status_basis": "not screened",
+    "precedential_status_checked": null
   },
   {
     "doc_id": "cl11235652",
@@ -372,13 +438,17 @@
     "opinion_type": "010combined",
     "topic_key": "vehicle_search",
     "area_of_law": "criminal",
+    "publication_status": "Published",
     "text_field": "plain_text",
     "raw_chars": 64220,
     "chars": 60316,
     "words": 9827,
     "chunks": 35,
     "api_url": "https://www.courtlistener.com/api/rest/v4/opinions/11235652/",
-    "source": "CourtListener REST API v4 (Free Law Project)"
+    "source": "CourtListener REST API v4 (Free Law Project)",
+    "precedential_status": "unknown",
+    "precedential_status_basis": "not screened",
+    "precedential_status_checked": null
   },
   {
     "doc_id": "cl11259842",
@@ -393,6 +463,7 @@
     "opinion_type": "lead-opinion",
     "topic_key": "contract_interpretation",
     "area_of_law": "contracts",
+    "publication_status": "Published",
     "text_field": "storage_pdf",
     "raw_chars": 25306,
     "pdf_url": "https://storage.courtlistener.com/pdf/2026/02/13/privilege_underwriters_reciprocal_exchange_v._jeff_mankoff_and_staci.pdf",
@@ -401,7 +472,10 @@
     "words": 3609,
     "chunks": 13,
     "api_url": "https://www.courtlistener.com/api/rest/v4/opinions/11259842/",
-    "source": "CourtListener file storage PDF, SHA-1 verified against the REST v4 search response (Free Law Project)"
+    "source": "CourtListener file storage PDF, SHA-1 verified against the REST v4 search response (Free Law Project)",
+    "precedential_status": "unknown",
+    "precedential_status_basis": "not screened",
+    "precedential_status_checked": null
   },
   {
     "doc_id": "cl11419421",
@@ -416,6 +490,7 @@
     "opinion_type": "combined-opinion",
     "topic_key": "negligence_duty",
     "area_of_law": "torts",
+    "publication_status": "Published",
     "text_field": "storage_pdf",
     "raw_chars": 26542,
     "pdf_url": "https://storage.courtlistener.com/pdf/2026/08/17/suquilanda_v._skyway_roofing_inc..pdf",
@@ -424,7 +499,10 @@
     "words": 3816,
     "chunks": 14,
     "api_url": "https://www.courtlistener.com/api/rest/v4/opinions/11419421/",
-    "source": "CourtListener file storage PDF, SHA-1 verified against the REST v4 search response (Free Law Project)"
+    "source": "CourtListener file storage PDF, SHA-1 verified against the REST v4 search response (Free Law Project)",
+    "precedential_status": "unknown",
+    "precedential_status_basis": "not screened",
+    "precedential_status_checked": null
   },
   {
     "doc_id": "cl11452592",
@@ -441,13 +519,17 @@
     "opinion_type": "010combined",
     "topic_key": "insurance_duty_defend",
     "area_of_law": "contracts",
+    "publication_status": "Published",
     "text_field": "html_with_citations",
     "raw_chars": 93509,
     "chars": 40806,
     "words": 6251,
     "chunks": 21,
     "api_url": "https://www.courtlistener.com/api/rest/v4/opinions/11452592/",
-    "source": "CourtListener REST API v4 (Free Law Project)"
+    "source": "CourtListener REST API v4 (Free Law Project)",
+    "precedential_status": "unknown",
+    "precedential_status_basis": "not screened",
+    "precedential_status_checked": null
   },
   {
     "doc_id": "cl4367038",
@@ -464,13 +546,17 @@
     "opinion_type": "010combined",
     "topic_key": "ineffective_assistance",
     "area_of_law": "criminal",
+    "publication_status": "Published",
     "text_field": "plain_text",
     "raw_chars": 42995,
     "chars": 38311,
     "words": 5827,
     "chunks": 21,
     "api_url": "https://www.courtlistener.com/api/rest/v4/opinions/4367038/",
-    "source": "CourtListener REST API v4 (Free Law Project)"
+    "source": "CourtListener REST API v4 (Free Law Project)",
+    "precedential_status": "unknown",
+    "precedential_status_basis": "not screened",
+    "precedential_status_checked": null
   },
   {
     "doc_id": "cl4532507",
@@ -485,13 +571,17 @@
     "opinion_type": "010combined",
     "topic_key": "insurance_duty_defend",
     "area_of_law": "contracts",
+    "publication_status": "Published",
     "text_field": "plain_text",
     "raw_chars": 61750,
     "chars": 56425,
     "words": 9492,
     "chunks": 34,
     "api_url": "https://www.courtlistener.com/api/rest/v4/opinions/4532507/",
-    "source": "CourtListener REST API v4 (Free Law Project)"
+    "source": "CourtListener REST API v4 (Free Law Project)",
+    "precedential_status": "unknown",
+    "precedential_status_basis": "not screened",
+    "precedential_status_checked": null
   },
   {
     "doc_id": "cl4538757",
@@ -510,13 +600,17 @@
     "opinion_type": "010combined",
     "topic_key": "personal_jurisdiction",
     "area_of_law": "civil_procedure",
+    "publication_status": "Published",
     "text_field": "plain_text",
     "raw_chars": 35693,
     "chars": 31615,
     "words": 4798,
     "chunks": 16,
     "api_url": "https://www.courtlistener.com/api/rest/v4/opinions/4538757/",
-    "source": "CourtListener REST API v4 (Free Law Project)"
+    "source": "CourtListener REST API v4 (Free Law Project)",
+    "precedential_status": "unknown",
+    "precedential_status_basis": "not screened",
+    "precedential_status_checked": null
   },
   {
     "doc_id": "cl4682256",
@@ -531,6 +625,7 @@
     "opinion_type": "combined-opinion",
     "topic_key": "contract_interpretation",
     "area_of_law": "contracts",
+    "publication_status": "Published",
     "text_field": "storage_pdf",
     "raw_chars": 38046,
     "pdf_url": "https://storage.courtlistener.com/pdf/2021/04/29/chester_water_auth_aplt._v._pa._dced.pdf",
@@ -539,7 +634,10 @@
     "words": 4861,
     "chunks": 17,
     "api_url": "https://www.courtlistener.com/api/rest/v4/opinions/4682256/",
-    "source": "CourtListener file storage PDF, SHA-1 verified against the REST v4 search response (Free Law Project)"
+    "source": "CourtListener file storage PDF, SHA-1 verified against the REST v4 search response (Free Law Project)",
+    "precedential_status": "unknown",
+    "precedential_status_basis": "not screened",
+    "precedential_status_checked": null
   },
   {
     "doc_id": "cl5124709",
@@ -556,6 +654,7 @@
     "opinion_type": "combined-opinion",
     "topic_key": "miranda_custody",
     "area_of_law": "criminal",
+    "publication_status": "Published",
     "text_field": "storage_pdf",
     "raw_chars": 16214,
     "pdf_url": "https://storage.courtlistener.com/pdf/2021/11/09/hersie_wesson_v._tim_shoop.pdf",
@@ -564,7 +663,10 @@
     "words": 2224,
     "chunks": 9,
     "api_url": "https://www.courtlistener.com/api/rest/v4/opinions/5124709/",
-    "source": "CourtListener file storage PDF, SHA-1 verified against the REST v4 search response (Free Law Project)"
+    "source": "CourtListener file storage PDF, SHA-1 verified against the REST v4 search response (Free Law Project)",
+    "precedential_status": "unknown",
+    "precedential_status_basis": "not screened",
+    "precedential_status_checked": null
   },
   {
     "doc_id": "cl5129137",
@@ -581,13 +683,17 @@
     "opinion_type": "010combined",
     "topic_key": "negligence_duty",
     "area_of_law": "torts",
+    "publication_status": "Published",
     "text_field": "plain_text",
     "raw_chars": 44670,
     "chars": 41698,
     "words": 6949,
     "chunks": 24,
     "api_url": "https://www.courtlistener.com/api/rest/v4/opinions/5129137/",
-    "source": "CourtListener REST API v4 (Free Law Project)"
+    "source": "CourtListener REST API v4 (Free Law Project)",
+    "precedential_status": "unknown",
+    "precedential_status_basis": "not screened",
+    "precedential_status_checked": null
   },
   {
     "doc_id": "cl6105386",
@@ -604,6 +710,7 @@
     "opinion_type": "combined-opinion",
     "topic_key": "miranda_custody",
     "area_of_law": "criminal",
+    "publication_status": "Published",
     "text_field": "storage_pdf",
     "raw_chars": 22496,
     "pdf_url": "https://storage.courtlistener.com/pdf/2022/01/20/united_states_v._doe.pdf",
@@ -612,7 +719,10 @@
     "words": 3377,
     "chunks": 12,
     "api_url": "https://www.courtlistener.com/api/rest/v4/opinions/6105386/",
-    "source": "CourtListener file storage PDF, SHA-1 verified against the REST v4 search response (Free Law Project)"
+    "source": "CourtListener file storage PDF, SHA-1 verified against the REST v4 search response (Free Law Project)",
+    "precedential_status": "unknown",
+    "precedential_status_basis": "not screened",
+    "precedential_status_checked": null
   },
   {
     "doc_id": "cl6320573",
@@ -627,13 +737,17 @@
     "opinion_type": "010combined",
     "topic_key": "contract_interpretation",
     "area_of_law": "contracts",
+    "publication_status": "Published",
     "text_field": "plain_text",
     "raw_chars": 30604,
     "chars": 29339,
     "words": 4554,
     "chunks": 16,
     "api_url": "https://www.courtlistener.com/api/rest/v4/opinions/6320573/",
-    "source": "CourtListener REST API v4 (Free Law Project)"
+    "source": "CourtListener REST API v4 (Free Law Project)",
+    "precedential_status": "unknown",
+    "precedential_status_basis": "not screened",
+    "precedential_status_checked": null
   },
   {
     "doc_id": "cl8234259",
@@ -651,13 +765,17 @@
     "opinion_type": "020lead",
     "topic_key": "limitations_discovery_rule",
     "area_of_law": "torts",
+    "publication_status": "Published",
     "text_field": "html_with_citations",
     "raw_chars": 120447,
     "chars": 47382,
     "words": 7547,
     "chunks": 25,
     "api_url": "https://www.courtlistener.com/api/rest/v4/opinions/8234259/",
-    "source": "CourtListener REST API v4 (Free Law Project)"
+    "source": "CourtListener REST API v4 (Free Law Project)",
+    "precedential_status": "unknown",
+    "precedential_status_basis": "not screened",
+    "precedential_status_checked": null
   },
   {
     "doc_id": "cl8250811",
@@ -674,13 +792,17 @@
     "opinion_type": "020lead",
     "topic_key": "limitations_discovery_rule",
     "area_of_law": "torts",
+    "publication_status": "Published",
     "text_field": "html_with_citations",
     "raw_chars": 54051,
     "chars": 27816,
     "words": 4436,
     "chunks": 15,
     "api_url": "https://www.courtlistener.com/api/rest/v4/opinions/8250811/",
-    "source": "CourtListener REST API v4 (Free Law Project)"
+    "source": "CourtListener REST API v4 (Free Law Project)",
+    "precedential_status": "unknown",
+    "precedential_status_basis": "not screened",
+    "precedential_status_checked": null
   },
   {
     "doc_id": "cl9226166",
@@ -699,13 +821,17 @@
     "opinion_type": "010combined",
     "topic_key": "insurance_duty_defend",
     "area_of_law": "contracts",
+    "publication_status": "Published",
     "text_field": "plain_text",
     "raw_chars": 29676,
     "chars": 26075,
     "words": 4238,
     "chunks": 14,
     "api_url": "https://www.courtlistener.com/api/rest/v4/opinions/9226166/",
-    "source": "CourtListener REST API v4 (Free Law Project)"
+    "source": "CourtListener REST API v4 (Free Law Project)",
+    "precedential_status": "unknown",
+    "precedential_status_basis": "not screened",
+    "precedential_status_checked": null
   },
   {
     "doc_id": "cl9363399",
@@ -720,13 +846,17 @@
     "opinion_type": "010combined",
     "topic_key": "limitations_discovery_rule",
     "area_of_law": "torts",
+    "publication_status": "Published",
     "text_field": "plain_text",
     "raw_chars": 18264,
     "chars": 17310,
     "words": 2800,
     "chunks": 12,
     "api_url": "https://www.courtlistener.com/api/rest/v4/opinions/9363399/",
-    "source": "CourtListener REST API v4 (Free Law Project)"
+    "source": "CourtListener REST API v4 (Free Law Project)",
+    "precedential_status": "unknown",
+    "precedential_status_basis": "not screened",
+    "precedential_status_checked": null
   },
   {
     "doc_id": "cl9374906",
@@ -743,6 +873,7 @@
     "opinion_type": "combined-opinion",
     "topic_key": "article_iii_standing",
     "area_of_law": "civil_procedure",
+    "publication_status": "Published",
     "text_field": "storage_pdf",
     "raw_chars": 19975,
     "pdf_url": "https://storage.courtlistener.com/pdf/2023/02/24/kelly_bassett_v._credit_bureau_services_inc..pdf",
@@ -751,7 +882,10 @@
     "words": 2782,
     "chunks": 10,
     "api_url": "https://www.courtlistener.com/api/rest/v4/opinions/9374906/",
-    "source": "CourtListener file storage PDF, SHA-1 verified against the REST v4 search response (Free Law Project)"
+    "source": "CourtListener file storage PDF, SHA-1 verified against the REST v4 search response (Free Law Project)",
+    "precedential_status": "unknown",
+    "precedential_status_basis": "not screened",
+    "precedential_status_checked": null
   },
   {
     "doc_id": "cl9379438",
@@ -768,13 +902,17 @@
     "opinion_type": "010combined",
     "topic_key": "agency_arbitrary_capricious",
     "area_of_law": "administrative",
+    "publication_status": "Published",
     "text_field": "plain_text",
     "raw_chars": 18222,
     "chars": 14779,
     "words": 2337,
     "chunks": 7,
     "api_url": "https://www.courtlistener.com/api/rest/v4/opinions/9379438/",
-    "source": "CourtListener REST API v4 (Free Law Project)"
+    "source": "CourtListener REST API v4 (Free Law Project)",
+    "precedential_status": "unknown",
+    "precedential_status_basis": "not screened",
+    "precedential_status_checked": null
   },
   {
     "doc_id": "cl9556163",
@@ -789,13 +927,17 @@
     "opinion_type": "010combined",
     "topic_key": "negligence_duty",
     "area_of_law": "torts",
+    "publication_status": "Published",
     "text_field": "plain_text",
     "raw_chars": 24431,
     "chars": 22426,
     "words": 3687,
     "chunks": 12,
     "api_url": "https://www.courtlistener.com/api/rest/v4/opinions/9556163/",
-    "source": "CourtListener REST API v4 (Free Law Project)"
+    "source": "CourtListener REST API v4 (Free Law Project)",
+    "precedential_status": "unknown",
+    "precedential_status_basis": "not screened",
+    "precedential_status_checked": null
   },
   {
     "doc_id": "cl9841132",
@@ -812,13 +954,17 @@
     "opinion_type": "010combined",
     "topic_key": "patent_obviousness",
     "area_of_law": "ip",
+    "publication_status": "Published",
     "text_field": "plain_text",
     "raw_chars": 26263,
     "chars": 23585,
     "words": 3747,
     "chunks": 13,
     "api_url": "https://www.courtlistener.com/api/rest/v4/opinions/9841132/",
-    "source": "CourtListener REST API v4 (Free Law Project)"
+    "source": "CourtListener REST API v4 (Free Law Project)",
+    "precedential_status": "unknown",
+    "precedential_status_basis": "not screened",
+    "precedential_status_checked": null
   },
   {
     "doc_id": "cl9900814",
@@ -835,13 +981,17 @@
     "opinion_type": "010combined",
     "topic_key": "vehicle_search",
     "area_of_law": "criminal",
+    "publication_status": "Published",
     "text_field": "plain_text",
     "raw_chars": 11210,
     "chars": 10157,
     "words": 1584,
     "chunks": 6,
     "api_url": "https://www.courtlistener.com/api/rest/v4/opinions/9900814/",
-    "source": "CourtListener REST API v4 (Free Law Project)"
+    "source": "CourtListener REST API v4 (Free Law Project)",
+    "precedential_status": "unknown",
+    "precedential_status_basis": "not screened",
+    "precedential_status_checked": null
   },
   {
     "doc_id": "cl9905225",
@@ -858,6 +1008,7 @@
     "opinion_type": "combined-opinion",
     "topic_key": "first_amendment_employee",
     "area_of_law": "constitutional",
+    "publication_status": "Published",
     "text_field": "storage_pdf",
     "raw_chars": 27150,
     "pdf_url": "https://storage.courtlistener.com/pdf/2023/11/28/ciarametaro_v._city_of_gloucester.pdf",
@@ -866,7 +1017,10 @@
     "words": 3520,
     "chunks": 12,
     "api_url": "https://www.courtlistener.com/api/rest/v4/opinions/9905225/",
-    "source": "CourtListener file storage PDF, SHA-1 verified against the REST v4 search response (Free Law Project)"
+    "source": "CourtListener file storage PDF, SHA-1 verified against the REST v4 search response (Free Law Project)",
+    "precedential_status": "unknown",
+    "precedential_status_basis": "not screened",
+    "precedential_status_checked": null
   },
   {
     "doc_id": "cl9905848",
@@ -883,13 +1037,17 @@
     "opinion_type": "010combined",
     "topic_key": "ineffective_assistance",
     "area_of_law": "criminal",
+    "publication_status": "Published",
     "text_field": "plain_text",
     "raw_chars": 24130,
     "chars": 21239,
     "words": 3446,
     "chunks": 13,
     "api_url": "https://www.courtlistener.com/api/rest/v4/opinions/9905848/",
-    "source": "CourtListener REST API v4 (Free Law Project)"
+    "source": "CourtListener REST API v4 (Free Law Project)",
+    "precedential_status": "unknown",
+    "precedential_status_basis": "not screened",
+    "precedential_status_checked": null
   },
   {
     "doc_id": "cl9915536",
@@ -906,13 +1064,17 @@
     "opinion_type": "010combined",
     "topic_key": "agency_arbitrary_capricious",
     "area_of_law": "administrative",
+    "publication_status": "Published",
     "text_field": "plain_text",
     "raw_chars": 17714,
     "chars": 16367,
     "words": 2444,
     "chunks": 9,
     "api_url": "https://www.courtlistener.com/api/rest/v4/opinions/9915536/",
-    "source": "CourtListener REST API v4 (Free Law Project)"
+    "source": "CourtListener REST API v4 (Free Law Project)",
+    "precedential_status": "unknown",
+    "precedential_status_basis": "not screened",
+    "precedential_status_checked": null
   },
   {
     "doc_id": "cl9931599",
@@ -927,13 +1089,17 @@
     "opinion_type": "010combined",
     "topic_key": "personal_jurisdiction",
     "area_of_law": "civil_procedure",
+    "publication_status": "Published",
     "text_field": "plain_text",
     "raw_chars": 33917,
     "chars": 32163,
     "words": 5035,
     "chunks": 19,
     "api_url": "https://www.courtlistener.com/api/rest/v4/opinions/9931599/",
-    "source": "CourtListener REST API v4 (Free Law Project)"
+    "source": "CourtListener REST API v4 (Free Law Project)",
+    "precedential_status": "unknown",
+    "precedential_status_basis": "not screened",
+    "precedential_status_checked": null
   },
   {
     "doc_id": "cl9950712",
@@ -950,13 +1116,17 @@
     "opinion_type": "010combined",
     "topic_key": "arbitration_enforce",
     "area_of_law": "contracts",
+    "publication_status": "Published",
     "text_field": "plain_text",
     "raw_chars": 22672,
     "chars": 21229,
     "words": 3355,
     "chunks": 12,
     "api_url": "https://www.courtlistener.com/api/rest/v4/opinions/9950712/",
-    "source": "CourtListener REST API v4 (Free Law Project)"
+    "source": "CourtListener REST API v4 (Free Law Project)",
+    "precedential_status": "unknown",
+    "precedential_status_basis": "not screened",
+    "precedential_status_checked": null
   },
   {
     "doc_id": "cl9954963",
@@ -973,13 +1143,17 @@
     "opinion_type": "010combined",
     "topic_key": "patent_obviousness",
     "area_of_law": "ip",
+    "publication_status": "Published",
     "text_field": "plain_text",
     "raw_chars": 19990,
     "chars": 17746,
     "words": 2846,
     "chunks": 10,
     "api_url": "https://www.courtlistener.com/api/rest/v4/opinions/9954963/",
-    "source": "CourtListener REST API v4 (Free Law Project)"
+    "source": "CourtListener REST API v4 (Free Law Project)",
+    "precedential_status": "unknown",
+    "precedential_status_basis": "not screened",
+    "precedential_status_checked": null
   },
   {
     "doc_id": "cl9958088",
@@ -994,13 +1168,17 @@
     "opinion_type": "010combined",
     "topic_key": "arbitration_enforce",
     "area_of_law": "contracts",
+    "publication_status": "Published",
     "text_field": "plain_text",
     "raw_chars": 19070,
     "chars": 17817,
     "words": 2778,
     "chunks": 10,
     "api_url": "https://www.courtlistener.com/api/rest/v4/opinions/9958088/",
-    "source": "CourtListener REST API v4 (Free Law Project)"
+    "source": "CourtListener REST API v4 (Free Law Project)",
+    "precedential_status": "unknown",
+    "precedential_status_basis": "not screened",
+    "precedential_status_checked": null
   },
   {
     "doc_id": "cl9963611",
@@ -1017,12 +1195,16 @@
     "opinion_type": "010combined",
     "topic_key": "vehicle_search",
     "area_of_law": "criminal",
+    "publication_status": "Published",
     "text_field": "plain_text",
     "raw_chars": 20436,
     "chars": 19175,
     "words": 3139,
     "chunks": 11,
     "api_url": "https://www.courtlistener.com/api/rest/v4/opinions/9963611/",
-    "source": "CourtListener REST API v4 (Free Law Project)"
+    "source": "CourtListener REST API v4 (Free Law Project)",
+    "precedential_status": "unknown",
+    "precedential_status_basis": "not screened",
+    "precedential_status_checked": null
   }
 ]

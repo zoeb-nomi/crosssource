@@ -47,7 +47,7 @@
 {"id": "first_amendment_employee-cc-2", "draft_key": "first_amendment_employee-cc-2", "construction_note": "Faithful paraphrase of cited chunk."}
 {"id": "first_amendment_employee-cc-3", "draft_key": "first_amendment_employee-cc-3", "construction_note": "Claim paraphrases Ciarametaro chunk 5; cited chunk is Burch chunk 20 on adverse employment actions."}
 {"id": "first_amendment_employee-cc-4", "draft_key": "first_amendment_employee-cc-4", "construction_note": "Started from supported claim (persisting after being told to stop does not make official-duty speech protected); reversed the holding."}
-{"id": "first_amendment_employee-cc-5", "draft_key": "first_amendment_employee-cc-5", "construction_note": "Faithful paraphrase of cited chunk."}
+{"id": "first_amendment_employee-cc-5", "draft_key": "first_amendment_employee-cc-5", "construction_note": "Rewritten at adjudication (2026-10-20): the round-1 claim said 'the mayor', an identifier found only in cl9905225:2 outside the context set (protocol v1.1 §5). Now names Theken as the passage does."}
 {"id": "ineffective_assistance-qa-1", "draft_key": "ineffective_assistance-qa-1", "construction_note": ""}
 {"id": "ineffective_assistance-qa-2", "draft_key": "ineffective_assistance-qa-2", "construction_note": ""}
 {"id": "ineffective_assistance-qa-3", "draft_key": "ineffective_assistance-qa-3", "construction_note": ""}
@@ -118,16 +118,16 @@
 {"id": "personal_jurisdiction-cc-3", "draft_key": "personal_jurisdiction-cc-3", "construction_note": "Claim paraphrases the Calder paragraph of cl11081153:7 (same opinion); cited chunk cl11081153:10 is on the nearby topic of tortious effects via servers."}
 {"id": "personal_jurisdiction-cc-4", "draft_key": "personal_jurisdiction-cc-4", "construction_note": "Claim paraphrases the factor list in cl4538757:12; cited chunk is from the Sixth Circuit Carbone opinion."}
 {"id": "personal_jurisdiction-cc-5", "draft_key": "personal_jurisdiction-cc-5", "construction_note": "Started from the supported claim (formal agency is not required) and reversed it to require a formal agency relationship."}
-{"id": "qi_excessive_force-qa-1", "draft_key": "qi_excessive_force-qa-1", "construction_note": ""}
-{"id": "qi_excessive_force-qa-2", "draft_key": "qi_excessive_force-qa-2", "construction_note": ""}
 {"id": "qi_excessive_force-qa-3", "draft_key": "qi_excessive_force-qa-3", "construction_note": ""}
 {"id": "qi_excessive_force-qa-4", "draft_key": "qi_excessive_force-qa-4", "construction_note": ""}
 {"id": "qi_excessive_force-qa-5", "draft_key": "qi_excessive_force-qa-5", "construction_note": ""}
-{"id": "qi_excessive_force-cc-1", "draft_key": "qi_excessive_force-cc-1", "construction_note": "Started from supported claim (court may discredit when video is clear enough that no reasonable jury could believe the account); changed to 'whenever video evidence exists' (scope overstated)."}
-{"id": "qi_excessive_force-cc-2", "draft_key": "qi_excessive_force-cc-2", "construction_note": "Faithful paraphrase of first sentence of cited chunk."}
-{"id": "qi_excessive_force-cc-3", "draft_key": "qi_excessive_force-cc-3", "construction_note": "Claim paraphrases Santander chunk 4; cited chunk is from the Najera opinion on an adjacent qualified immunity point."}
-{"id": "qi_excessive_force-cc-4", "draft_key": "qi_excessive_force-cc-4", "construction_note": "Faithful paraphrase of the quoted test in the cited chunk."}
-{"id": "qi_excessive_force-cc-5", "draft_key": "qi_excessive_force-cc-5", "construction_note": "Claim paraphrases Santander chunk 10; cited chunk 9 is the preceding false-arrest standard passage in the same opinion."}
+{"id": "qi_excessive_force-qa-1", "draft_key": "qi_excessive_force-qa-1", "construction_note": ""}
+{"id": "qi_excessive_force-qa-2", "draft_key": "qi_excessive_force-qa-2", "construction_note": ""}
+{"id": "qi_excessive_force-cc-1", "draft_key": "qi_excessive_force-cc-1", "construction_note": "Started from the supported claim that the court found the deputies' response, within seconds of Norman's punch and headlock, not clearly unreasonable. Changed one thing: reversed the outcome to clearly unreasonable and a constitutional violation. Different-opinion chunks (Cuevas:9, Santander:7) concern other parties and do not support it."}
+{"id": "qi_excessive_force-cc-2", "draft_key": "qi_excessive_force-cc-2", "construction_note": "Faithful paraphrase of cl10465655:7 (passenger seized with driver; dog entry and shots were uses of force; Cuevas was Castro's passenger). Adds nothing beyond the passage."}
+{"id": "qi_excessive_force-cc-3", "draft_key": "qi_excessive_force-cc-3", "construction_note": "Faithful paraphrase of cl10839652:4 (no heightened pleading standard; plead facts which, if proved, defeat immunity). Cited a Cuevas qualified immunity standard chunk that is on a nearby topic but silent on pleading. No other chunk in the set states the claim."}
+{"id": "qi_excessive_force-cc-4", "draft_key": "qi_excessive_force-cc-4", "construction_note": "Faithful paraphrase of cl11121462:6 covering the three elements and the added clearly-established requirement; nothing added."}
+{"id": "qi_excessive_force-cc-5", "draft_key": "qi_excessive_force-cc-5", "construction_note": "Faithful paraphrase of cl10839652:12. Cited cl10839652:11, an adjacent Santander chunk on the same claim that introduces its elements but not the timing reasoning. Other context chunks (Santander:9 false arrest, Cuevas:10, Norman:7) do not state it."}
 {"id": "title_vii_retaliation-qa-1", "draft_key": "title_vii_retaliation-qa-1", "construction_note": ""}
 {"id": "title_vii_retaliation-qa-2", "draft_key": "title_vii_retaliation-qa-2", "construction_note": ""}
 {"id": "title_vii_retaliation-qa-3", "draft_key": "title_vii_retaliation-qa-3", "construction_note": ""}

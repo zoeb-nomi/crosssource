@@ -1,6 +1,6 @@
 # CrossSource labelling protocol — v0.3
 
-Version 1.0.2 (2026-10-20). Any change after raters start gets a new version number and an entry in the changelog at the bottom; items labelled under an older version are re-labelled, not grandfathered.
+Version 1.1 (2026-10-20). Any change after raters start gets a new version number and an entry in the changelog at the bottom; items labelled under an older version are re-labelled, not grandfathered.
 
 This protocol governs every item in `data/v0.3/`. The 25 v0.1 items (`data/golden.jsonl`) were built under different source rules (Caselaw Access Project, pre-2018 landmark cases) and are kept unchanged as the `v0.1-legacy` split. They are not counted toward the 150 and are not re-labelled.
 
@@ -43,9 +43,9 @@ Every v0.3 item comes from opinions that meet **all** of these:
 | Date | `date_filed` on or after 2018-01-01. |
 | Court | A federal court of appeals (`ca1`–`ca11`, `cadc`, `cafc`) or a state court of last resort (the court CourtListener lists as that state's highest court, e.g. `cal`, `ny`, `tex`, `mass`). In Texas and Oklahoma, which have two courts of last resort, use the civil supreme court only. |
 | Language | English. |
-| Opinion type | Lead / majority / combined opinion. No concurrences, no dissents, no per curiam summary orders. |
+| Opinion type | Lead / majority / combined opinion, including a **reasoned per curiam opinion** (signed or unsigned, with the court's own analysis). No concurrences, no dissents, no per curiam summary orders or orders without reasoning. |
 | Length | At least 1,500 words of opinion text (enough for ≥ 4 chunks). |
-| Precedential status | Not abrogated, overruled or vacated. Every opinion is screened by searching CourtListener for later opinions that cite it and use abrogation / overruling / vacatur language (`src/v03_fetch.py treatment`). Zero hits → `good law` (screen basis, dated). Any hit is read by hand and set to `good law`, `abrogated`, `overruled` or `unknown` with the evidence in `data/v0.3/treatment.json`. `sources.json` carries `precedential_status` for every opinion; the validator rejects items that touch an `abrogated` / `overruled` opinion and, by default, an `unknown` one. This is a screen, not a citator (Shepard's / KeyCite). |
+| Precedential status (recorded, **not** a selection criterion) | Every opinion's later treatment is screened by searching CourtListener for later opinions that cite it and use abrogation / overruling / vacatur language (`src/v03_fetch.py treatment`); hits are read by hand. The result is recorded in `sources.json` as `precedential_status` (`good law` / `abrogated` / `overruled` / `unknown`) with its basis and date (`data/v0.3/treatment.json`). It does not decide inclusion — the dataset tests whether a citation supports a claim within the text shown — but the validator reports every item that touches a non-`good law` or `unknown` opinion, so a status never changes silently. The curator may still choose to replace an opinion (as with the abrogated *Hamilton v. Dallas County* panel opinion). This is a screen, not a citator (Shepard's / KeyCite). |
 
 **Spread.**
 - At least 40 distinct opinions across the 150 items; no opinion supplies more than 4 items.
@@ -87,12 +87,14 @@ Shared rule for both types: **judge only from the text shown.** Do not use what 
 
 You see a question, reference notes, and a **candidate window**: the chunk the item was built from plus up to two chunks either side of it in the same opinion (≤ 5 chunks, shown in order).
 
-Mark a chunk as ground truth if **and only if** it states at least one of the "Must mention" points, such that a reader could verify that point from that chunk alone.
+Mark a chunk as ground truth if **and only if** it **alone** lets a reader verify **any one** Must-mention point **in full**. Mark every chunk in the window that qualifies, not just the one the question was built from.
 
 Decision rules:
 1. A chunk that only *mentions* the topic, quotes the question's words, or sets up the issue without stating the point is **not** ground truth.
+1a. A **rule-only** chunk — one that states the governing legal rule or standard but not how the court applied it — counts **only when the Must-mention point is the rule itself**. It does not count for a point about the court's application, reasoning or outcome.
+1b. A chunk that states only part of a point (some of its elements) does not qualify for that point.
 2. If the same point is stated in two chunks, mark **both**.
-3. A point split across a chunk boundary (half a sentence in each): mark both chunks.
+3. **Exception to 1b:** a point split across a chunk boundary (half a sentence in each) — mark both chunks.
 4. A point stated only in a footnote that the chunker has placed in a chunk: that chunk counts.
 5. If you think no chunk in the window states a "Must mention" point, mark none and flag the item `bad_item` (see §5).
 
@@ -151,7 +153,8 @@ Exclude (or have the rater flag `bad_item`) if:
 - the passage is not the court's own text: a staff-prepared summary, syllabus or headnote, a caption, or a counsel list;
 - the passage is mainly a block quote of a statute, regulation, contract or jury instruction;
 - the question or claim can be answered from general legal knowledge without the passage *and* the passage does not add anything specific;
-- the text is garbled (OCR errors, broken footnote markers) in a way that changes meaning;
+- the text is garbled (OCR errors, broken words) in a way that changes meaning — footnote text interleaved with the body (a common PDF-extraction artifact) is **not** by itself "garbled";
+- (`citation_check`) the claim depends on an identifier — a name, title, role or date — that appears only outside the passages shown (e.g. a claim says "the mayor" and only an unshown chunk says who the mayor is);
 - the item would require any personal information beyond party names already in the case caption.
 
 A rater who flags `bad_item` still gives a best-effort label, plus a one-line reason. `bad_item` flags go to adjudication.
@@ -191,4 +194,5 @@ Output per item: `{"id", "label", "reason", "bad_item": null | "<reason>"}` wher
 ## Changelog
 - **1.0 (2026-10-19)** — first version.
 - **1.0.1 (2026-10-20)** — source rule only: SHA-1-verified CourtListener storage PDFs allowed as a text source; §5 excludes staff summaries/syllabi. Label definitions unchanged, so no re-labelling.
+- **1.1 (2026-10-20, from adjudication)** — label rules: §3.1 a chunk qualifies if it alone lets a reader verify any one Must-mention point in full; a rule-only chunk counts only when the point is the rule itself (rules 1a–1b). §5: exclude claims that depend on an identifier shown only outside the passages; interleaved footnote text alone is not "garbled". Source rules: §2 reasoned per curiam opinions allowed (summary orders still excluded); precedential status is recorded, not a selection criterion. Items in the round-1 adjudication queue were decided under v1.1; agreed items outside the queue were labelled under v1.0 (see AGREEMENT.md).
 - **1.0.2 (2026-10-20)** — source rule only: precedential-status screen and `precedential_status` field (added after a 5th Cir. panel opinion later abrogated en banc slipped in). Label definitions unchanged.

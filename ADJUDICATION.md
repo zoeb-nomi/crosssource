@@ -1,4 +1,4 @@
-# Adjudication queue — CrossSource v0.3 (round 1)
+# Adjudication queue — CrossSource v0.3 (round 1) — **adjudicated 2026-10-20**
 
 **30 items: 17 disagreements, then a seeded random 10% (13) of the 133 agreed items.** For each, read the passage and both raters' reasons, apply [LABELING_PROTOCOL.md](LABELING_PROTOCOL.md) §3 as written, tick the box and write the final label.
 - The recommended label and its one-line justification are the curator-model's suggestion. They are not binding.
@@ -10,12 +10,12 @@ When done, record final labels in `data/v0.3/labels/adjudicated.jsonl` as `{"id"
 ## Source-level checks (not in the label queue)
 These are opinion-level questions for you, flagged during generation. They don't change any label.
 - [x] **Hamilton v. Dallas County, 5th Cir. 2022 panel opinion** — *resolved 2026-10-20*. Removed and logged in `data/v0.3/exclusions.json`. Its 3 items and the 3 that used its chunks as context were rebuilt with the same labels on Rodriguez v. City of Corpus Christi (5th Cir. 2025). Both raters agree on all 6, and none of them is in this queue.
-- [ ] **Estate of Najera Aguirre** (`cl10820676`, 9th Cir.): the caption lists three plaintiffs by initials (likely minors). No item uses the caption or summary chunks. Keep under §2 ("name or describe a minor")?
-- [ ] **Per curiam opinions kept as full merits opinions, not summary orders:** Norman v. Ingle (5th Cir.), Marcus & Millichap v. Triex and Lennar Homes v. Rafiei (Tex.).
+- [x] **Estate of Najera Aguirre** (`cl10820676`, 9th Cir.) — *resolved 2026-10-20 (decision 3)*: removed under the no-minors rule and logged in `exclusions.json`. Its 7 items were rebuilt with the same labels on Cuevas v. City of Tulare (9th Cir. 2024); both raters agree on all 7.
+- [x] **Per curiam opinions** (Norman v. Ingle; Marcus & Millichap v. Triex; Lennar Homes v. Rafiei) — *resolved (decision 2b)*: protocol v1.1 §2 allows reasoned per curiam opinions, not summary orders. Kept.
 
 ## Disagreements and bad-item flags (17)
 
-### [ ] agency_arbitrary_capricious-qa-2 · qa_citation · Shenzhen Youme v. FDA (ca5, 2025-08-06)
+### [x] agency_arbitrary_capricious-qa-2 · qa_citation · Shenzhen Youme v. FDA (ca5, 2025-08-06)
 
 Source: [https://www.courtlistener.com/opinion/10649060/shenzhen-youme-v-fda/](https://www.courtlistener.com/opinion/10649060/shenzhen-youme-v-fda/) · opinion 11115647 · cited authority as it appears: `Calumet Shreveport Refin., L.L.C. v. EPA, 86 F.4th 1121, 1135 (5th Cir. 2023)`
 
@@ -52,11 +52,11 @@ Candidate window: `cl11115647:11`, `cl11115647:12`, `cl11115647:13`, `cl11115647
 
 **Recommended:** `['cl11115647:11', 'cl11115647:13']` — B: chunk 11 quotes the awareness-and-good-reasons test, a Must-mention point (§3.1 rule 2: same point in two chunks → mark both).
 
-**Final label:** ______
+**Final label:** `['cl11115647:11', 'cl11115647:13']` — accepted recommendation
 
 ---
 
-### [ ] agency_arbitrary_capricious-qa-3 · qa_citation · BNSF Railway v. FRA (ca5, 2023-03-15)
+### [x] agency_arbitrary_capricious-qa-3 · qa_citation · BNSF Railway v. FRA (ca5, 2023-03-15)
 
 Source: [https://www.courtlistener.com/opinion/9383962/bnsf-railway-v-fra/](https://www.courtlistener.com/opinion/9383962/bnsf-railway-v-fra/) · opinion 9379438 · cited authority as it appears: `Encino Motorcars, LLC v. Navarro, 579 U.S. 211, 221 (2016)`
 
@@ -105,11 +105,11 @@ Candidate window: `cl9379438:2`, `cl9379438:3`, `cl9379438:4`, `cl9379438:5`, `c
 
 **Recommended:** `['cl9379438:5', 'cl9379438:6']` — B: chunk 5 states the 'upheld, if at all, on the basis articulated by the agency' rule, the first Must-mention point.
 
-**Final label:** ______
+**Final label:** `['cl9379438:5', 'cl9379438:6']` — accepted recommendation
 
 ---
 
-### [ ] arbitration_enforce-qa-1 · qa_citation · William Pace v. Hamilton Cove (nj, 2024-07-10)
+### [x] arbitration_enforce-qa-1 · qa_citation · William Pace v. Hamilton Cove (nj, 2024-07-10)
 
 Source: [https://www.courtlistener.com/opinion/9999010/william-pace-v-hamilton-cove/](https://www.courtlistener.com/opinion/9999010/william-pace-v-hamilton-cove/) · opinion 10465611 · cited authority as it appears: `Davis v. Oasis Legal Fin. Operating Co., 936 F.3d 1174, 1183`
 
@@ -138,11 +138,11 @@ Candidate window: `cl10465611:17`, `cl10465611:18`, `cl10465611:19`, `cl10465611
 
 **Recommended:** `['cl10465611:18', 'cl10465611:19']` — B: chunk 18 states the FLSA cases rest on Congress expressly providing for class actions (point 1).
 
-**Final label:** ______
+**Final label:** `['cl10465611:18', 'cl10465611:19']` — accepted recommendation
 
 ---
 
-### [ ] arbitration_enforce-qa-5 · qa_citation · Lennar Homes of Texas Inc. Lennar Homes of Texas Land and Construction, Ltd. Lennar Homes of Texas Sales and Marketing, Ltd. v. Mohammad Rafiei (tex, 2024-04-05)
+### [x] arbitration_enforce-qa-5 · qa_citation · Lennar Homes of Texas Inc. Lennar Homes of Texas Land and Construction, Ltd. Lennar Homes of Texas Sales and Marketing, Ltd. v. Mohammad Rafiei (tex, 2024-04-05)
 
 Source: [https://www.courtlistener.com/opinion/9491475/lennar-homes-of-texas-inc-lennar-homes-of-texas-land-and-construction/](https://www.courtlistener.com/opinion/9491475/lennar-homes-of-texas-inc-lennar-homes-of-texas-land-and-construction/) · opinion 9958088 · cited authority as it appears: `In re U.S. Home Corp., 236 S.W.3d 761, 764`
 
@@ -187,11 +187,11 @@ Candidate window: `cl9958088:4`, `cl9958088:5`, `cl9958088:6`, `cl9958088:7`, `c
 
 **Recommended:** `['cl9958088:5', 'cl9958088:6', 'cl9958088:7']` — B: chunk 5 says a party must adduce evidence of the fee schedule as applied (point 1); chunk 7 requires the litigation-vs-arbitration cost and ability-to-pay comparison (point 3).
 
-**Final label:** ______
+**Final label:** `['cl9958088:5', 'cl9958088:6', 'cl9958088:7']` — accepted recommendation
 
 ---
 
-### [ ] contract_interpretation-qa-3 · qa_citation · Chester Water Auth, Aplt. v. Pa. DCED (pa, 2021-04-29)
+### [x] contract_interpretation-qa-3 · qa_citation · Chester Water Auth, Aplt. v. Pa. DCED (pa, 2021-04-29)
 
 Source: [https://www.courtlistener.com/opinion/4878477/chester-water-auth-aplt-v-pa-dced/](https://www.courtlistener.com/opinion/4878477/chester-water-auth-aplt-v-pa-dced/) · opinion 4682256 · cited authority as it appears: `N. Hills News Record v. Town of McCandless, 555 Pa. 51, 58, 722 A.2d 1037, 1040 (1999)`
 
@@ -224,11 +224,11 @@ Candidate window: `cl4682256:8`, `cl4682256:9`, `cl4682256:10`, `cl4682256:11`, 
 
 **Recommended:** `['cl4682256:9', 'cl4682256:10']` — B: chunk 9 states that exceptions to disclosure are narrowly construed (point 3).
 
-**Final label:** ______
+**Final label:** `['cl4682256:9', 'cl4682256:10']` — accepted recommendation
 
 ---
 
-### [ ] first_amendment_employee-cc-5 · citation_check · Ciarametaro v. City of Gloucester (ca1, 2023-11-28)
+### [x] first_amendment_employee-cc-5 · citation_check · Ciarametaro v. City of Gloucester (ca1, 2023-11-28)
 
 Source: [https://www.courtlistener.com/opinion/9447400/ciarametaro-v-city-of-gloucester/](https://www.courtlistener.com/opinion/9447400/ciarametaro-v-city-of-gloucester/) · opinion 9905225 · cited authority as it appears: `Mihos v. Swift, 358 F.3d 91 (1st Cir. 2004)`
 
@@ -283,11 +283,11 @@ Source: [https://www.courtlistener.com/opinion/9447400/ciarametaro-v-city-of-glo
 
 **Recommended:** `unsupported_claim` — B under §3.2 as written: the passage says the MLA told 'Theken'; only cl9905225:2 (not in the context set) identifies Theken as mayor. Preferred alternative: reword the claim to say 'told Theken' and keep `supported`, which is what A built.
 
-**Final label:** ______
+**Final label:** `unsupported_claim` — accepted recommendation (claim rewritten afterwards (adjudication decision 4) to name Theken as the passage does; the rewritten item is labelled `supported` and re-rated blind — see AGREEMENT.md)
 
 ---
 
-### [ ] ineffective_assistance-qa-3 · qa_citation · Jeffrey Workman v. Superintendent Albion SCI (ca3, 2019-02-12)
+### [x] ineffective_assistance-qa-3 · qa_citation · Jeffrey Workman v. Superintendent Albion SCI (ca3, 2019-02-12)
 
 Source: [https://www.courtlistener.com/opinion/4589785/jeffrey-workman-v-superintendent-albion-sci/](https://www.courtlistener.com/opinion/4589785/jeffrey-workman-v-superintendent-albion-sci/) · opinion 4367038 · cited authority as it appears: `Miller-El v. Cockrell, 537 U.S. 322`
 
@@ -342,11 +342,11 @@ Candidate window: `cl4367038:6`, `cl4367038:7`, `cl4367038:8`, `cl4367038:9`, `c
 
 **Recommended:** `['cl4367038:8', 'cl4367038:9']` — Partly B: chunk 9 states the some-merit standard differs from Strickland merits and that PCR counsel must be ineffective (points 2–3); chunk 10 states no Must-mention point of this question.
 
-**Final label:** ______
+**Final label:** `['cl4367038:8', 'cl4367038:9', 'cl4367038:10']` — resolved by protocol v1.1 §3.1 amendment (differs from recommendation)
 
 ---
 
-### [ ] ineffective_assistance-qa-4 · qa_citation · Jeffrey Workman v. Superintendent Albion SCI (ca3, 2019-02-12)
+### [x] ineffective_assistance-qa-4 · qa_citation · Jeffrey Workman v. Superintendent Albion SCI (ca3, 2019-02-12)
 
 Source: [https://www.courtlistener.com/opinion/4589785/jeffrey-workman-v-superintendent-albion-sci/](https://www.courtlistener.com/opinion/4589785/jeffrey-workman-v-superintendent-albion-sci/) · opinion 4367038 · cited authority as it appears: `Brown v. Brown, 847 F.3d 502, 513`
 
@@ -465,11 +465,11 @@ Candidate window: `cl4367038:9`, `cl4367038:10`, `cl4367038:11`, `cl4367038:12`,
 
 **Recommended:** `['cl4367038:10', 'cl4367038:11', 'cl4367038:13']` — B: chunk 10 states the 'less exacting than Strickland prejudice' standard (point 1); chunk 13 states agreement with the Ninth Circuit and quotes the Seventh's rule (point 3).
 
-**Final label:** ______
+**Final label:** `['cl4367038:10', 'cl4367038:11', 'cl4367038:13']` — accepted recommendation
 
 ---
 
-### [ ] ineffective_assistance-qa-5 · qa_citation · People v. Roland (ill, 2023-11-30)
+### [x] ineffective_assistance-qa-5 · qa_citation · People v. Roland (ill, 2023-11-30)
 
 Source: [https://www.courtlistener.com/opinion/9448023/people-v-roland/](https://www.courtlistener.com/opinion/9448023/people-v-roland/) · opinion 9905848 · cited authority as it appears: `People v. Harris, 206 Ill. 2d 1, 16`
 
@@ -496,11 +496,11 @@ Candidate window: `cl9905848:8`, `cl9905848:9`, `cl9905848:10`, `cl9905848:11`, 
 
 **Recommended:** `['cl9905848:10', 'cl9905848:11']` — B: chunk 10 (¶27) says the court need not address deficient performance (point 3).
 
-**Final label:** ______
+**Final label:** `['cl9905848:10', 'cl9905848:11']` — accepted recommendation
 
 ---
 
-### [ ] limitations_discovery_rule-qa-4 · qa_citation · Marcus & Millichap Real Estate Investment Services of Nevada, Inc. v. Triex Texas Holdings, LLC, and Bryan Weiner (tex, 2023-01-13)
+### [x] limitations_discovery_rule-qa-4 · qa_citation · Marcus & Millichap Real Estate Investment Services of Nevada, Inc. v. Triex Texas Holdings, LLC, and Bryan Weiner (tex, 2023-01-13)
 
 Source: [https://www.courtlistener.com/opinion/9367923/marcus-millichap-real-estate-investment-services-of-nevada-inc-v-triex/](https://www.courtlistener.com/opinion/9367923/marcus-millichap-real-estate-investment-services-of-nevada-inc-v-triex/) · opinion 9363399 · cited authority as it appears: `Valdez v. Hollenbeck, 465 S.W.3d 217, 231`
 
@@ -529,11 +529,11 @@ Candidate window: `cl9363399:3`, `cl9363399:4`, `cl9363399:5`, `cl9363399:6`, `c
 
 **Recommended:** `['cl9363399:4', 'cl9363399:5']` — B: chunk 4 states the rule defers accrual until the plaintiff knew or should have known (point 2).
 
-**Final label:** ______
+**Final label:** `['cl9363399:4', 'cl9363399:5']` — accepted recommendation
 
 ---
 
-### [ ] limitations_discovery_rule-qa-5 · qa_citation · Marcus & Millichap Real Estate Investment Services of Nevada, Inc. v. Triex Texas Holdings, LLC, and Bryan Weiner (tex, 2023-01-13)
+### [x] limitations_discovery_rule-qa-5 · qa_citation · Marcus & Millichap Real Estate Investment Services of Nevada, Inc. v. Triex Texas Holdings, LLC, and Bryan Weiner (tex, 2023-01-13)
 
 Source: [https://www.courtlistener.com/opinion/9367923/marcus-millichap-real-estate-investment-services-of-nevada-inc-v-triex/](https://www.courtlistener.com/opinion/9367923/marcus-millichap-real-estate-investment-services-of-nevada-inc-v-triex/) · opinion 9363399 · cited authority as it appears: `PPG Indus., Inc. v. JMB/Hous. Ctrs. Partners Ltd. P’ship, 146 S.W.3d 79, 93`
 
@@ -562,11 +562,11 @@ Candidate window: `cl9363399:4`, `cl9363399:5`, `cl9363399:6`, `cl9363399:7`, `c
 
 **Recommended:** `['cl9363399:5', 'cl9363399:6']` — B: the 'requirement of reasonable diligence' sentence splits across the boundary (§3.1 rule 3 → mark both).
 
-**Final label:** ______
+**Final label:** `['cl9363399:5', 'cl9363399:6']` — accepted recommendation
 
 ---
 
-### [ ] miranda_custody-qa-4 · qa_citation · United States v. Doe (ca1, 2022-01-20)
+### [x] miranda_custody-qa-4 · qa_citation · United States v. Doe (ca1, 2022-01-20)
 
 Source: [https://www.courtlistener.com/opinion/6238504/united-states-v-doe/](https://www.courtlistener.com/opinion/6238504/united-states-v-doe/) · opinion 6105386 · cited authority as it appears: `United States v. Piper, 298 F.3d 47, 58 (1st Cir. 2002)`
 
@@ -597,11 +597,11 @@ Candidate window: `cl6105386:7`, `cl6105386:8`, `cl6105386:9`, `cl6105386:10`, `
 
 **Recommended:** `['cl6105386:9', 'cl6105386:10']` — B: chunk 10 says the testimony had no material impact given the documented strength of Angel Rodriguez's testimony (points 2–3).
 
-**Final label:** ______
+**Final label:** `['cl6105386:9', 'cl6105386:10']` — accepted recommendation
 
 ---
 
-### [ ] negligence_duty-qa-1 · qa_citation · Suquilanda v. Skyway Roofing, Inc. (mass, 2026-08-17)
+### [x] negligence_duty-qa-1 · qa_citation · Suquilanda v. Skyway Roofing, Inc. (mass, 2026-08-17)
 
 Source: [https://www.courtlistener.com/opinion/10951829/suquilanda-v-skyway-roofing-inc/](https://www.courtlistener.com/opinion/10951829/suquilanda-v-skyway-roofing-inc/) · opinion 11419421 · cited authority as it appears: `Dilaveris v. W.T. Rich Co., 424 Mass. 9, 12 (1996)`
 
@@ -640,11 +640,11 @@ Candidate window: `cl11419421:4`, `cl11419421:5`, `cl11419421:6`, `cl11419421:7`
 
 **Recommended:** `['cl11419421:5', 'cl11419421:6']` — B: the 'express contractual language … concrete actions' sentence splits across chunks 5–6 (§3.1 rule 3).
 
-**Final label:** ______
+**Final label:** `['cl11419421:5', 'cl11419421:6']` — accepted recommendation
 
 ---
 
-### [ ] negligence_duty-qa-4 · qa_citation · Snay v. Burr (Slip Opinion) (ohio, 2021-11-24)
+### [x] negligence_duty-qa-4 · qa_citation · Snay v. Burr (Slip Opinion) (ohio, 2021-11-24)
 
 Source: [https://www.courtlistener.com/opinion/5300575/snay-v-burr-slip-opinion/](https://www.courtlistener.com/opinion/5300575/snay-v-burr-slip-opinion/) · opinion 5129137 · cited authority as it appears: `Turner v. Ohio Bell Tel. Co., 118 Ohio St.3d 215, 2008-Ohio-2010, 887 N.E.2d 1158`
 
@@ -675,11 +675,11 @@ Candidate window: `cl5129137:9`, `cl5129137:10`, `cl5129137:11`, `cl5129137:12`,
 
 **Recommended:** `['cl5129137:10', 'cl5129137:11']` — B: chunk 10 (¶21) states the Manufacturer's accident occurred on the regularly traveled portion (point 1).
 
-**Final label:** ______
+**Final label:** `['cl5129137:10', 'cl5129137:11']` — accepted recommendation
 
 ---
 
-### [ ] patent_obviousness-qa-5 · qa_citation · Virtek Vision International Ulc v. Assembly Guidance Systems, Inc. (cafc, 2024-03-27)
+### [x] patent_obviousness-qa-5 · qa_citation · Virtek Vision International Ulc v. Assembly Guidance Systems, Inc. (cafc, 2024-03-27)
 
 Source: [https://www.courtlistener.com/opinion/9488350/virtek-vision-international-ulc-v-assembly-guidance-systems-inc/](https://www.courtlistener.com/opinion/9488350/virtek-vision-international-ulc-v-assembly-guidance-systems-inc/) · opinion 9954963 · cited authority as it appears: `Belden Inc. v. Berk-Tek LLC, 805 F.3d 1064, 1073`
 
@@ -720,11 +720,11 @@ Candidate window: `cl9954963:2`, `cl9954963:3`, `cl9954963:4`, `cl9954963:5`, `c
 
 **Recommended:** `['cl9954963:4', 'cl9954963:5']` — Partly B: chunk 5 says the mere existence of both arrangements gives no reason to substitute (points 1–2); chunk 6 is about KSR generally, not the would-vs-could point.
 
-**Final label:** ______
+**Final label:** `['cl9954963:4', 'cl9954963:5', 'cl9954963:6']` — resolved by protocol v1.1 §3.1 amendment (differs from recommendation)
 
 ---
 
-### [ ] personal_jurisdiction-qa-2 · qa_citation · Rios v. Bayer Corp. (ill, 2020-06-04)
+### [x] personal_jurisdiction-qa-2 · qa_citation · Rios v. Bayer Corp. (ill, 2020-06-04)
 
 Source: [https://www.courtlistener.com/opinion/4758410/rios-v-bayer-corp/](https://www.courtlistener.com/opinion/4758410/rios-v-bayer-corp/) · opinion 4538757 · cited authority as it appears: `Moore v. Bayer Corp., No. 4:18 CV 262 CDP, 2018 WL 4144795, at *1`
 
@@ -759,11 +759,11 @@ Candidate window: `cl4538757:9`, `cl4538757:10`, `cl4538757:11`, `cl4538757:12`,
 
 **Recommended:** `['cl4538757:10', 'cl4538757:11', 'cl4538757:13']` — Partly B: chunk 10 (devices not implanted, no false info received in Illinois) and chunk 13 (no connection; factors weigh against jurisdiction) state points 1–2; chunk 9 states the general no-relation finding but none of the listed links.
 
-**Final label:** ______
+**Final label:** `['cl4538757:10', 'cl4538757:11', 'cl4538757:13']` — resolved by protocol v1.1 §3.1 amendment
 
 ---
 
-### [ ] title_vii_retaliation-qa-4 · qa_citation · Stella Paterakos v. City of Chicago (ca7, 2025-08-12)
+### [x] title_vii_retaliation-qa-4 · qa_citation · Stella Paterakos v. City of Chicago (ca7, 2025-08-12)
 
 Source: [https://www.courtlistener.com/opinion/10652248/stella-paterakos-v-city-of-chicago/](https://www.courtlistener.com/opinion/10652248/stella-paterakos-v-city-of-chicago/) · opinion 11118835 · cited authority as it appears: `Ellis v. CCA of Tennessee LLC, 650 F.3d 640, 650 (7th Cir. 2011)`
 
@@ -794,13 +794,13 @@ Candidate window: `cl11118835:9`, `cl11118835:10`, `cl11118835:11`, `cl11118835:
 
 **Recommended:** `['cl11118835:10', 'cl11118835:11']` — B: chunk 10 states Muldrow requires some harm but not significant harm (point 1).
 
-**Final label:** ______
+**Final label:** `['cl11118835:10', 'cl11118835:11']` — accepted recommendation
 
 ---
 
 ## Random 10% audit of agreed items (13)
 
-### [ ] agency_arbitrary_capricious-cc-2 · citation_check · Shenzhen Youme v. FDA (ca5, 2025-08-06)
+### [x] agency_arbitrary_capricious-cc-2 · citation_check · Shenzhen Youme v. FDA (ca5, 2025-08-06)
 
 Source: [https://www.courtlistener.com/opinion/10649060/shenzhen-youme-v-fda/](https://www.courtlistener.com/opinion/10649060/shenzhen-youme-v-fda/) · opinion 11115647 · cited authority as it appears: `Wages & White Lion Invs., L.L.C. v. FDA, 90 F.4th 357 (5th Cir. 2024) (en banc)`
 
@@ -867,11 +867,11 @@ Source: [https://www.courtlistener.com/opinion/10649060/shenzhen-youme-v-fda/](h
 
 **Recommended:** `supported` — Confirm: the agreed label matches the passage on a re-read.
 
-**Final label:** ______
+**Final label:** `supported` — accepted recommendation
 
 ---
 
-### [ ] agency_arbitrary_capricious-qa-5 · qa_citation · Juanita Cross v. Martin O'Malley (ca9, 2024-01-05)
+### [x] agency_arbitrary_capricious-qa-5 · qa_citation · Juanita Cross v. Martin O'Malley (ca9, 2024-01-05)
 
 Source: [https://www.courtlistener.com/opinion/9457711/juanita-cross-v-martin-omalley/](https://www.courtlistener.com/opinion/9457711/juanita-cross-v-martin-omalley/) · opinion 9915536 · cited authority as it appears: `Harner v. Soc. Sec. Admin., Comm’r, 38 F.4th 892, 897 (11th Cir. 2022)`
 
@@ -902,11 +902,11 @@ Candidate window: `cl9915536:4`, `cl9915536:5`, `cl9915536:6`, `cl9915536:7`, `c
 
 **Recommended:** `['cl9915536:8']` — Confirm: the agreed label matches the passage on a re-read.
 
-**Final label:** ______
+**Final label:** `['cl9915536:8']` — accepted recommendation
 
 ---
 
-### [ ] contract_interpretation-cc-5 · citation_check · Privilege Underwriters Reciprocal Exchange v. Jeff Mankoff and Staci Mankoff (tex, 2026-02-13)
+### [x] contract_interpretation-cc-5 · citation_check · Privilege Underwriters Reciprocal Exchange v. Jeff Mankoff and Staci Mankoff (tex, 2026-02-13)
 
 Source: [https://www.courtlistener.com/opinion/10793200/privilege-underwriters-reciprocal-exchange-v-jeff-mankoff-and-staci/](https://www.courtlistener.com/opinion/10793200/privilege-underwriters-reciprocal-exchange-v-jeff-mankoff-and-staci/) · opinion 11259842 · cited authority as it appears: `EBS Sols., Inc. v. Hegar, 601 S.W.3d 744, 758 (Tex. 2020)`
 
@@ -965,11 +965,11 @@ Source: [https://www.courtlistener.com/opinion/10793200/privilege-underwriters-r
 
 **Recommended:** `supported` — Confirm: the agreed label matches the passage on a re-read.
 
-**Final label:** ______
+**Final label:** `supported` — accepted recommendation
 
 ---
 
-### [ ] first_amendment_employee-cc-1 · citation_check · Ciarametaro v. City of Gloucester (ca1, 2023-11-28)
+### [x] first_amendment_employee-cc-1 · citation_check · Ciarametaro v. City of Gloucester (ca1, 2023-11-28)
 
 Source: [https://www.courtlistener.com/opinion/9447400/ciarametaro-v-city-of-gloucester/](https://www.courtlistener.com/opinion/9447400/ciarametaro-v-city-of-gloucester/) · opinion 9905225 · cited authority as it appears: `Camreta v. Greene, 563 U.S. 692, 709 n.7 (2011)`
 
@@ -1030,11 +1030,11 @@ Source: [https://www.courtlistener.com/opinion/9447400/ciarametaro-v-city-of-glo
 
 **Recommended:** `right_doc_wrong_passage` — Confirm: the agreed label matches the passage on a re-read.
 
-**Final label:** ______
+**Final label:** `right_doc_wrong_passage` — accepted recommendation
 
 ---
 
-### [ ] insurance_duty_defend-cc-4 · citation_check · A.R. Wilfley & Sons, Inc. v. National Union Fire Insurance Company of Pittsburgh, PA; Federal Insurance Company; and United States Fire Insurance Company. (colo, 2026-09-21)
+### [x] insurance_duty_defend-cc-4 · citation_check · A.R. Wilfley & Sons, Inc. v. National Union Fire Insurance Company of Pittsburgh, PA; Federal Insurance Company; and United States Fire Insurance Company. (colo, 2026-09-21)
 
 Source: [https://www.courtlistener.com/opinion/10984928/ar-wilfley-sons-inc-v-national-union-fire-insurance-company-of/](https://www.courtlistener.com/opinion/10984928/ar-wilfley-sons-inc-v-national-union-fire-insurance-company-of/) · opinion 11452592 · cited authority as it appears: `In re Phillips, 139 P.3d 639, 643`
 
@@ -1081,11 +1081,11 @@ Source: [https://www.courtlistener.com/opinion/10984928/ar-wilfley-sons-inc-v-na
 
 **Recommended:** `wrong_document` — Confirm: the agreed label matches the passage on a re-read.
 
-**Final label:** ______
+**Final label:** `wrong_document` — accepted recommendation
 
 ---
 
-### [ ] limitations_discovery_rule-qa-3 · qa_citation · Sec. Bank & Trust Co. v. Larkin, Hoffman, Daly & Lindgren, Ltd. (minn, 2018-06-27)
+### [x] limitations_discovery_rule-qa-3 · qa_citation · Sec. Bank & Trust Co. v. Larkin, Hoffman, Daly & Lindgren, Ltd. (minn, 2018-06-27)
 
 Source: [https://www.courtlistener.com/opinion/8284769/sec-bank-trust-co-v-larkin-hoffman-daly-lindgren-ltd/](https://www.courtlistener.com/opinion/8284769/sec-bank-trust-co-v-larkin-hoffman-daly-lindgren-ltd/) · opinion 8250811 · cited authority as it appears: `Frederick v. Wallerich , 907 N.W.2d 167, 173`
 
@@ -1114,11 +1114,11 @@ Candidate window: `cl8250811:2`, `cl8250811:3`, `cl8250811:4`, `cl8250811:5`, `c
 
 **Recommended:** `['cl8250811:4']` — Confirm: the agreed label matches the passage on a re-read.
 
-**Final label:** ______
+**Final label:** `['cl8250811:4']` — accepted recommendation
 
 ---
 
-### [ ] miranda_custody-cc-1 · citation_check · People v. Robinson (ny, 2025-10-23)
+### [x] miranda_custody-cc-1 · citation_check · People v. Robinson (ny, 2025-10-23)
 
 Source: [https://www.courtlistener.com/opinion/10717764/people-v-robinson/](https://www.courtlistener.com/opinion/10717764/people-v-robinson/) · opinion 11176209 · cited authority as it appears: `New York v Quarles, 467 US 649 [1984]`
 
@@ -1167,11 +1167,11 @@ Source: [https://www.courtlistener.com/opinion/10717764/people-v-robinson/](http
 
 **Recommended:** `wrong_document` — Confirm: the agreed label matches the passage on a re-read.
 
-**Final label:** ______
+**Final label:** `wrong_document` — accepted recommendation
 
 ---
 
-### [ ] miranda_custody-qa-1 · qa_citation · People v. Robinson (ny, 2025-10-23)
+### [x] miranda_custody-qa-1 · qa_citation · People v. Robinson (ny, 2025-10-23)
 
 Source: [https://www.courtlistener.com/opinion/10717764/people-v-robinson/](https://www.courtlistener.com/opinion/10717764/people-v-robinson/) · opinion 11176209 · cited authority as it appears: `Rhode Island v Innis, 446 US 291, 301 [1980]`
 
@@ -1196,11 +1196,11 @@ Candidate window: `cl11176209:2`, `cl11176209:3`, `cl11176209:4`, `cl11176209:5`
 
 **Recommended:** `['cl11176209:4']` — Confirm: the agreed label matches the passage on a re-read.
 
-**Final label:** ______
+**Final label:** `['cl11176209:4']` — accepted recommendation
 
 ---
 
-### [ ] miranda_custody-qa-2 · qa_citation · Hersie Wesson v. Tim Shoop (ca6, 2021-11-09)
+### [x] miranda_custody-qa-2 · qa_citation · Hersie Wesson v. Tim Shoop (ca6, 2021-11-09)
 
 Source: [https://www.courtlistener.com/opinion/5296147/hersie-wesson-v-tim-shoop/](https://www.courtlistener.com/opinion/5296147/hersie-wesson-v-tim-shoop/) · opinion 5124709 · cited authority as it appears: `United States v. Mahan, 190 F.3d 416, 422 (6th Cir. 1999)`
 
@@ -1223,11 +1223,11 @@ Candidate window: `cl5124709:1`, `cl5124709:2`, `cl5124709:3`, `cl5124709:4`, `c
 
 **Recommended:** `['cl5124709:3']` — Confirm: the agreed label matches the passage on a re-read.
 
-**Final label:** ______
+**Final label:** `['cl5124709:3']` — accepted recommendation
 
 ---
 
-### [ ] negligence_duty-cc-5 · citation_check · Snay v. Burr (Slip Opinion) (ohio, 2021-11-24)
+### [x] negligence_duty-cc-5 · citation_check · Snay v. Burr (Slip Opinion) (ohio, 2021-11-24)
 
 Source: [https://www.courtlistener.com/opinion/5300575/snay-v-burr-slip-opinion/](https://www.courtlistener.com/opinion/5300575/snay-v-burr-slip-opinion/) · opinion 5129137 · cited authority as it appears: `Ramby v. Ping, 2d Dist. Greene No. 93-CA-52, 1994 WL 124829 (Apr. 13, 1994)`
 
@@ -1306,11 +1306,11 @@ Source: [https://www.courtlistener.com/opinion/5300575/snay-v-burr-slip-opinion/
 
 **Recommended:** `supported` — Confirm: the agreed label matches the passage on a re-read.
 
-**Final label:** ______
+**Final label:** `supported` — accepted recommendation
 
 ---
 
-### [ ] patent_obviousness-cc-4 · citation_check · Elekta Limited v. Zap Surgical Systems, Inc. (cafc, 2023-09-21)
+### [x] patent_obviousness-cc-4 · citation_check · Elekta Limited v. Zap Surgical Systems, Inc. (cafc, 2023-09-21)
 
 Source: [https://www.courtlistener.com/opinion/9427507/elekta-limited-v-zap-surgical-systems-inc/](https://www.courtlistener.com/opinion/9427507/elekta-limited-v-zap-surgical-systems-inc/) · opinion 9841132 · cited authority as it appears: `In re Gartside, 203 F.3d 1305, 1312`
 
@@ -1381,11 +1381,11 @@ Source: [https://www.courtlistener.com/opinion/9427507/elekta-limited-v-zap-surg
 
 **Recommended:** `wrong_document` — Confirm: the agreed label matches the passage on a re-read.
 
-**Final label:** ______
+**Final label:** `wrong_document` — accepted recommendation
 
 ---
 
-### [ ] qi_excessive_force-qa-4 · qa_citation · Santander v. Salazar (ca5, 2025-04-04)
+### [x] qi_excessive_force-qa-4 · qa_citation · Santander v. Salazar (ca5, 2025-04-04)
 
 Source: [https://www.courtlistener.com/opinion/10373064/santander-v-salazar/](https://www.courtlistener.com/opinion/10373064/santander-v-salazar/) · opinion 10839652 · cited authority as it appears: `Harmon v. City of Arlington, Texas, 16 F.4th 1159, 1167 (5th Cir. 2021)`
 
@@ -1414,11 +1414,11 @@ Candidate window: `cl10839652:6`, `cl10839652:7`, `cl10839652:8`, `cl10839652:9`
 
 **Recommended:** `['cl10839652:8']` — Confirm: the agreed label matches the passage on a re-read.
 
-**Final label:** ______
+**Final label:** `['cl10839652:8']` — accepted recommendation
 
 ---
 
-### [ ] title_vii_retaliation-qa-2 · qa_citation · Ayorinde v. Team Industrial (ca5, 2024-11-08)
+### [x] title_vii_retaliation-qa-2 · qa_citation · Ayorinde v. Team Industrial (ca5, 2024-11-08)
 
 Source: [https://www.courtlistener.com/opinion/10270600/ayorinde-v-team-industrial/](https://www.courtlistener.com/opinion/10270600/ayorinde-v-team-industrial/) · opinion 10737190 · cited authority as it appears: `Aryain v. Wal-Mart Stores Texas LP, 534 F.3d 473, 480 (5th Cir. 2008)`
 
@@ -1443,6 +1443,6 @@ Candidate window: `cl10737190:5`, `cl10737190:6`, `cl10737190:7`, `cl10737190:8`
 
 **Recommended:** `['cl10737190:7']` — Confirm: the agreed label matches the passage on a re-read.
 
-**Final label:** ______
+**Final label:** `['cl10737190:7']` — accepted recommendation
 
 ---

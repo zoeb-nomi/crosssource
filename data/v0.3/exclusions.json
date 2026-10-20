@@ -10,5 +10,6 @@
   "7802385": "describes a 13-year-old student (protocol \u00a72: opinions that describe a minor)",
   "10557793": "describes children who died (protocol \u00a72: opinions that describe a minor)",
   "7797513": "panel opinion later reheard en banc and abrogated (Hamilton v. Dallas County, 79 F.4th 494 (5th Cir. 2023) (en banc)); removed 2026-10-20 with its 3 source items (title_vii_retaliation-qa-5, -cc-2, -cc-3) and the 3 items that used its chunks as context (-cc-1, -cc-4, -cc-5), all rebuilt with the same labels on a post-Muldrow replacement",
-  "10547437": "describes specific minor students (eighth-graders who complained); skipped as Hamilton's replacement for consistency with the minor rule"
+  "10547437": "describes specific minor students (eighth-graders who complained); skipped as Hamilton's replacement for consistency with the minor rule",
+  "10820676": "caption lists plaintiffs by initials (J.S.; A.S.; Y.S., likely minors) \u2014 protocol \u00a72 no-minors rule; removed 2026-10-20 at adjudication with the 4 items sourced on it (qi_excessive_force-qa-1, -qa-2, -cc-2, -cc-3) and the 3 that used its chunks as context (-cc-1, -cc-4, -cc-5), all rebuilt with the same labels"
 }

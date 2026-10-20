@@ -35,20 +35,23 @@ This project is an independent implementation of published RAG-evaluation method
 2. **Neither configuration fabricated**: faithfulness is 1.000 and `unsupported_claim`/`wrong_document` are zero. On a 22-document corpus with clean retrieval, failure lives in *where citations point*, not invented law.
 3. **Recall is capped by retrieval, not generation**: both configurations scored 0.760 because on 6 of 25 questions BM25 never surfaced the ground-truth chunk (`missing_authority`), so neither could cite it. Improving the reader can't fix what the retriever never showed it.
 
-## v0.3 dataset (2026-10)
+## v0.3 dataset — final (2026-10-20)
 
-**150 items** over **45 published US appellate opinions from 2018–2026** (25 federal circuit, 20 state supreme court, 15 legal topics), pulled from CourtListener (Free Law Project). Every item carries provenance: opinion id, URL, the exact passage, and the cited authority as it appears in the opinion.
+**150 items** over **45 published US appellate opinions from 2018–2026** (27 federal circuit, 18 state supreme court, 15 legal topics), pulled from CourtListener (Free Law Project). Every item carries provenance: opinion id, URL, the exact passage, and the cited authority as it appears in the opinion. Labels are final: 30 items adjudicated by the curator, the other 120 agreed by two independent model raters.
 
 | Type | Items | Labels |
 |---|---|---|
 | `qa_citation`: question over one opinion, answer must cite the supporting chunk(s) | 75 | ground-truth chunk set |
 | `citation_check`: a claim with a citation attached; is the citation good, and if not, what kind of failure? | 75 | `supported` 30 · `right_doc_wrong_passage` 15 · `wrong_document` 15 · `unsupported_claim` 15 |
 
-- **Protocol:** [LABELING_PROTOCOL.md](LABELING_PROTOCOL.md) covers source rules, label definitions with decision rules and edge cases, rater instructions and the adjudication rule.
-- **Agreement:** [AGREEMENT.md](AGREEMENT.md). Two independent, blind model raters (Claude Sonnet 5.5) agreed **98.7% on `citation_check` (κ = 0.98)** and **78.7% exact-set on `qa_citation` (chunk-level κ = 0.84)**. These are model–model figures, not human inter-rater reliability; see the caveats there.
-- **Adjudication:** [ADJUDICATION.md](ADJUDICATION.md) holds 30 items (17 disagreements plus a 10% audit of agreed items), each with a recommended label. Until adjudication is recorded, item labels are the generator's (rater A's).
+- **Protocol:** [LABELING_PROTOCOL.md](LABELING_PROTOCOL.md) **v1.1** covers source rules, label definitions with decision rules and edge cases, rater instructions and the adjudication rule. v1.1 amendments came from adjudication; see the changelog.
+- **Agreement:** [AGREEMENT.md](AGREEMENT.md).
+  - **Round 1, two blind model raters** (Claude Sonnet 5.5): 98.7% on `citation_check` (κ = 0.98) and 78.7% exact-set on `qa_citation` (chunk-level κ = 0.84).
+  - **Human adjudication (third rater):** the adjudicator agreed with the recommended label on **27 of 30** items, resolved 3 via the v1.1 §3.1 amendment, and found **0 of 13** audited agreed items wrong.
+  - These are model–model figures plus a 30-item human pass, not full human inter-rater reliability; see the caveats in AGREEMENT.md.
+- **Adjudication:** [ADJUDICATION.md](ADJUDICATION.md) covers the 17 disagreements and a 10% audit, each with both labels, reasons, the recommendation and the final decision. Decisions are in `data/v0.3/labels/adjudicated.jsonl` and applied by `src/v03_dataset.py apply-adjudication`. Each item records `label_source` (`adjudicated` or agreed).
 - **Data:** `data/v0.3/qa_citation.jsonl`, `data/v0.3/citation_check.jsonl`, `data/v0.3/corpus/` (normalised opinion text), `data/v0.3/sources.json` (per-opinion provenance, including text source), `data/v0.3/labels/`.
-- **Rebuild:** `src/v03_fetch.py` (search and fetch; needs `COURTLISTENER_API_TOKEN`), then `src/v03_corpus.py`, then `src/v03_dataset.py` (packets, assemble, validate, rater input, agreement, adjudication). Raw API responses are cached in `data/raw/`, which is gitignored. 35 opinions come from the REST API; 10 come from CourtListener storage PDFs, SHA-1-verified against the search response.
+- **Rebuild:** `src/v03_fetch.py` (search and fetch; needs `COURTLISTENER_API_TOKEN`), then `src/v03_corpus.py`, then `src/v03_dataset.py` (packets, assemble, validate, rater input, agreement, adjudication). Raw API responses are cached in `data/raw/`, which is gitignored. 33 opinions come from the REST API; 12 come from CourtListener storage PDFs, SHA-1-verified against the search response. Opinions removed during curation, with reasons, are in `data/v0.3/exclusions.json`. Each opinion's later treatment is recorded in `sources.json` as `precedential_status` (good law / abrogated / overruled / unknown), with its basis and date; it is recorded, not used for selection (protocol v1.1 §2).
 - **Method note:** unlike v0.1, v0.3 items were **drafted by a model** following the protocol, labelled independently by a second blind model run, and then human-adjudicated (disagreements plus an audit sample). The v0.1 statement that every question is human-written applies to v0.1 only.
 
 ### v0.3 harness sanity pass (30-item seeded sample, pipeline check only)
@@ -63,7 +66,7 @@ This project is an independent implementation of published RAG-evaluation method
 | `claude-sonnet-5-5` | 0.915 / 0.916 | 0.70 | 1.00 (1.00) | $3.31 |
 | `gpt-5-mini` (judge `claude-sonnet-5-5`) | 0.744 / 0.841 | 0.70 | 0.93 (0.90) | $0.10 + $1.42 judge |
 
-n = 15 per type: these numbers confirm the pipeline runs end to end, not a model comparison. Gold labels were pre-adjudication. Summaries are in `results/v0.3/<model>/summary.json`.
+n = 15 per type: these numbers confirm the pipeline runs end to end, not a model comparison. They were run before adjudication and before the Najera Aguirre and cc-5 rebuilds, so they are not re-scored on the final labels. Summaries are in `results/v0.3/<model>/summary.json`.
 
 ## Method (v0.1)
 
