@@ -9,7 +9,7 @@ When done, record final labels in `data/v0.3/labels/adjudicated.jsonl` as `{"id"
 
 ## Source-level checks (not in the label queue)
 These are opinion-level questions for you, flagged during generation. They don't change any label.
-- [ ] **Hamilton v. Dallas County, 5th Cir. 2022 panel opinion** (`cl7797513`; used by `title_vii_retaliation-qa-5`, `-cc-2`, `-cc-3`): later reheard en banc and abrogated (79 F.4th 494, 5th Cir. 2023). It is a published majority opinion, so §2 does not bar it. Its law is superseded, though, which is a poor look in a registry dataset. Keep, or swap for the en banc opinion and redraft 3 items?
+- [x] **Hamilton v. Dallas County, 5th Cir. 2022 panel opinion** — *resolved 2026-10-20*. Removed and logged in `data/v0.3/exclusions.json`. Its 3 items and the 3 that used its chunks as context were rebuilt with the same labels on Rodriguez v. City of Corpus Christi (5th Cir. 2025). Both raters agree on all 6, and none of them is in this queue.
 - [ ] **Estate of Najera Aguirre** (`cl10820676`, 9th Cir.): the caption lists three plaintiffs by initials (likely minors). No item uses the caption or summary chunks. Keep under §2 ("name or describe a minor")?
 - [ ] **Per curiam opinions kept as full merits opinions, not summary orders:** Norman v. Ingle (5th Cir.), Marcus & Millichap v. Triex and Lennar Homes v. Rafiei (Tex.).
 

@@ -115,6 +115,8 @@ def main():
             **{k: meta.get(k) for k in ("opinion_id", "cluster_id", "case_name", "court_id", "date_filed",
                                          "citation", "docket_number", "url", "opinion_type", "topic_key",
                                          "area_of_law")},
+            # CourtListener's own field (Published / Unpublished) — not to be confused with precedential_status below
+            "publication_status": meta.get("precedential_status", "Published"),
             "text_field": field, "raw_chars": len(raw_text),
             **({k: meta[k] for k in ("pdf_url", "pdf_sha1")} if field == "storage_pdf" else {}),
             "chars": len(text),
@@ -126,6 +128,14 @@ def main():
         })
         print(f"{doc_id:14} {meta['court_id']:6} {meta['date_filed']}  {len(text.split()):6} words  "
               f"{len(chunks):3} chunks  {meta['case_name'][:50]}")
+    # precedential status (good law / abrogated / overruled / unknown) from the treatment screen + review
+    treatment_path = OUT / "treatment.json"
+    treatment = json.loads(treatment_path.read_text(encoding="utf-8")) if treatment_path.exists() else {}
+    for s in sources:
+        t = treatment.get(str(s["opinion_id"]), {})
+        s["precedential_status"] = t.get("precedential_status", "unknown")
+        s["precedential_status_basis"] = t.get("basis", "not screened")
+        s["precedential_status_checked"] = t.get("reviewed_at") or t.get("screened_at")
     sources.sort(key=lambda s: s["doc_id"])
     (OUT / "sources.json").write_text(json.dumps(sources, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     print(f"\n{len(sources)} documents -> {OUT / 'corpus'}")

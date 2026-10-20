@@ -13,7 +13,7 @@ Both raters are the **same model family**, so these numbers are **model–model 
 | Type | n | Percent agreement | Cohen's kappa | Notes |
 |---|---|---|---|---|
 | `citation_check` | 75 | 98.7% | 0.982 | 4-way label |
-| `qa_citation` | 75 | 78.7% (exact chunk set) | 0.836 (chunk level, 375 decisions) | chunk-level agreement 94.1%; mean Jaccard 0.881 |
+| `qa_citation` | 75 | 78.7% (exact chunk set) | 0.835 (chunk level, 375 decisions) | chunk-level agreement 94.1%; mean Jaccard 0.881 |
 
 `citation_check` confusion (rows = rater A, columns = rater B):
 
@@ -25,6 +25,8 @@ Both raters are the **same model family**, so these numbers are **model–model 
 | unsupported_claim | 0 | 0 | 0 | 15 |
 
 For `qa_citation`, kappa is computed over binary decisions: each chunk in each item's candidate window counts as one ground-truth / not-ground-truth decision per rater.
+
+**Hamilton replacement (2026-10-20).** The 5th Cir. *Hamilton v. Dallas County* panel opinion (later abrogated en banc) was removed. The 6 Title VII items that used it, 3 as their source and 3 as context distractors, were rebuilt with the same labels on *Rodriguez v. City of Corpus Christi* (5th Cir. 2025). Rater B labelled them blind and agreed with rater A on all 6. The superseded rater B labels are kept in `data/v0.3/labels/superseded_hamilton_rater_b.jsonl`. The table above already includes the rebuilt items.
 
 ## What the disagreements show
 - **All 16 `qa_citation` disagreements go the same way.** Rater B chose a strict superset of rater A's chunks. Rater A marked one chunk on 74 of 75 items. Rater B marked one chunk on 58, two on 12, three on 4 and four on 1.

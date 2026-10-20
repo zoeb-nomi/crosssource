@@ -133,11 +133,11 @@
 {"id": "title_vii_retaliation-qa-3", "draft_key": "title_vii_retaliation-qa-3", "construction_note": ""}
 {"id": "title_vii_retaliation-qa-4", "draft_key": "title_vii_retaliation-qa-4", "construction_note": ""}
 {"id": "title_vii_retaliation-qa-5", "draft_key": "title_vii_retaliation-qa-5", "construction_note": ""}
-{"id": "title_vii_retaliation-cc-1", "draft_key": "title_vii_retaliation-cc-1", "construction_note": "Started from supported claim (no evidence of protected activity or retaliation); changed to say protected activity was accepted and only causation failed (misattributes the basis of the holding)."}
-{"id": "title_vii_retaliation-cc-2", "draft_key": "title_vii_retaliation-cc-2", "construction_note": "Faithful paraphrase of cited chunk."}
-{"id": "title_vii_retaliation-cc-3", "draft_key": "title_vii_retaliation-cc-3", "construction_note": "Claim paraphrases Hamilton chunk 3; cited chunk 2 is the preceding passage on proof methods in the same opinion."}
-{"id": "title_vii_retaliation-cc-4", "draft_key": "title_vii_retaliation-cc-4", "construction_note": "Faithful paraphrase of cited chunk."}
-{"id": "title_vii_retaliation-cc-5", "draft_key": "title_vii_retaliation-cc-5", "construction_note": "Claim paraphrases Ayorinde chunk 5; cited chunk is Paterakos chunk 12 on pretext."}
+{"id": "title_vii_retaliation-cc-1", "draft_key": "title_vii_retaliation-cc-1", "construction_note": "Started from supported claim (failed to exhaust because charges lacked like-or-related allegations; letter irrelevant). Changed one thing: reversed the outcome to 'properly exhausted' via the resignation letter. No context passage supports it."}
+{"id": "title_vii_retaliation-cc-2", "draft_key": "title_vii_retaliation-cc-2", "construction_note": "Faithful paraphrase of the FLSA retaliation elements and Kasten-based complaint standard in the cited chunk. Same-opinion distractor cl10815384:6 (sham affidavit); other-opinion chunks concern Title VII/FMLA retaliation elements, not FLSA."}
+{"id": "title_vii_retaliation-cc-3", "draft_key": "title_vii_retaliation-cc-3", "construction_note": "Claim paraphrases the conclusion in cl10815384:13; cited the preceding Rodriguez chunk, which sets out the salary-basis rule and paystub facts but not the overtime-does-not-destroy-exemption conclusion."}
+{"id": "title_vii_retaliation-cc-4", "draft_key": "title_vii_retaliation-cc-4", "construction_note": "Faithful paraphrase of the pretext paragraph in the cited chunk. Other-opinion chunks address McDonnell Douglas burden shifting and Fifth Circuit pretext but not these points."}
+{"id": "title_vii_retaliation-cc-5", "draft_key": "title_vii_retaliation-cc-5", "construction_note": "Claim paraphrases the sham affidavit passage in cl10815384:6; cited a Paterakos pretext chunk on a nearby summary-judgment theme that does not mention the doctrine."}
 {"id": "vehicle_search-qa-1", "draft_key": "vehicle_search-qa-1", "construction_note": ""}
 {"id": "vehicle_search-qa-2", "draft_key": "vehicle_search-qa-2", "construction_note": ""}
 {"id": "vehicle_search-qa-3", "draft_key": "vehicle_search-qa-3", "construction_note": ""}

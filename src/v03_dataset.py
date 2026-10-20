@@ -145,7 +145,7 @@ def cmd_assemble(_):
 
 
 # --------------------------------------------------------------------------- validate
-def cmd_validate(_):
+def cmd_validate(args):
     sources, chunks = load_sources(), load_chunks()
     corpus_text = {p.stem: p.read_text(encoding="utf-8") for p in (V3 / "corpus").glob("*.txt")}
     qa, cc = jl_read(V3 / "qa_citation.jsonl"), jl_read(V3 / "citation_check.jsonl")
@@ -194,6 +194,16 @@ def cmd_validate(_):
         "area_of_law": dict(areas), "max_area_share": round(max(areas.values()) / n, 3) if n else 0,
         "problems": problems,
     }
+    # precedential status of every opinion an item touches (source, window, context) — LABELING_PROTOCOL §2
+    status = {d: s.get("precedential_status", "unknown") for d, s in sources.items()}
+    for it in items:
+        docs = {doc_of(c) for c in it.get("candidate_window", []) + it.get("context_chunks", [])} | {it["provenance"]["doc_id"]}
+        for d in sorted(docs):
+            if status.get(d) in ("abrogated", "overruled"):
+                problems.append(f"{it['id']}: uses {d}, precedential_status={status[d]}")
+            elif status.get(d) == "unknown" and not getattr(args, "allow_unknown", False):
+                problems.append(f"{it['id']}: uses {d}, precedential_status unknown (screen/review it, or pass --allow-unknown)")
+    report["precedential_status"] = dict(Counter(status.values()))
     if report["distinct_opinions"] < 40: problems.append("fewer than 40 distinct opinions")
     if report["max_items_per_opinion"] > 4: problems.append("an opinion supplies more than 4 items")
     if not 0.4 <= report["federal_share"] <= 0.6: problems.append("federal share outside 40–60%")
@@ -332,6 +342,44 @@ def cmd_adjudication(args):
     print(f"{len(dis)} disagreements/flags + {len(audit)} audit = {len(dis) + len(audit)} -> {out}")
 
 
+# --------------------------------------------------------------------------- treatment
+STATUSES = ("good law", "abrogated", "overruled", "unknown")
+TREATMENT = V3 / "treatment.json"
+
+
+def cmd_treatment_review(args):
+    """Fold data/raw/treatment/<oid>.json screens into data/v0.3/treatment.json.
+
+    Zero citing-with-negative-terms hits -> "good law" (screen basis). Any hit -> "unknown"
+    until a human/curator entry with "reviewed": true sets the status; reviewed entries are kept."""
+    raw = ROOT / "data" / "raw" / "treatment"
+    cur = json.loads(TREATMENT.read_text()) if TREATMENT.exists() else {}
+    pending = []
+    for s in load_sources().values():
+        oid = str(s["opinion_id"])
+        if cur.get(oid, {}).get("reviewed"):
+            continue
+        path = raw / f"{oid}.json"
+        if not path.exists():
+            cur[oid] = {"precedential_status": "unknown", "reviewed": False, "basis": "not screened"}
+            continue
+        d = json.loads(path.read_text(encoding="utf-8"))
+        req = json.loads((raw / f"{oid}.request.json").read_text())
+        hits = [{"case_name": x["caseName"], "court_id": x["court_id"], "date_filed": x["dateFiled"],
+                 "cluster_id": x["cluster_id"],
+                 "snippet": re.sub(r"\s+", " ", " … ".join(o.get("snippet", "") for o in x["opinions"]))[:400]}
+                for x in d["results"]]
+        cur[oid] = {"precedential_status": "good law" if d["count"] == 0 else "unknown", "reviewed": False,
+                    "screen_hits": d["count"], "screened_at": req["fetched_at"],
+                    "basis": ("no CourtListener citing opinion uses abrogation/overruling/vacatur language"
+                              if d["count"] == 0 else "citing opinions use negative-treatment terms; needs review"),
+                    "hits": hits}
+        if d["count"]:
+            pending.append(oid)
+    TREATMENT.write_text(json.dumps(dict(sorted(cur.items())), indent=1, ensure_ascii=False) + "\n", encoding="utf-8")
+    print(json.dumps(Counter(v["precedential_status"] for v in cur.values())), "| needs review:", pending)
+
+
 # --------------------------------------------------------------------------- markdown renderers
 def agreement_tables(res):
     cc, qa = res["citation_check"], res["qa_citation"]
@@ -387,15 +435,16 @@ def cmd_render(args):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("cmd", choices=["packets", "assemble", "validate", "rater-input", "agreement", "adjudication", "render", "import-labels"])
+    ap.add_argument("cmd", choices=["packets", "assemble", "validate", "rater-input", "agreement", "adjudication", "render", "import-labels", "treatment-review"])
     ap.add_argument("--labels-b", default=str(V3 / "labels" / "rater_b_round1.jsonl"))
     ap.add_argument("--round", type=int, default=1)
     ap.add_argument("--out", default=None, help="rater-input: write batches here (e.g. an isolated scratch dir)")
     ap.add_argument("--src", default=None, help="import-labels: rater output file (opaque ids)")
     ap.add_argument("--append", action="store_true", help="import-labels: merge into an existing round file")
+    ap.add_argument("--allow-unknown", action="store_true", help="validate: don't fail on precedential_status unknown")
     args = ap.parse_args()
     {"packets": cmd_packets, "assemble": cmd_assemble, "validate": cmd_validate, "rater-input": cmd_rater_input,
-     "agreement": cmd_agreement, "adjudication": cmd_adjudication, "render": cmd_render, "import-labels": cmd_import_labels}[args.cmd](args)
+     "agreement": cmd_agreement, "adjudication": cmd_adjudication, "render": cmd_render, "import-labels": cmd_import_labels, "treatment-review": cmd_treatment_review}[args.cmd](args)
 
 
 if __name__ == "__main__":

@@ -1,6 +1,6 @@
 # CrossSource labelling protocol — v0.3
 
-Version 1.0.1 (2026-10-20). Any change after raters start gets a new version number and an entry in the changelog at the bottom; items labelled under an older version are re-labelled, not grandfathered.
+Version 1.0.2 (2026-10-20). Any change after raters start gets a new version number and an entry in the changelog at the bottom; items labelled under an older version are re-labelled, not grandfathered.
 
 This protocol governs every item in `data/v0.3/`. The 25 v0.1 items (`data/golden.jsonl`) were built under different source rules (Caselaw Access Project, pre-2018 landmark cases) and are kept unchanged as the `v0.1-legacy` split. They are not counted toward the 150 and are not re-labelled.
 
@@ -39,12 +39,13 @@ Every v0.3 item comes from opinions that meet **all** of these:
 | Rule | Requirement |
 |---|---|
 | Source | CourtListener REST API v4 (Free Law Project). Opinion text taken from the `plain_text` field, or from `html_with_citations` / `html` with tags removed, in that order of preference — or, when the API quota is exhausted, from the opinion's PDF in CourtListener's public file storage (`storage.courtlistener.com/<local_path>`), accepted only if its SHA-1 matches the `sha1` in the verbatim REST search response. Each document records which source it used (`text_field`). |
-| Precedential status | `Published` only (cluster `precedential_status`). |
+| Publication status | `Published` only (CourtListener cluster field `precedential_status`; stored as `publication_status` in `sources.json`). |
 | Date | `date_filed` on or after 2018-01-01. |
 | Court | A federal court of appeals (`ca1`–`ca11`, `cadc`, `cafc`) or a state court of last resort (the court CourtListener lists as that state's highest court, e.g. `cal`, `ny`, `tex`, `mass`). In Texas and Oklahoma, which have two courts of last resort, use the civil supreme court only. |
 | Language | English. |
 | Opinion type | Lead / majority / combined opinion. No concurrences, no dissents, no per curiam summary orders. |
 | Length | At least 1,500 words of opinion text (enough for ≥ 4 chunks). |
+| Precedential status | Not abrogated, overruled or vacated. Every opinion is screened by searching CourtListener for later opinions that cite it and use abrogation / overruling / vacatur language (`src/v03_fetch.py treatment`). Zero hits → `good law` (screen basis, dated). Any hit is read by hand and set to `good law`, `abrogated`, `overruled` or `unknown` with the evidence in `data/v0.3/treatment.json`. `sources.json` carries `precedential_status` for every opinion; the validator rejects items that touch an `abrogated` / `overruled` opinion and, by default, an `unknown` one. This is a screen, not a citator (Shepard's / KeyCite). |
 
 **Spread.**
 - At least 40 distinct opinions across the 150 items; no opinion supplies more than 4 items.
@@ -190,3 +191,4 @@ Output per item: `{"id", "label", "reason", "bad_item": null | "<reason>"}` wher
 ## Changelog
 - **1.0 (2026-10-19)** — first version.
 - **1.0.1 (2026-10-20)** — source rule only: SHA-1-verified CourtListener storage PDFs allowed as a text source; §5 excludes staff summaries/syllabi. Label definitions unchanged, so no re-labelling.
+- **1.0.2 (2026-10-20)** — source rule only: precedential-status screen and `precedential_status` field (added after a 5th Cir. panel opinion later abrogated en banc slipped in). Label definitions unchanged.

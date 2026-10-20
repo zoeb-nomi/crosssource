@@ -90,6 +90,31 @@
     "source": "CourtListener REST API v4 (Free Law Project)"
   },
   {
+    "doc_id": "cl10815384",
+    "opinion_id": 10815384,
+    "cluster_id": 10348796,
+    "case_name": "Rodriguez v. City of Corpus Christi",
+    "court_id": "ca5",
+    "date_filed": "2025-03-03",
+    "citation": [
+      "129 F.4th 890"
+    ],
+    "docket_number": "23-40520",
+    "url": "https://www.courtlistener.com/opinion/10348796/rodriguez-v-city-of-corpus-christi/",
+    "opinion_type": "combined-opinion",
+    "topic_key": "title_vii_retaliation",
+    "area_of_law": "employment",
+    "text_field": "storage_pdf",
+    "raw_chars": 34972,
+    "pdf_url": "https://storage.courtlistener.com/pdf/2025/03/03/rodriguez_v._city_of_corpus_christi.pdf",
+    "pdf_sha1": "2148b9b1e5f54afa62f4f161d430c712017c8d84",
+    "chars": 27908,
+    "words": 4388,
+    "chunks": 14,
+    "api_url": "https://www.courtlistener.com/api/rest/v4/opinions/10815384/",
+    "source": "CourtListener file storage PDF, SHA-1 verified against the REST v4 search response (Free Law Project)"
+  },
+  {
     "doc_id": "cl10820676",
     "opinion_id": 10820676,
     "cluster_id": 10354088,
@@ -608,29 +633,6 @@
     "words": 4554,
     "chunks": 16,
     "api_url": "https://www.courtlistener.com/api/rest/v4/opinions/6320573/",
-    "source": "CourtListener REST API v4 (Free Law Project)"
-  },
-  {
-    "doc_id": "cl7797513",
-    "opinion_id": 7797513,
-    "cluster_id": 7853647,
-    "case_name": "Hamilton v. Dallas County",
-    "court_id": "ca5",
-    "date_filed": "2022-08-03",
-    "citation": [
-      "42 F.4th 550"
-    ],
-    "docket_number": "21-10133",
-    "url": "https://www.courtlistener.com/opinion/7853647/hamilton-v-dallas-county/",
-    "opinion_type": "010combined",
-    "topic_key": "title_vii_retaliation",
-    "area_of_law": "employment",
-    "text_field": "plain_text",
-    "raw_chars": 24566,
-    "chars": 20521,
-    "words": 3193,
-    "chunks": 11,
-    "api_url": "https://www.courtlistener.com/api/rest/v4/opinions/7797513/",
     "source": "CourtListener REST API v4 (Free Law Project)"
   },
   {

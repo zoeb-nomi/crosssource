@@ -9,8 +9,7 @@
     "wrong_document": 15
   },
   "qa_gt_sizes": {
-    "1": 74,
-    "2": 1
+    "1": 75
   },
   "distinct_opinions": 45,
   "max_items_per_opinion": 4,
@@ -27,5 +26,8 @@
     "employment": 10
   },
   "max_area_share": 0.2,
-  "problems": []
+  "problems": [],
+  "precedential_status": {
+    "unknown": 45
+  }
 }

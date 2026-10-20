@@ -28,7 +28,7 @@
     "exact_set_agreement": 0.7867,
     "chunk_decisions": 375,
     "chunk_percent_agreement": 0.9413,
-    "chunk_kappa": 0.8362,
+    "chunk_kappa": 0.8348,
     "mean_jaccard": 0.8811,
     "disagreements": [
       "agency_arbitrary_capricious-qa-2",

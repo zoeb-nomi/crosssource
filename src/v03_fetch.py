@@ -18,6 +18,7 @@ Cached responses are reused, so re-runs cost no requests. Requests are spaced
 by --delay seconds and 429s honour Retry-After.
 
 Usage:  python src/v03_fetch.py search [--topics a,b]
+        python src/v03_fetch.py treatment [--ids 1,2]   # negative-treatment screen -> data/raw/treatment/
         python src/v03_fetch.py fetch [--per-topic 3] [--delay 1.0] [--topics a,b]
 """
 
@@ -142,6 +143,32 @@ def cmd_search(client, topics):
               f"courts={sorted({x['court_id'] for x in d['results']})}")
 
 
+NEGATIVE_TERMS = '(abrogated OR abrogating OR overruled OR overruling OR vacated OR superseded OR "no longer good law")'
+
+
+def cmd_treatment(client, oids):
+    """Negative-treatment screen: later CourtListener opinions that cite this one and use abrogation language.
+
+    One search per opinion, saved byte-exact to data/raw/treatment/<oid>.json. This is a screen,
+    not a citator: zero hits means no negative-treatment language found among CourtListener's
+    citing opinions on the check date; any hit is reviewed by hand (data/v0.3/treatment.json)."""
+    out_dir = RAW / "treatment"
+    out_dir.mkdir(parents=True, exist_ok=True)
+    for oid in oids:
+        out = out_dir / f"{oid}.json"
+        if out.exists():
+            continue
+        params = {"type": "o", "q": f"cites:({oid}) AND {NEGATIVE_TERMS}", "order_by": "dateFiled desc", "highlight": "on"}
+        r = client.request("search/", params)
+        out.write_bytes(r.content)
+        (out_dir / f"{oid}.request.json").write_text(json.dumps(
+            {"url": f"{API}/search/", "params": params, "status": r.status_code,
+             "fetched_at": datetime.now(timezone.utc).isoformat(timespec="seconds")}, indent=2) + "\n")
+        d = r.json()
+        print(f"  {oid:>10}  citing-with-negative-terms={d['count']:3}  "
+              + "; ".join(f"{x['caseName'][:35]} ({x['court_id']} {x['dateFiled']})" for x in d["results"][:3]))
+
+
 def opinion_text(op):
     for f in TEXT_FIELDS:
         if (op.get(f) or "").strip():
@@ -205,10 +232,12 @@ def candidates(topic):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("cmd", choices=["search", "fetch"])
+    ap.add_argument("cmd", choices=["search", "fetch", "treatment"])
+    ap.add_argument("--ids", default="", help="treatment: comma-separated opinion ids (default: every accepted opinion)")
     ap.add_argument("--per-topic", type=int, default=3)
     ap.add_argument("--delay", type=float, default=1.0)
     ap.add_argument("--topics", default="")
+    ap.add_argument("--filed-after", default="2018-01-01", help="fetch: only consider candidates filed on/after this date")
     ap.add_argument("--source", choices=["api", "pdf"], default="api",
                     help="fetch: opinion text from the REST API, or from CourtListener's storage PDFs (sha1-verified)")
     args = ap.parse_args()
@@ -221,6 +250,12 @@ def main():
     client = Client(token, args.delay)
     storage = requests.Session()
     storage.headers["User-Agent"] = "crosssource-v0.3 (research; MIT)"
+    if args.cmd == "treatment":
+        ids = [int(x) for x in args.ids.split(",") if x] or sorted(
+            json.loads(p.read_text())["opinion_id"] for p in (RAW / "opinions").glob("*.meta.json"))
+        cmd_treatment(client, ids)
+        print(f"\n{client.requests} API requests this run")
+        return
     if args.cmd == "search":
         cmd_search(client, topics)
         print(f"\n{client.requests} API requests this run")
@@ -247,7 +282,8 @@ def main():
                     break
                 if oid in accepted or (distinct and result["court_id"] in courts_used):
                     continue
-                if result["court_id"] not in topic["courts"] or EXCLUDE_NAME_RE.search(result["caseName"]):
+                if (result["court_id"] not in topic["courts"] or EXCLUDE_NAME_RE.search(result["caseName"])
+                        or result["dateFiled"] < args.filed_after):
                     continue  # decided from search metadata alone; no request spent
                 if (result["caseName"].lower(), result["dateFiled"]) in same_case:
                     continue  # duplicate cluster of a case already accepted
