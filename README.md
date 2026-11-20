@@ -9,6 +9,8 @@ Legal AI is a major LLM category whose most famous trust failure is citation hal
 
 This project is an independent implementation of published RAG-evaluation methods, applied to a domain where citation errors carry professional consequences.
 
+**Try the citation check as a tool:** [zoebnomi-mcp](https://github.com/zoeb-nomi/zoebnomi-mcp) packages it as a free, read-only MCP server at `https://mcp.zoebnomi.com/mcp`. It decides wrong-document and wrong-passage citations without a model call and hands the rest to this harness's judge prompt.
+
 ## Headline results (v0.1)
 
 **Human–judge agreement: 100% (15/15)** on a blind, stratified sample of the LLM judge's citation-precision verdicts — the number that determines whether any of the other numbers can be trusted ([details](results/judge_agreement.md)).
